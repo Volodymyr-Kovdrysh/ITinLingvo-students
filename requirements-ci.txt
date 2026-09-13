@@ -1,0 +1,5 @@
+sphinx==8.2.3
+myst-parser==4.0.1
+sphinx-book-theme==1.1.4
+accessible-pygments==0.0.5
+sphinx-togglebutton==0.3.2

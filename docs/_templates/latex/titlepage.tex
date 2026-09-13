@@ -1,0 +1,39 @@
+\definecolor{ITinLingvoAccent}{HTML}{1F6F8B}
+\definecolor{ITinLingvoMuted}{HTML}{5F6B7A}
+
+\renewcommand{\sphinxmaketitle}{%
+  \begin{titlepage}
+  \thispagestyle{empty}
+  \sffamily
+  \begin{center}
+    \vspace*{1.2cm}
+    {\small Міністерство освіти і науки України\par}
+    \vspace{0.35cm}
+    {\small Чернівецький національний університет імені Юрія Федьковича\par}
+
+    \vfill
+
+    {\color{ITinLingvoAccent}\rule{0.72\textwidth}{1.2pt}\par}
+    \vspace{0.9cm}
+    {\LARGE\bfseries \@title\par}
+    \vspace{0.55cm}
+    {\large \ITinLingvoSubtitle\par}
+    \vspace{0.9cm}
+    {\color{ITinLingvoAccent}\rule{0.72\textwidth}{1.2pt}\par}
+
+    \vfill
+
+    \begin{flushright}
+      {\small Автори:\par}
+      \vspace{0.2cm}
+      {\normalsize\bfseries \@author\par}
+    \end{flushright}
+
+    \vfill
+
+    {\small\color{ITinLingvoMuted}\ITinLingvoPlace\space\textemdash\space\ITinLingvoYear\par}
+  \end{center}
+  \end{titlepage}
+  \clearpage
+  \ITinLingvoImprintPage
+}
