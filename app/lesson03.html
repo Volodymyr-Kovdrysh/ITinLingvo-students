@@ -1,0 +1,888 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>3. ЛАБОРАТОРНА РОБОТА №2 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/lab.css?v=9e99ccb3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/lesson03';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="4. ЛАБОРАТОРНА РОБОТА №3" href="lesson04.html" />
+    <link rel="prev" title="2. ЛАБОРАТОРНА РОБОТА №1" href="lesson02.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lesson01.html">1. Основи інформаційних технологій</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson02.html">2. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson04.html">4. ЛАБОРАТОРНА РОБОТА №3</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/blob/main/docs/app/lesson03.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/edit/main/docs/app/lesson03.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/issues/new?title=Issue%20on%20page%20%2Fapp/lesson03.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/lesson03.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №2</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1. План</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3.2. Методичні вказівки</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3.2.1. Створення списків</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3.2.1.1. Марковані списки</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">3.2.1.2. Нумеровані списки</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">3.2.1.3. Багаторівневі списки</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.2.2. Додавання графічних елементів</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.2.2.1. Вставлення зображення</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.2.2.2. Розташування зображення відносно тексту</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">3.2.2.3. Знімки екрана</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3.2.2.4. Фігури та схеми</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">3.2.3. Колонтитули, номери сторінок і спеціальні символи</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">3.2.3.1. Колонтитули</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">3.2.3.2. Номери сторінок</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">3.2.3.3. Спеціальні символи</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">3.2.4. Текстові вставки</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">3.2.4.1. Текстові поля</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">3.2.4.2. Вставлення тексту з іншого файла</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">3.2.4.3. Математичні вирази</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">3.2.5. Гіперпосилання, примітки та виноски</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">3.2.5.1. Гіперпосилання</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">3.2.5.2. Примітки</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">3.2.5.3. Виноски</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">3.2.6. Оформлення навчального реферату</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">3.2.6.1. Титульна сторінка</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">3.2.6.2. Стилі заголовків</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">3.2.6.3. Автоматичний зміст</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">3.3. Практичні завдання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">3.4. Контрольні питання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">3.5. Вимоги до виконання і подання</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o2">
+<h1><span class="section-number">3. </span>ЛАБОРАТОРНА РОБОТА №2<a class="headerlink" href="#o2" title="Link to this heading">#</a></h1>
+<p><strong>Інтеграція об’єктів у текстові документи</strong></p>
+<div class="lab-block lab-goal admonition">
+<p class="admonition-title">Мета роботи</p>
+<p>Опанувати базові прийоми додавання й організації об’єктів у текстових документах: списків, зображень, фігур, знімків екрана, колонтитулів, номерів сторінок, спеціальних символів, текстових вставок, математичних виразів, гіперпосилань, приміток і виносок, а також оформлення заголовків та автоматичного змісту.</p>
+</div>
+<section id="id1">
+<h2><span class="section-number">3.1. </span>План<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="lab-block lab-plan docutils container">
+<ol class="arabic simple">
+<li><p>Створення маркованих, нумерованих і багаторівневих списків.</p></li>
+<li><p>Вставлення зображень, фігур і знімків екрана.</p></li>
+<li><p>Колонтитули, номери сторінок і спеціальні символи.</p></li>
+<li><p>Текстові поля, вставлення файлів і математичних виразів.</p></li>
+<li><p>Гіперпосилання, примітки та виноски.</p></li>
+<li><p>Оформлення реферату: титульна сторінка, стилі заголовків і автоматичний зміст.</p></li>
+</ol>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">3.2. </span>Методичні вказівки<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>У цій лабораторній роботі розглядаються об’єкти, які роблять текстовий документ структурованим і зручним для читання: списки, рисунки, фігури, колонтитули, посилання, примітки, виноски та зміст. Базовим редактором для пояснень є <strong>LibreOffice Writer</strong>, але практичні завдання виконуються у кількох редакторах за спільною логікою.</p>
+<p>Команди в різних текстових процесорах можуть мати інші назви. У LibreOffice Writer більшість дій із додавання об’єктів виконується через меню <strong>Insert</strong>, робота зі списками й абзацами пов’язана з панеллю форматування та меню <strong>Format</strong>, а автоматичний зміст створюється на основі стилів заголовків.</p>
+<section id="id3">
+<h3><span class="section-number">3.2.1. </span>Створення списків<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Списки використовують тоді, коли потрібно подати кілька однотипних пунктів. У текстових документах найчастіше трапляються марковані, нумеровані та багаторівневі списки.</p>
+<section id="id4">
+<h4><span class="section-number">3.2.1.1. </span>Марковані списки<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<p><strong>Маркований список</strong> — це набір пунктів, перед кожним із яких стоїть маркер: крапка, тире, стрілка або інший символ. Такий список зручний, коли порядок пунктів не є принциповим.</p>
+<p>Щоб створити маркований список у LibreOffice Writer, можна скористатися кнопкою <strong>Toggle Unordered List</strong> на панелі форматування або відповідною командою в меню <strong>Format → Lists</strong>. Після введення пункту натисніть <kbd class="kbd docutils literal notranslate">Enter</kbd>, щоб перейти до наступного пункту. Щоб завершити список, натисніть <kbd class="kbd docutils literal notranslate">Enter</kbd> ще раз на порожньому пункті або вимкніть режим списку.</p>
+<p>Марковані списки варто використовувати для переліку ознак, властивостей, вимог, прикладів або варіантів, які не мають жорсткого порядку.</p>
+</section>
+<section id="id5">
+<h4><span class="section-number">3.2.1.2. </span>Нумеровані списки<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<p><strong>Нумерований список</strong> використовують тоді, коли порядок пунктів важливий: інструкція, алгоритм, послідовність дій, етапи виконання завдання. Нумерація в такому списку оновлюється автоматично, якщо додати або вилучити пункт.</p>
+<p>У LibreOffice Writer нумерований список можна створити кнопкою <strong>Toggle Ordered List</strong> або через <strong>Format → Lists</strong>. Після натискання <kbd class="kbd docutils literal notranslate">Enter</kbd> редактор автоматично створює наступний номер. Якщо потрібно продовжити список після звичайного абзацу, скористайтеся контекстним меню списку або знову ввімкніть нумерований список і перевірте номер першого пункту.</p>
+<p>Не варто набирати номери вручну. Якщо писати <code class="docutils literal notranslate"><span class="pre">1.</span></code>, <code class="docutils literal notranslate"><span class="pre">2.</span></code>, <code class="docutils literal notranslate"><span class="pre">3.</span></code> як звичайний текст, редактор не зможе автоматично перенумерувати список після редагування.</p>
+</section>
+<section id="id6">
+<h4><span class="section-number">3.2.1.3. </span>Багаторівневі списки<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<p><strong>Багаторівневий список</strong> містить пункти різних рівнів: основні пункти й підпункти. Такий список корисний для плану, структури доповіді, класифікації понять або розкладу.</p>
+<p>У більшості текстових процесорів рівень пункту змінюють клавішами:</p>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">Tab</kbd> — понизити пункт на рівень нижче;</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Shift</kbd> + <kbd class="kbd docutils literal notranslate">Tab</kbd> — підняти пункт на рівень вище.</p></li>
+</ul>
+<p>Приклад багаторівневого списку показано на рис. <a class="fig-num-reference" href="#lesson03-multilevel-list">3.1</a>.</p>
+<figure class="align-default" id="lesson03-multilevel-list">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vQcd88CgzXAI6Zf-ga-gyHGQpqNpQ9BLf_Q6Y__bM6a2BUVxEslgBDwNLC999-0Dup_JLrqGfbFoW6S/pub?w=960&amp;h=720"><img alt="Приклади багаторівневих списків" src="https://docs.google.com/drawings/d/e/2PACX-1vQcd88CgzXAI6Zf-ga-gyHGQpqNpQ9BLf_Q6Y__bM6a2BUVxEslgBDwNLC999-0Dup_JLrqGfbFoW6S/pub?w=960&amp;h=720" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 3.1 </span><span class="caption-text">Приклади багаторівневих списків</span><a class="headerlink" href="#lesson03-multilevel-list" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Для навчальних документів зазвичай достатньо двох рівнів списку. Якщо рівнів більше, текст стає важче читати, а структуру легше втратити під час редагування.</p>
+</section>
+</section>
+<section id="id7">
+<h3><span class="section-number">3.2.2. </span>Додавання графічних елементів<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>До текстового документа можна додавати зображення, знімки екрана, фігури, схеми та інші графічні об’єкти. У навчальних документах графічні елементи мають пояснювати текст, а не просто прикрашати сторінку.</p>
+<p>У LibreOffice Writer основні команди для вставлення графічних об’єктів розташовані в меню <strong>Insert</strong>. Після вставлення об’єкта його можна переміщувати, змінювати розмір, обрізати, налаштовувати обтікання текстом і додавати підпис.</p>
+<section id="id8">
+<h4><span class="section-number">3.2.2.1. </span>Вставлення зображення<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
+<p>Щоб вставити зображення з файла, виконайте команду <strong>Insert → Image</strong> і виберіть потрібний файл. Після вставлення зображення з’явиться в документі в місці розташування курсора.</p>
+<p>Після вставлення перевірте:</p>
+<ul class="simple">
+<li><p>чи зображення достатньо чітке;</p></li>
+<li><p>чи не виходить воно за межі сторінки;</p></li>
+<li><p>чи не перекриває текст;</p></li>
+<li><p>чи має воно зрозумілий підпис, якщо це ілюстрація до завдання.</p></li>
+</ul>
+<p>Приклад вставленого зображення та його параметрів показано на рис. <a class="fig-num-reference" href="#lesson03-insert-image">3.2</a>.</p>
+<figure class="align-default" id="lesson03-insert-image">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vQiLOJqXA4-eMd5u-vWFTAze0XN4ZtE61pzd0vMCpbxAQAnbE9C6R22Nm89OVJdl_vQIOwkZrlwLYfI/pub?w=960&amp;h=720"><img alt="Вставлення зображення в LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vQiLOJqXA4-eMd5u-vWFTAze0XN4ZtE61pzd0vMCpbxAQAnbE9C6R22Nm89OVJdl_vQIOwkZrlwLYfI/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 3.2 </span><span class="caption-text">Вставлення зображення в LibreOffice Writer</span><a class="headerlink" href="#lesson03-insert-image" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id9">
+<h4><span class="section-number">3.2.2.2. </span>Розташування зображення відносно тексту<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
+<p>Зображення в документі може поводитися по-різному: бути частиною рядка, обтікатися текстом або розташовуватися окремо. У LibreOffice Writer ці параметри налаштовують через контекстне меню зображення або через властивості об’єкта.</p>
+<p>Для навчальних робіт найчастіше достатньо двох варіантів:</p>
+<ul class="simple">
+<li><p>зображення розташоване окремим блоком між абзацами;</p></li>
+<li><p>текст обтікає невелике зображення збоку.</p></li>
+</ul>
+<p>Якщо зображення велике або містить багато деталей, краще розміщувати його окремим блоком на всю доступну ширину. Якщо зображення невелике й лише доповнює абзац, можна використати обтікання текстом. Приклад налаштування обтікання показано на рис. <a class="fig-num-reference" href="#lesson03-image-wrap">3.3</a>.</p>
+<figure class="align-default" id="lesson03-image-wrap">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vRdoE0xRrsMaWUR0M3_N-NPwyC5IMwDMP4E0bwsnfut9O5Q_jf8ErKBHk90YgSmxl1uR-YtMCrtiDPr/pub?w=960&amp;h=720"><img alt="Налаштування обтікання зображення текстом" src="https://docs.google.com/drawings/d/e/2PACX-1vRdoE0xRrsMaWUR0M3_N-NPwyC5IMwDMP4E0bwsnfut9O5Q_jf8ErKBHk90YgSmxl1uR-YtMCrtiDPr/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 3.3 </span><span class="caption-text">Налаштування обтікання зображення текстом</span><a class="headerlink" href="#lesson03-image-wrap" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id10">
+<h4><span class="section-number">3.2.2.3. </span>Знімки екрана<a class="headerlink" href="#id10" title="Link to this heading">#</a></h4>
+<p>Знімок екрана використовують тоді, коли потрібно показати вікно програми, меню, результат налаштування або послідовність дій. У Linux можна зробити скріншот системним інструментом або програмою на зразок Flameshot, зберегти його як зображення, а потім вставити в документ через <strong>Insert → Image</strong>.</p>
+<p>Перед вставленням скріншота варто обрізати зайві частини екрана. У документі має бути видно саме той елемент, який пояснюється в тексті. Після вставлення скріншота додайте підпис або коротке пояснення.</p>
+</section>
+<section id="id11">
+<h4><span class="section-number">3.2.2.4. </span>Фігури та схеми<a class="headerlink" href="#id11" title="Link to this heading">#</a></h4>
+<p>Фігури використовують для простих схем, стрілок, блоків, виносок і пояснювальних елементів. У LibreOffice Writer фігури доступні через <strong>Insert → Shape</strong> або панель інструментів рисування.</p>
+<p>Після вставлення фігуру можна переміщувати, змінювати її розмір, колір заливки, контур і текст усередині фігури. Щоб створити просту схему, можна поєднувати прямокутники, стрілки та підписи. Приклад роботи з фігурами показано на рис. <a class="fig-num-reference" href="#lesson03-shapes">3.4</a>.</p>
+<figure class="align-default" id="lesson03-shapes">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vR3zbjWw-3si__dr5y9KJ6C5nxqNCI-PJOmwsVYYBbypRdsfRwldQDJFs7z7-jZDHFVge0qyjaKaeP0/pub?w=960&amp;h=720"><img alt="Фігури та схема в LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vR3zbjWw-3si__dr5y9KJ6C5nxqNCI-PJOmwsVYYBbypRdsfRwldQDJFs7z7-jZDHFVge0qyjaKaeP0/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 3.4 </span><span class="caption-text">Фігури та схема в LibreOffice Writer</span><a class="headerlink" href="#lesson03-shapes" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Для складних схем краще використовувати окремий інструмент для діаграм або рисунків, а в документ вставляти готове зображення. Так простіше контролювати вигляд схеми та не зламати її під час редагування тексту.</p>
+</section>
+</section>
+<section id="id12">
+<h3><span class="section-number">3.2.3. </span>Колонтитули, номери сторінок і спеціальні символи<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>У великих навчальних документах важливо не лише вставити текст і рисунки, а й оформити службові елементи сторінки: колонтитули, нумерацію сторінок, дату, спеціальні символи. Такі елементи допомагають читачеві орієнтуватися в документі.</p>
+<section id="id13">
+<h4><span class="section-number">3.2.3.1. </span>Колонтитули<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
+<p><strong>Колонтитул</strong> — це область у верхній або нижній частині сторінки, у якій повторюється службова інформація: назва документа, назва розділу, прізвище автора, дата, номер сторінки або інший короткий текст.</p>
+<p>У LibreOffice Writer колонтитули додають через меню <strong>Insert → Header and Footer</strong>. Після додавання верхнього або нижнього колонтитула в документі з’являється окрема область для введення тексту. Щоб відредагувати колонтитул, достатньо клацнути всередині цієї області.</p>
+<p>У колонтитулі не варто розміщувати довгі речення. Достатньо короткої інформації, яка повторюється на сторінках і не відволікає від основного тексту.</p>
+</section>
+<section id="id14">
+<h4><span class="section-number">3.2.3.2. </span>Номери сторінок<a class="headerlink" href="#id14" title="Link to this heading">#</a></h4>
+<p>Нумерація сторінок потрібна для рефератів, звітів і методичних матеріалів. У LibreOffice Writer номер сторінки можна вставити через <strong>Insert → Page Number</strong> або через <strong>Insert → Field → Page Number</strong> залежно від версії програми.</p>
+<p>Зазвичай номер сторінки розміщують у нижньому колонтитулі. Якщо документ має титульну сторінку, її часто не нумерують або враховують у загальній нумерації без видимого номера. Це залежить від вимог до оформлення конкретної роботи.</p>
+</section>
+<section id="id15">
+<h4><span class="section-number">3.2.3.3. </span>Спеціальні символи<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
+<p>Не всі символи є на клавіатурі. Наприклад, у тексті можуть знадобитися грецькі літери, математичні знаки, стрілки або службові символи: φ, α, β, →, ≥, §.</p>
+<p>У LibreOffice Writer такі символи вставляють через <strong>Insert → Special Character</strong>. У вікні спеціальних символів можна вибрати шрифт, групу символів і потрібний знак. Після вставлення символ поводиться як звичайний текст: його можна копіювати, виділяти, змінювати розмір і форматувати.</p>
+</section>
+</section>
+<section id="id16">
+<h3><span class="section-number">3.2.4. </span>Текстові вставки<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<p>Окрім звичайного набору тексту, у документ можна вставляти окремі текстові об’єкти, фрагменти з інших файлів і математичні вирази. Такі вставки потрібні тоді, коли частина матеріалу має відрізнятися від основного тексту або вже підготовлена в іншому документі.</p>
+<section id="id17">
+<h4><span class="section-number">3.2.4.1. </span>Текстові поля<a class="headerlink" href="#id17" title="Link to this heading">#</a></h4>
+<p><strong>Текстове поле</strong> — це окремий блок із текстом, який можна розмістити в потрібному місці сторінки. Його використовують для коротких пояснень, підписів, виносок на полі, цитат або допоміжних коментарів.</p>
+<p>У LibreOffice Writer текстове поле можна додати через <strong>Insert → Text Box</strong>. Після вставлення на сторінці з’являється рамка, у яку вводять текст. Текстове поле можна переміщувати, змінювати його розмір, налаштовувати рамку, заливку й обтікання текстом.</p>
+<p>Текстові поля варто використовувати помірно. Якщо весь важливий матеріал розміщувати в окремих блоках, документ стає важче читати й редагувати.</p>
+</section>
+<section id="id18">
+<h4><span class="section-number">3.2.4.2. </span>Вставлення тексту з іншого файла<a class="headerlink" href="#id18" title="Link to this heading">#</a></h4>
+<p>Іноді потрібно перенести до поточного документа фрагмент або весь текст з іншого файла. Найпростіший спосіб — відкрити потрібний документ, скопіювати фрагмент і вставити його в потрібне місце.</p>
+<p>У LibreOffice Writer також можна вставити файл через <strong>Insert → Text from File</strong>. Цей спосіб зручний, коли потрібно додати великий готовий фрагмент без ручного копіювання.</p>
+<p>Після вставлення тексту з іншого файла перевірте форматування: стилі заголовків, абзацні відступи, списки, міжрядковий інтервал і шрифт. Текст, скопійований з різних джерел, часто має різне оформлення.</p>
+</section>
+<section id="id19">
+<h4><span class="section-number">3.2.4.3. </span>Математичні вирази<a class="headerlink" href="#id19" title="Link to this heading">#</a></h4>
+<p>Математичні вирази вставляють тоді, коли звичайного тексту недостатньо для запису формули. У LibreOffice Writer для цього можна скористатися <strong>Insert → Object → Formula Object</strong>.</p>
+<p>Формула відкривається в окремому режимі редагування. Після створення вона вставляється в документ як об’єкт. Формулу можна переміщувати, вирівнювати й редагувати повторно.</p>
+<p>Для цієї лабораторної роботи достатньо вміти вставити простий вираз із дробом, коренем або індексом.</p>
+</section>
+</section>
+<section id="id20">
+<h3><span class="section-number">3.2.5. </span>Гіперпосилання, примітки та виноски<a class="headerlink" href="#id20" title="Link to this heading">#</a></h3>
+<p>У текстових документах часто потрібно пов’язати фрагмент тексту з вебсторінкою, іншим місцем у документі або додати пояснення до окремого слова. Для цього використовують гіперпосилання, примітки та виноски.</p>
+<section id="id21">
+<h4><span class="section-number">3.2.5.1. </span>Гіперпосилання<a class="headerlink" href="#id21" title="Link to this heading">#</a></h4>
+<p><strong>Гіперпосилання</strong> — це фрагмент тексту або об’єкт, за яким можна перейти до вебсторінки, файла, електронної адреси або іншого місця в документі. У навчальному документі гіперпосилання зручно використовувати для джерел, онлайн-матеріалів і додаткових прикладів.</p>
+<p>У LibreOffice Writer гіперпосилання можна створити через <strong>Insert → Hyperlink</strong> або комбінацією клавіш <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">K</kbd>. У вікні гіперпосилання потрібно вказати адресу й текст, який буде видно в документі.</p>
+<p>Якщо вставити повну вебадресу, редактор може автоматично перетворити її на посилання. Але для оформленого документа краще використовувати зрозумілий текст посилання, наприклад не <code class="docutils literal notranslate"><span class="pre">https://...</span></code>, а <strong>офіційний сайт університету</strong>.</p>
+</section>
+<section id="id22">
+<h4><span class="section-number">3.2.5.2. </span>Примітки<a class="headerlink" href="#id22" title="Link to this heading">#</a></h4>
+<p><strong>Примітка</strong> — це коментар до фрагмента тексту. Її використовують під час перевірки, редагування або спільної роботи над документом. Примітка не є частиною основного тексту, але прив’язана до конкретного місця.</p>
+<p>У LibreOffice Writer примітку можна додати через <strong>Insert → Comment</strong> або комбінацією клавіш <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Alt</kbd> + <kbd class="kbd docutils literal notranslate">C</kbd>. Перед додаванням примітки потрібно виділити слово або фрагмент тексту, якого вона стосується.</p>
+<p>Примітки корисні для чернеток і рецензування. У фінальній версії документа їх зазвичай переглядають, опрацьовують і вилучають або приховують перед експортом у PDF.</p>
+</section>
+<section id="id23">
+<h4><span class="section-number">3.2.5.3. </span>Виноски<a class="headerlink" href="#id23" title="Link to this heading">#</a></h4>
+<p><strong>Виноска</strong> — це коротке пояснення або посилання, яке розміщується внизу сторінки. У тексті місце виноски позначається номером або символом у верхньому індексі.</p>
+<p>У LibreOffice Writer виноску вставляють через <strong>Insert → Footnote and Endnote → Footnote</strong>. Курсор потрібно поставити одразу після слова або речення, до якого додається пояснення.</p>
+<p>Виноски доречні тоді, коли пояснення важливе, але його не варто включати в основний абзац. Наприклад, можна коротко пояснити термін, подати джерело або уточнити переклад.</p>
+</section>
+</section>
+<section id="id24">
+<h3><span class="section-number">3.2.6. </span>Оформлення навчального реферату<a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
+<p>У цій лабораторній роботі частина завдань пов’язана з оформленням невеликого навчального реферату. Мета не в тому, щоб написати повноцінну наукову роботу, а в тому, щоб навчитися правильно структурувати документ і використовувати інструменти текстового процесора.</p>
+<p>Типова структура реферату:</p>
+<ul class="simple">
+<li><p>титульна сторінка;</p></li>
+<li><p>зміст;</p></li>
+<li><p>вступ;</p></li>
+<li><p>основна частина;</p></li>
+<li><p>висновки;</p></li>
+<li><p>список використаних джерел;</p></li>
+<li><p>додатки за потреби.</p></li>
+</ul>
+<section id="id25">
+<h4><span class="section-number">3.2.6.1. </span>Титульна сторінка<a class="headerlink" href="#id25" title="Link to this heading">#</a></h4>
+<p>Титульна сторінка містить основні відомості про роботу: назву закладу освіти, факультет або кафедру, тему, дані студента, дані викладача, місто й рік виконання.</p>
+<p>У LibreOffice Writer титульну сторінку можна створити вручну на першій сторінці документа. Для цього використовують вирівнювання тексту, інтервали між абзацами та розрив сторінки після титульного аркуша. Якщо потрібно, для титульної сторінки можна застосувати окремий стиль сторінки без видимого номера.</p>
+<p>Приклад титульної сторінки показано на рис. <a class="fig-num-reference" href="#lesson03-title-page">3.5</a>.</p>
+<figure class="align-default" id="lesson03-title-page">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vSzzOeFZ9cwftNbyRoCsxw0sWEK-CdgDwSJxZhkN4YQxEZqg5Tl07EnXJ2lbXZcjmY6IvPdO7X-0U9K/pub?w=960&amp;h=720"><img alt="Приклад титульної сторінки в LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vSzzOeFZ9cwftNbyRoCsxw0sWEK-CdgDwSJxZhkN4YQxEZqg5Tl07EnXJ2lbXZcjmY6IvPdO7X-0U9K/pub?w=960&amp;h=720" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 3.5 </span><span class="caption-text">Приклад титульної сторінки в LibreOffice Writer</span><a class="headerlink" href="#lesson03-title-page" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id26">
+<h4><span class="section-number">3.2.6.2. </span>Стилі заголовків<a class="headerlink" href="#id26" title="Link to this heading">#</a></h4>
+<p>Автоматичний зміст створюється не з тексту, який просто зробили жирним або великим, а зі стилів заголовків. Тому розділи документа потрібно оформлювати стилями <strong>Heading 1</strong>, <strong>Heading 2</strong>, <strong>Heading 3</strong>.</p>
+<p>Стилі заголовків допомагають підтримувати однакове оформлення в усьому документі. Якщо змінити параметри стилю, зміняться всі заголовки цього рівня. Це зручніше, ніж вручну форматувати кожен заголовок окремо.</p>
+<p>Для невеликого реферату зазвичай достатньо двох рівнів заголовків: <strong>Heading 1</strong> для основних розділів і <strong>Heading 2</strong> для підрозділів.</p>
+<p>Приклад застосування стилів заголовків показано на рис. <a class="fig-num-reference" href="#lesson03-heading-styles">3.6</a>.</p>
+<figure class="align-default" id="lesson03-heading-styles">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vRjL3oaQLgjTC73mbYFmEn8OaiIsSqY91eszXqaBzENSewHs02VYb8bFvdKxKvALWGcP08FqA57Q99N/pub?w=960&amp;h=720"><img alt="Стилі заголовків у LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vRjL3oaQLgjTC73mbYFmEn8OaiIsSqY91eszXqaBzENSewHs02VYb8bFvdKxKvALWGcP08FqA57Q99N/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 3.6 </span><span class="caption-text">Стилі заголовків у LibreOffice Writer</span><a class="headerlink" href="#lesson03-heading-styles" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id27">
+<h4><span class="section-number">3.2.6.3. </span>Автоматичний зміст<a class="headerlink" href="#id27" title="Link to this heading">#</a></h4>
+<p>Після того як заголовки оформлено стилями, можна створити автоматичний зміст. У LibreOffice Writer це роблять через <strong>Insert → Table of Contents and Index → Table of Contents, Index or Bibliography</strong>.</p>
+<p>Автоматичний зміст зручний тим, що він бере назви розділів із заголовків і додає номери сторінок. Якщо текст змінювався, зміст потрібно оновити через контекстне меню змісту.</p>
+<p>Перед поданням роботи перевірте, чи всі потрібні заголовки потрапили до змісту і чи немає в ньому зайвих рядків.</p>
+<p>Приклад автоматичного змісту показано на рис. <a class="fig-num-reference" href="#lesson03-toc">3.7</a>.</p>
+<figure class="align-default" id="lesson03-toc">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vS8d4h9iC9aKpE8yiBloM74hW0C8J28uPLSOPlOA2EdbTXH2tBjJxMlQ_es_6xrUdoSiVZTmkIay2uw/pub?w=960&amp;h=720"><img alt="Автоматичний зміст у LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vS8d4h9iC9aKpE8yiBloM74hW0C8J28uPLSOPlOA2EdbTXH2tBjJxMlQ_es_6xrUdoSiVZTmkIay2uw/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 3.7 </span><span class="caption-text">Автоматичний зміст у LibreOffice Writer</span><a class="headerlink" href="#lesson03-toc" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+</section>
+<section id="id28">
+<h2><span class="section-number">3.3. </span>Практичні завдання<a class="headerlink" href="#id28" title="Link to this heading">#</a></h2>
+<p>Виконайте однаковий набір завдань у трьох текстових процесорах, зазначених у вимогах до виконання і подання. Методичні вказівки нижче орієнтовані на LibreOffice Writer; в інших редакторах використовуйте еквівалентні інструменти. Для демонстрації використовуйте власний навчальний текст або короткий реферат на тему, пов’язану з вашою спеціальністю.</p>
+<ol class="arabic simple">
+<li><p>Створіть титульну сторінку документа.</p></li>
+<li><p>Додайте до документа кілька розділів і підрозділів, оформивши їх стилями <strong>Heading 1</strong> і <strong>Heading 2</strong>.</p></li>
+<li><p>Створіть маркований список навчальних дисциплін поточного семестру.</p></li>
+<li><p>Створіть нумерований список студентів у підгрупі або етапів виконання роботи.</p></li>
+<li><p>Створіть багаторівневий список <strong>Розклад</strong>, у якому будуть дні тижня та заняття всередині кожного дня.</p></li>
+<li><p>Вставте зображення з файла й додайте до нього підпис.</p></li>
+<li><p>Налаштуйте розташування зображення відносно тексту: окремим блоком або з обтіканням.</p></li>
+<li><p>Обріжте зайву частину зображення або змініть його розмір так, щоб воно не виходило за межі сторінки.</p></li>
+<li><p>Додайте знімок екрана відкритої програми або фрагмента вікна.</p></li>
+<li><p>Створіть просту схему з фігур: наприклад, класифікацію приголосних, прикметників, числівників або іменників.</p></li>
+<li><p>Додайте верхній або нижній колонтитул із короткою службовою інформацією.</p></li>
+<li><p>Додайте номери сторінок.</p></li>
+<li><p>Вставте кілька спеціальних символів, яких немає на клавіатурі.</p></li>
+<li><p>Додайте текстове поле з коротким поясненням або цитатою.</p></li>
+<li><p>Вставте фрагмент тексту з іншого файла або скопіюйте його з окремого документа.</p></li>
+<li><p>Вставте простий математичний вираз із дробом, коренем або індексом.</p></li>
+<li><p>Створіть гіперпосилання на вебресурс, пов’язаний із темою документа.</p></li>
+<li><p>Додайте примітку до одного фрагмента тексту.</p></li>
+<li><p>Додайте виноску до терміна або цитати.</p></li>
+<li><p>Створіть автоматичний зміст документа.</p></li>
+<li><p>Змініть один із заголовків і оновіть автоматичний зміст.</p></li>
+<li><p>Експортуйте документ у PDF.</p></li>
+</ol>
+</section>
+<section id="id29">
+<h2><span class="section-number">3.4. </span>Контрольні питання<a class="headerlink" href="#id29" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Чим маркований список відрізняється від нумерованого?</p></li>
+<li><p>Для чого використовують багаторівневі списки?</p></li>
+<li><p>Чому не варто набирати номери списку вручну?</p></li>
+<li><p>Як вставити зображення в документ LibreOffice Writer?</p></li>
+<li><p>Що потрібно перевірити після вставлення зображення?</p></li>
+<li><p>Коли зображення краще розміщувати окремим блоком, а коли з обтіканням текстом?</p></li>
+<li><p>Для чого в навчальному документі використовують знімки екрана?</p></li>
+<li><p>Як створити просту схему за допомогою фігур?</p></li>
+<li><p>Що таке колонтитул і яку інформацію в ньому доречно розміщувати?</p></li>
+<li><p>Як вставити номер сторінки в LibreOffice Writer?</p></li>
+<li><p>Для чого потрібні спеціальні символи?</p></li>
+<li><p>Коли доцільно використовувати текстове поле?</p></li>
+<li><p>Що потрібно перевірити після вставлення тексту з іншого файла?</p></li>
+<li><p>Як вставити математичний вираз у LibreOffice Writer?</p></li>
+<li><p>Чим гіперпосилання відрізняється від звичайного тексту?</p></li>
+<li><p>Для чого використовують примітки?</p></li>
+<li><p>Чим виноска відрізняється від примітки?</p></li>
+<li><p>Чому автоматичний зміст потрібно створювати на основі стилів заголовків?</p></li>
+<li><p>Як оновити автоматичний зміст після редагування документа?</p></li>
+<li><p>Які елементи має містити навчальний реферат?</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id30">
+<h2><span class="section-number">3.5. </span>Вимоги до виконання і подання<a class="headerlink" href="#id30" title="Link to this heading">#</a></h2>
+<p><strong>Виконайте практичні завдання тричі:</strong></p>
+<ol class="arabic simple">
+<li><p>у <strong>LibreOffice Writer</strong>;</p></li>
+<li><p>у <strong>Google Docs</strong>;</p></li>
+<li><p>у <strong>ще одному редакторі на вибір</strong>: Microsoft Word / Pages / WPS / OnlyOffice.</p></li>
+</ol>
+<p><strong>Подання в Google Classroom:</strong> завантажте <strong>три PDF-файли</strong>, кожен — експорт із відповідного редактора.</p>
+<p><strong>Схема імені файлу:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;назва</span> <span class="pre">текстового</span> <span class="pre">редактора&gt;_&lt;група&gt;_&lt;ПрізвищеІм’я&gt;_ЛР2.pdf</span></code></p>
+<p><strong>Приклади:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>LibreOffice_141_ПетренкоІван_ЛР2.pdf
+GoogleDocs_143_ПетренкоІван_ЛР2.pdf
+Word_144_АлукіАнастасія_ЛР2.pdf
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Коментар щодо недоступних опцій</p>
+<p>Якщо певної опції немає у вашому редакторі, у звіті коротко вкажіть це й опишіть обраний еквівалент дії. За можливості додайте скріншот.</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lesson02.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>ЛАБОРАТОРНА РОБОТА №1</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="lesson04.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>ЛАБОРАТОРНА РОБОТА №3</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">3.1. План</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">3.2. Методичні вказівки</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3.2.1. Створення списків</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3.2.1.1. Марковані списки</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">3.2.1.2. Нумеровані списки</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">3.2.1.3. Багаторівневі списки</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">3.2.2. Додавання графічних елементів</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">3.2.2.1. Вставлення зображення</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">3.2.2.2. Розташування зображення відносно тексту</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">3.2.2.3. Знімки екрана</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">3.2.2.4. Фігури та схеми</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">3.2.3. Колонтитули, номери сторінок і спеціальні символи</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">3.2.3.1. Колонтитули</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">3.2.3.2. Номери сторінок</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">3.2.3.3. Спеціальні символи</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">3.2.4. Текстові вставки</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">3.2.4.1. Текстові поля</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">3.2.4.2. Вставлення тексту з іншого файла</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">3.2.4.3. Математичні вирази</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">3.2.5. Гіперпосилання, примітки та виноски</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">3.2.5.1. Гіперпосилання</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">3.2.5.2. Примітки</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">3.2.5.3. Виноски</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">3.2.6. Оформлення навчального реферату</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">3.2.6.1. Титульна сторінка</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">3.2.6.2. Стилі заголовків</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">3.2.6.3. Автоматичний зміст</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">3.3. Практичні завдання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">3.4. Контрольні питання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">3.5. Вимоги до виконання і подання</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

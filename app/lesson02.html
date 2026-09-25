@@ -1,0 +1,1185 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>2. ЛАБОРАТОРНА РОБОТА №1 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/lab.css?v=9e99ccb3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/lesson02';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="3. ЛАБОРАТОРНА РОБОТА №2" href="lesson03.html" />
+    <link rel="prev" title="1. Основи інформаційних технологій" href="lesson01.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lesson01.html">1. Основи інформаційних технологій</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson03.html">3. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson04.html">4. ЛАБОРАТОРНА РОБОТА №3</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/blob/main/docs/app/lesson02.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/edit/main/docs/app/lesson02.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/issues/new?title=Issue%20on%20page%20%2Fapp/lesson02.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/lesson02.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №1</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.1. План</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.2. Методичні вказівки</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#libreoffice-writer">2.2.1. Інтерфейс LibreOffice Writer</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.2.1.1. Робоча область</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2.1.2. Меню і панелі інструментів</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.2.1.3. Бічна панель і стилі</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.2.1.4. Лінійка, масштаб і режим перегляду</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.2.2. Налаштування робочого середовища</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2.2.2.1. Панелі інструментів</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.2.2.2. Мова документа і перевірка правопису</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2.2.2.3. Масштаб і зручність роботи</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2.2.3. Операції над файлами</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">2.2.3.1. Створення документа</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">2.2.3.2. Збереження документа</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">2.2.3.3. Відкриття документа</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pdf">2.2.3.4. Експорт у PDF</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">2.2.3.5. Одночасна робота з кількома документами</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2.2.4. Друк і попередній перегляд</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">2.2.5. Налаштування параметрів документа</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">2.2.6. Введення та редагування тексту</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">2.2.6.1. Розрив сторінки</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">2.2.6.2. Виправлення тексту</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">2.2.7. Перевірка правопису</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">2.2.7.1. Виправлення підкресленого слова</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">2.2.7.2. Повна перевірка документа</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">2.2.8. Виділення фрагментів тексту</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">2.2.9. Дії над фрагментами тексту</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">2.2.10. Форматування тексту</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">2.2.10.1. Форматування шрифту</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">2.2.10.2. Накреслення і колір</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">2.2.10.3. Верхній і нижній індекс</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">2.2.10.4. Розширені параметри символів</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">2.2.11. Форматування абзаців</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">2.2.11.1. Вирівнювання тексту</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">2.2.11.2. Міжрядковий інтервал</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">2.2.11.3. Відступи абзаців</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">2.2.11.4. Додаткові параметри абзацу</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">2.2.12. Копіювання заданого форматування</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">2.2.13. Табуляція</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">2.2.14. Пошук тексту в документах</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">2.2.15. Заміна тексту в документах</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">2.2.16. Розширений пошук</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">2.3. Практичні завдання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">2.4. Контрольні питання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">2.5. Вимоги до виконання і подання</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o1">
+<h1><span class="section-number">2. </span>ЛАБОРАТОРНА РОБОТА №1<a class="headerlink" href="#o1" title="Link to this heading">#</a></h1>
+<p><strong>Створення, редагування та форматування текстових документів у LibreOffice Writer</strong></p>
+<div class="lab-block lab-goal admonition">
+<p class="admonition-title">Мета роботи</p>
+<p>Опанувати базові прийоми роботи з текстовим процесором LibreOffice Writer: створення документа, орієнтація в інтерфейсі, налаштування робочого середовища, введення й редагування тексту, перевірка правопису, збереження документа та підготовка його до експорту у PDF.</p>
+</div>
+<section id="id1">
+<h2><span class="section-number">2.1. </span>План<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="lab-block lab-plan docutils container">
+<ol class="arabic simple">
+<li><p>Інтерфейс LibreOffice Writer: робоча область, меню, панелі інструментів, лінійка, рядок стану та бічна панель.</p></li>
+<li><p>Налаштування робочого середовища: масштаб, лінійка, панелі інструментів і мова документа.</p></li>
+<li><p>Операції з файлами: створення, відкриття, збереження та експорт у PDF.</p></li>
+<li><p>Введення, редагування і перевірка правопису.</p></li>
+<li><p>Виділення, копіювання та переміщення фрагментів тексту.</p></li>
+<li><p>Форматування символів і абзаців.</p></li>
+<li><p>Табулятори, пошук і заміна фрагментів тексту.</p></li>
+</ol>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">2.2. </span>Методичні вказівки<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Текстовий процесор дає змогу створювати, редагувати й форматувати текстові документи, додавати до них таблиці, рисунки, списки, гіперпосилання, колонтитули та інші елементи. У цій лабораторній роботі базовим інструментом є <strong>LibreOffice Writer</strong> з англійським інтерфейсом. Якщо студент працює в Google Docs або іншому текстовому процесорі, він має виконати ті самі дії за змістом і отримати еквівалентний результат.</p>
+<p>LibreOffice Writer використовує класичний інтерфейс із рядком меню та панелями інструментів. На відміну від стрічкового інтерфейсу Microsoft Word, тут немає стрічки, тому команди подано через меню на зразок <strong>File</strong>, <strong>Edit</strong>, <strong>View</strong>, <strong>Insert</strong>, <strong>Format</strong>, <strong>Styles</strong>, <strong>Tools</strong>. Для методички це важливо: студент має навчитися не запам’ятовувати конкретне розташування кнопки, а розуміти тип операції, яку він виконує з документом.</p>
+<section id="libreoffice-writer">
+<h3><span class="section-number">2.2.1. </span>Інтерфейс LibreOffice Writer<a class="headerlink" href="#libreoffice-writer" title="Link to this heading">#</a></h3>
+<p>Після запуску LibreOffice Writer відкривається вікно нового текстового документа або стартовий екран LibreOffice, з якого можна створити документ Writer. Основні елементи вікна програми показано на рис. <a class="fig-num-reference" href="#lesson02-writer-window">2.1</a>.</p>
+<figure class="align-default" id="lesson02-writer-window">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vQOR1cg9XFQUoXQWCs2lVEHsJ5s7AXsV5Iq7bjxdMaPnsmgsIJUA29yneSG4mv0hoGpWlu-JtWU6Mda/pub?w=960&amp;h=720"><img alt="Вікно LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vQOR1cg9XFQUoXQWCs2lVEHsJ5s7AXsV5Iq7bjxdMaPnsmgsIJUA29yneSG4mv0hoGpWlu-JtWU6Mda/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.1 </span><span class="caption-text">Вікно LibreOffice Writer</span><a class="headerlink" href="#lesson02-writer-window" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>До основних елементів вікна LibreOffice Writer належать робоча область документа, рядок меню, панелі інструментів, горизонтальна й вертикальна лінійки, рядок стану та бічна панель. Їхнє розташування може відрізнятися залежно від версії LibreOffice, налаштувань користувача та розміру екрана.</p>
+<section id="id3">
+<h4><span class="section-number">2.2.1.1. </span>Робоча область<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
+<p>Робоча область призначена для введення та редагування тексту. У ній відображається сторінка документа, текстовий курсор, межі сторінки, поля та інші елементи макета. Масштаб відображення можна змінювати в правій частині рядка стану або через меню <strong>View</strong>. Зміна масштабу впливає лише на вигляд документа на екрані й не змінює його друкований розмір.</p>
+<p>У рядку стану відображаються службові відомості про документ: номер сторінки, кількість слів і символів, мова тексту, режим вставлення, масштаб та режим перегляду. Ці елементи допомагають контролювати документ під час набору й редагування тексту.</p>
+</section>
+<section id="id4">
+<h4><span class="section-number">2.2.1.2. </span>Меню і панелі інструментів<a class="headerlink" href="#id4" title="Link to this heading">#</a></h4>
+<p>Команди LibreOffice Writer згруповані в рядку меню. Для початку роботи важливо орієнтуватися в кількох основних меню:</p>
+<ul class="simple">
+<li><p><strong>File</strong> — створення, відкриття, збереження, друк та експорт документа;</p></li>
+<li><p><strong>Insert</strong> — вставлення зображень, номерів сторінок, розривів, гіперпосилань і спеціальних символів;</p></li>
+<li><p><strong>Table</strong> — створення та редагування таблиць;</p></li>
+<li><p><strong>Format</strong> — форматування символів, абзаців і сторінки.</p></li>
+</ul>
+<p>Найуживаніші команди дублюються на панелях інструментів. Типовий вигляд меню та панелей інструментів показано на рис. <a class="fig-num-reference" href="#lesson02-writer-toolbars">2.2</a>.</p>
+<figure class="align-default" id="lesson02-writer-toolbars">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vQ5bV9HmLKs43adA6ywNK770L0cpahsOKWoW5BS6br1k1Pe6n0068pfSJjrsux9dIqczv4C2yumON7U/pub?w=960&amp;h=720"><img alt="Меню та панелі інструментів LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vQ5bV9HmLKs43adA6ywNK770L0cpahsOKWoW5BS6br1k1Pe6n0068pfSJjrsux9dIqczv4C2yumON7U/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.2 </span><span class="caption-text">Меню та панелі інструментів LibreOffice Writer</span><a class="headerlink" href="#lesson02-writer-toolbars" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>За потреби панелі інструментів можна вмикати або вимикати через меню <strong>View → Toolbars</strong>. Для базової роботи з документом зазвичай достатньо стандартної панелі інструментів і панелі форматування.</p>
+</section>
+<section id="id5">
+<h4><span class="section-number">2.2.1.3. </span>Бічна панель і стилі<a class="headerlink" href="#id5" title="Link to this heading">#</a></h4>
+<p>Бічна панель LibreOffice Writer відкривається праворуч у вікні програми. Через неї можна швидко змінювати вигляд тексту, відкривати панель <strong>Styles</strong> і переходити між частинами документа.</p>
+<p>На першому етапі <strong>Styles</strong> варто розуміти просто: це готові варіанти оформлення тексту. Наприклад, для назви розділу можна вибрати стиль заголовка, а для звичайного абзацу — стиль основного тексту. Тоді однакові частини документа матимуть однаковий вигляд без ручного налаштування кожного абзацу. Приклад бічної панелі показано на рис. <a class="fig-num-reference" href="#lesson02-writer-sidebar">2.3</a>.</p>
+<figure class="align-default" id="lesson02-writer-sidebar">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vThyaD9uoWjQDtHbimklakvGkKBRcHkSS4evDZYzDpYcveuNZzb8uPtXmdfAdolKp28Q-0aQ4hkuc6s/pub?w=960&amp;h=720"><img alt="Бічна панель і стилі LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vThyaD9uoWjQDtHbimklakvGkKBRcHkSS4evDZYzDpYcveuNZzb8uPtXmdfAdolKp28Q-0aQ4hkuc6s/pub?w=960&amp;h=720" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.3 </span><span class="caption-text">Бічна панель і стилі LibreOffice Writer</span><a class="headerlink" href="#lesson02-writer-sidebar" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id6">
+<h4><span class="section-number">2.2.1.4. </span>Лінійка, масштаб і режим перегляду<a class="headerlink" href="#id6" title="Link to this heading">#</a></h4>
+<p>Горизонтальна лінійка допомагає контролювати поля, відступи абзаців і позиції табуляції. Якщо лінійку не видно, її можна ввімкнути через меню <strong>View → Rulers → Rulers</strong>. Масштаб документа змінюється в рядку стану або через меню <strong>View → Zoom</strong>.</p>
+<p>Для звичайного редагування текстового документа доцільно працювати в режимі, де сторінка відображається приблизно так, як вона виглядатиме під час друку або експорту в PDF. Налаштування масштабу та елементи рядка стану показано на рис. <a class="fig-num-reference" href="#lesson02-ruler-status">2.4</a>.</p>
+<figure class="align-default" id="lesson02-ruler-status">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vTdsMqsQln9uy43r1q-r1hNEsxt-vOARW7fn3ze4bzJqPhFvbRqPjP_XzPmCvHWSlCI3dBuSs1i7cMm/pub?w=960&amp;h=720"><img alt="Лінійка та рядок стану LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vTdsMqsQln9uy43r1q-r1hNEsxt-vOARW7fn3ze4bzJqPhFvbRqPjP_XzPmCvHWSlCI3dBuSs1i7cMm/pub?w=960&amp;h=720" style="width: 90%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.4 </span><span class="caption-text">Лінійка та рядок стану LibreOffice Writer</span><a class="headerlink" href="#lesson02-ruler-status" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="id7">
+<h3><span class="section-number">2.2.2. </span>Налаштування робочого середовища<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Перед виконанням лабораторної роботи варто перевірити кілька базових параметрів середовища: чи видно потрібні панелі інструментів, чи ввімкнено лінійку, який масштаб документа встановлено, а також яка мова призначена для тексту. Це зменшує кількість технічних помилок під час набору, форматування та перевірки правопису.</p>
+<section id="id8">
+<h4><span class="section-number">2.2.2.1. </span>Панелі інструментів<a class="headerlink" href="#id8" title="Link to this heading">#</a></h4>
+<p>Щоб увімкнути або вимкнути панель інструментів, скористайтеся меню <strong>View → Toolbars</strong> і позначте потрібну панель. Якщо інтерфейс програми відрізняється від наведеного в методичних вказівках, спочатку перевірте саме цей пункт меню.</p>
+</section>
+<section id="id9">
+<h4><span class="section-number">2.2.2.2. </span>Мова документа і перевірка правопису<a class="headerlink" href="#id9" title="Link to this heading">#</a></h4>
+<p>Мова тексту впливає на перевірку правопису, розстановку переносів і деякі мовні параметри документа. Для українського тексту встановіть українську мову через меню <strong>Tools → Language</strong>. Якщо перевірка правопису не працює, потрібно перевірити, чи встановлено відповідний мовний словник LibreOffice.</p>
+</section>
+<section id="id10">
+<h4><span class="section-number">2.2.2.3. </span>Масштаб і зручність роботи<a class="headerlink" href="#id10" title="Link to this heading">#</a></h4>
+<p>Для набору тексту зручно використовувати масштаб, за якого сторінка добре читається, але не потребує постійного горизонтального прокручування. На невеликому екрані доцільно приховати зайві панелі або бічну панель, а під час форматування знову їх увімкнути.</p>
+</section>
+</section>
+<section id="id11">
+<h3><span class="section-number">2.2.3. </span>Операції над файлами<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>У LibreOffice Writer робота з файлами виконується через меню <strong>File</strong>. У цьому меню зібрані команди для створення, відкриття, збереження, друку й експорту документа. На цьому етапі важливо розрізняти дві дії: зберегти робочий файл для подальшого редагування та експортувати готовий документ у формат PDF.</p>
+<section id="id12">
+<h4><span class="section-number">2.2.3.1. </span>Створення документа<a class="headerlink" href="#id12" title="Link to this heading">#</a></h4>
+<p>Новий текстовий документ можна створити під час запуску LibreOffice або з уже відкритої програми. Для створення порожнього документа виконайте команду <strong>File → New → Text Document</strong> або натисніть <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">N</kbd>.</p>
+<p>Якщо після запуску відкрився стартовий екран LibreOffice, виберіть <strong>Writer Document</strong>. Після цього відкриється порожній текстовий документ. Приклад створення нового документа показано на рис. <a class="fig-num-reference" href="#lesson02-new-document">2.5</a>.</p>
+<figure class="align-default" id="lesson02-new-document">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vQBr2Qg4Oy9bgx5YrZd5xWzexpWwnVT-U1uPYxuXv4KgOCg0kRmYqCs7dOME27YNbZJE_Z4Kkhu91T4/pub?w=960&amp;h=720"><img alt="Створення нового документа в LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vQBr2Qg4Oy9bgx5YrZd5xWzexpWwnVT-U1uPYxuXv4KgOCg0kRmYqCs7dOME27YNbZJE_Z4Kkhu91T4/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.5 </span><span class="caption-text">Створення нового документа в LibreOffice Writer</span><a class="headerlink" href="#lesson02-new-document" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>LibreOffice Writer також підтримує шаблони, але для цієї лабораторної роботи достатньо створити звичайний порожній документ. Шаблони доцільно розглядати пізніше, коли йтиметься про типові заяви, резюме, звіти або інші повторювані документи.</p>
+</section>
+<section id="id13">
+<h4><span class="section-number">2.2.3.2. </span>Збереження документа<a class="headerlink" href="#id13" title="Link to this heading">#</a></h4>
+<p>Під час першого збереження потрібно вказати назву файла, місце збереження та формат. Для подальшого редагування залишайте стандартний формат LibreOffice Writer.</p>
+<p>Щоб уперше зберегти документ, виконайте такі дії:</p>
+<ol class="arabic simple">
+<li><p>Виберіть команду <strong>File → Save As</strong>.</p></li>
+<li><p>Укажіть папку, у якій потрібно зберегти файл.</p></li>
+<li><p>У полі назви файла введіть зрозумілу назву документа.</p></li>
+<li><p>Залиште стандартний формат документа LibreOffice Writer.</p></li>
+<li><p>Натисніть <strong>Save</strong>.</p></li>
+</ol>
+<p>Вікно збереження документа показано на рис. <a class="fig-num-reference" href="#lesson02-save-as">2.6</a>.</p>
+<figure class="align-default" id="lesson02-save-as">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vTthY0lLTuu3FMrOMgVF9LrXQcnC-Rz6y75Udo-Lcb99v98Fzb8ojrzfengqsMZCiLeJUeUgmAQ4q0R/pub?w=960&amp;h=720"><img alt="Збереження документа LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vTthY0lLTuu3FMrOMgVF9LrXQcnC-Rz6y75Udo-Lcb99v98Fzb8ojrzfengqsMZCiLeJUeUgmAQ4q0R/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.6 </span><span class="caption-text">Збереження документа LibreOffice Writer</span><a class="headerlink" href="#lesson02-save-as" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Після першого збереження поточні зміни можна зберігати командою <strong>File → Save</strong> або комбінацією клавіш <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">S</kbd>. Цю комбінацію варто використовувати регулярно під час роботи.</p>
+<div class="note admonition">
+<p class="admonition-title">Робочий файл і готовий PDF</p>
+<p>Збережений документ потрібен для подальшого редагування. PDF потрібен для подання або друку готової роботи. Якщо здати тільки PDF, редагувати документ потім буде незручно.</p>
+</div>
+</section>
+<section id="id14">
+<h4><span class="section-number">2.2.3.3. </span>Відкриття документа<a class="headerlink" href="#id14" title="Link to this heading">#</a></h4>
+<p>Щоб відкрити вже створений документ із LibreOffice Writer, виберіть <strong>File → Open</strong> або натисніть <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">O</kbd>. У діалоговому вікні перейдіть до потрібної папки, виберіть файл і натисніть <strong>Open</strong>.</p>
+<p>LibreOffice Writer може відкривати власні документи, а також файли <strong>DOCX</strong>, <strong>DOC</strong>, <strong>RTF</strong>, <strong>TXT</strong> та інші текстові формати. Якщо документ створено в іншому редакторі, після відкриття потрібно уважно перевірити його вигляд: шрифти, відступи, таблиці та розташування рисунків можуть відрізнятися.</p>
+<p>Останні відкриті документи доступні через меню <strong>File → Recent Documents</strong>. Це зручно, якщо потрібно швидко повернутися до файлів, з якими ви працювали нещодавно.</p>
+</section>
+<section id="pdf">
+<h4><span class="section-number">2.2.3.4. </span>Експорт у PDF<a class="headerlink" href="#pdf" title="Link to this heading">#</a></h4>
+<p>PDF використовують тоді, коли документ потрібно передати викладачеві, надіслати поштою або роздрукувати без зміни оформлення. Для експорту документа в PDF виконайте команду <strong>File → Export As → Export as PDF</strong> або скористайтеся кнопкою експорту в PDF на панелі інструментів.</p>
+<p>Перед експортом перевірте документ: назву файла, кількість сторінок, відступи, нумерацію сторінок, рисунки та таблиці. Вікно експорту в PDF показано на рис. <a class="fig-num-reference" href="#lesson02-export-pdf">2.7</a>.</p>
+<figure class="align-default" id="lesson02-export-pdf">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vTSpN1A850CsPmBiDLPgidmks2S0Quk_f8fq2mQ4torVgHj7_JYXaFYTTBkkOJMQUuFWxAYY8daDwSr/pub?w=960&amp;h=720"><img alt="Експорт документа у PDF" src="https://docs.google.com/drawings/d/e/2PACX-1vTSpN1A850CsPmBiDLPgidmks2S0Quk_f8fq2mQ4torVgHj7_JYXaFYTTBkkOJMQUuFWxAYY8daDwSr/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.7 </span><span class="caption-text">Експорт документа у PDF</span><a class="headerlink" href="#lesson02-export-pdf" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Для більшості навчальних робіт достатньо стандартних параметрів експорту. Якщо документ містить посилання, можна залишити ввімкнену підтримку гіперпосилань, щоб вони працювали в електронному PDF.</p>
+</section>
+<section id="id15">
+<h4><span class="section-number">2.2.3.5. </span>Одночасна робота з кількома документами<a class="headerlink" href="#id15" title="Link to this heading">#</a></h4>
+<p>У LibreOffice Writer можна відкрити кілька документів одночасно. Кожен документ відкривається в окремому вікні. Перемикатися між ними можна через меню <strong>Window</strong>, через панель задач операційної системи або комбінаціями клавіш, які використовуються у вашій системі.</p>
+<p>Це зручно, коли потрібно перенести фрагмент тексту з одного документа в інший, порівняти два варіанти роботи або використати попередній документ як зразок. Важливо стежити, у якому саме вікні ви зараз працюєте, щоб випадково не змінити не той файл.</p>
+</section>
+</section>
+<section id="id16">
+<h3><span class="section-number">2.2.4. </span>Друк і попередній перегляд<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<p>Перед друком або здачею PDF варто переглянути документ як цілісний макет. Для цього використовуйте <strong>File → Print Preview</strong> або команду друку <strong>File → Print</strong>.</p>
+<p>Щоб надрукувати документ, виконайте такі дії:</p>
+<ol class="arabic simple">
+<li><p>Виберіть <strong>File → Print</strong> або натисніть <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">P</kbd>.</p></li>
+<li><p>Виберіть принтер.</p></li>
+<li><p>Укажіть потрібні сторінки, кількість копій та інші параметри друку.</p></li>
+<li><p>Перевірте попередній вигляд документа.</p></li>
+<li><p>Натисніть <strong>Print</strong>.</p></li>
+</ol>
+<p>Якщо фізичний друк не потрібен, але треба отримати файл для подання, використовуйте експорт у PDF, а не команду друку.</p>
+</section>
+<section id="id17">
+<h3><span class="section-number">2.2.5. </span>Налаштування параметрів документа<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<p>Параметри сторінки визначають, як документ буде розміщено на аркуші: формат паперу, орієнтацію сторінки та поля. У LibreOffice Writer ці параметри можна налаштувати через меню <strong>Format → Page Style</strong>.</p>
+<p>У вікні налаштування стилю сторінки зверніть увагу на такі параметри:</p>
+<ul class="simple">
+<li><p><strong>Paper format</strong> — формат сторінки, наприклад A4;</p></li>
+<li><p><strong>Orientation</strong> — книжкова або альбомна орієнтація;</p></li>
+<li><p><strong>Margins</strong> — верхнє, нижнє, ліве та праве поле сторінки.</p></li>
+</ul>
+<p>Параметри сторінки показано на рис. <a class="fig-num-reference" href="#lesson02-page-style">2.8</a>.</p>
+<figure class="align-default" id="lesson02-page-style">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vSgbseAlQ0JxoMWnChZFxySjLVE5qTtGk_nsMBbNlzYgVCUmA4W1AV11TG96W1u3efaLU8sR7fUa_4O/pub?w=960&amp;h=720"><img alt="Налаштування параметрів сторінки в LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vSgbseAlQ0JxoMWnChZFxySjLVE5qTtGk_nsMBbNlzYgVCUmA4W1AV11TG96W1u3efaLU8sR7fUa_4O/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.8 </span><span class="caption-text">Налаштування параметрів сторінки в LibreOffice Writer</span><a class="headerlink" href="#lesson02-page-style" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Для звичайної студентської роботи найчастіше використовують формат <strong>A4</strong>, книжкову орієнтацію та стандартні поля. Якщо викладач або шаблон роботи задає інші вимоги, потрібно використовувати саме їх.</p>
+</section>
+<section id="id18">
+<h3><span class="section-number">2.2.6. </span>Введення та редагування тексту<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<p>Після створення нового документа в робочій області з’являється текстовий курсор. Він показує місце, у якому буде введено наступний символ. Під час набору текст автоматично переходить на новий рядок, коли доходить до правого поля сторінки.</p>
+<p>Новий абзац створюють клавішею <kbd class="kbd docutils literal notranslate">Enter</kbd>. Не потрібно натискати <kbd class="kbd docutils literal notranslate">Enter</kbd> у кінці кожного рядка: текстовий процесор сам переносить рядки всередині абзацу. Клавішу <kbd class="kbd docutils literal notranslate">Enter</kbd> використовують тоді, коли справді треба почати новий абзац.</p>
+<p>Для вставлення нерозривного пробілу використовуйте <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Shift</kbd> + <kbd class="kbd docutils literal notranslate">Space</kbd>. Такий пробіл потрібний, наприклад, між ініціалами та прізвищем, щоб вони не розривалися між різними рядками.</p>
+<section id="id19">
+<h4><span class="section-number">2.2.6.1. </span>Розрив сторінки<a class="headerlink" href="#id19" title="Link to this heading">#</a></h4>
+<p>Іноді потрібно почати нову частину документа з наступної сторінки, навіть якщо попередня сторінка ще не заповнена. Для цього використовують розрив сторінки: <strong>Insert → Page Break</strong> або <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Enter</kbd>.</p>
+<p>Розрив сторінки не треба замінювати багатьма порожніми абзацами. Якщо натискати <kbd class="kbd docutils literal notranslate">Enter</kbd> багато разів, документ легко “роз’їдеться” після додавання або вилучення тексту.</p>
+</section>
+<section id="id20">
+<h4><span class="section-number">2.2.6.2. </span>Виправлення тексту<a class="headerlink" href="#id20" title="Link to this heading">#</a></h4>
+<p>Для вилучення символів використовують клавіші <kbd class="kbd docutils literal notranslate">Backspace</kbd> і <kbd class="kbd docutils literal notranslate">Delete</kbd>:</p>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">Backspace</kbd> вилучає символ ліворуч від курсора;</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Delete</kbd> вилучає символ праворуч від курсора.</p></li>
+</ul>
+<p>Якщо потрібно вилучити або замінити більший фрагмент, спочатку виділіть його, а потім натисніть <kbd class="kbd docutils literal notranslate">Delete</kbd> або введіть новий текст. Виділений текст буде замінено тим, що ви набираєте.</p>
+<p>Щоб скасувати останню дію, використовуйте <strong>Edit → Undo</strong> або <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Z</kbd>. Щоб повторити скасовану дію, використовуйте <strong>Edit → Redo</strong> або <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Y</kbd>.</p>
+</section>
+</section>
+<section id="id21">
+<h3><span class="section-number">2.2.7. </span>Перевірка правопису<a class="headerlink" href="#id21" title="Link to this heading">#</a></h3>
+<p>LibreOffice Writer може автоматично підкреслювати слова, у яких програма бачить можливі помилки. Зазвичай орфографічні помилки позначаються хвилястим підкресленням. Якщо слово підкреслено, це не завжди означає, що воно написане неправильно: іноді слова просто немає у словнику програми.</p>
+<p>Щоб перевірка українського тексту працювала коректно, для тексту має бути вибрана українська мова. Це можна перевірити в рядку стану або через меню <strong>Tools → Language</strong>.</p>
+<section id="id22">
+<h4><span class="section-number">2.2.7.1. </span>Виправлення підкресленого слова<a class="headerlink" href="#id22" title="Link to this heading">#</a></h4>
+<p>Щоб переглянути варіанти виправлення, клацніть правою кнопкою миші по підкресленому слову. У контекстному меню LibreOffice Writer запропонує можливі варіанти заміни. Якщо серед них є правильний варіант, виберіть його. Приклад такого меню показано на рис. <a class="fig-num-reference" href="#lesson02-spelling-context">2.9</a>.</p>
+<figure class="align-default" id="lesson02-spelling-context">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vRKEmMNc5MFK3Jcpnj94SynaVvGwdHAUB7z_g8_VS729KEwtX2fXd-AY1DbfS4ap0PLIxe1DumrjB5J/pub?w=960&amp;h=720"><img alt="Варіанти виправлення слова в LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vRKEmMNc5MFK3Jcpnj94SynaVvGwdHAUB7z_g8_VS729KEwtX2fXd-AY1DbfS4ap0PLIxe1DumrjB5J/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.9 </span><span class="caption-text">Варіанти виправлення слова в LibreOffice Writer</span><a class="headerlink" href="#lesson02-spelling-context" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Якщо слово написане правильно, але програма його не знає, можна залишити його без змін. Не варто автоматично приймати перший запропонований варіант: перевірка правопису допомагає, але не замінює уважного читання тексту.</p>
+</section>
+<section id="id23">
+<h4><span class="section-number">2.2.7.2. </span>Повна перевірка документа<a class="headerlink" href="#id23" title="Link to this heading">#</a></h4>
+<p>Після завершення набору тексту запустіть перевірку всього документа командою <strong>Tools → Spelling</strong> або клавішею <kbd class="kbd docutils literal notranslate">F7</kbd>. Програма по черзі показуватиме можливі помилки та варіанти виправлення.</p>
+<p>У вікні перевірки можна виконувати такі дії:</p>
+<ul class="simple">
+<li><p><strong>Correct</strong> або вибір запропонованого варіанта — виправити слово;</p></li>
+<li><p><strong>Ignore Once</strong> — пропустити це місце один раз;</p></li>
+<li><p><strong>Ignore All</strong> — пропустити всі такі випадки в документі;</p></li>
+<li><p><strong>Add to Dictionary</strong> — додати слово до словника, якщо воно справді правильне.</p></li>
+</ul>
+<p>Вікно перевірки правопису показано на рис. <a class="fig-num-reference" href="#lesson02-spelling-dialog">2.10</a>.</p>
+<figure class="align-default" id="lesson02-spelling-dialog">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vR-_e1P-T4v_0UnRWDs_QNq0BGBhsgcYKaOkUIxJNQ8hwr3xjDe_zpcFp04iLEjCJ8Tm8f79Q1BDORP/pub?w=960&amp;h=720"><img alt="Перевірка правопису в LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vR-_e1P-T4v_0UnRWDs_QNq0BGBhsgcYKaOkUIxJNQ8hwr3xjDe_zpcFp04iLEjCJ8Tm8f79Q1BDORP/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.10 </span><span class="caption-text">Перевірка правопису в LibreOffice Writer</span><a class="headerlink" href="#lesson02-spelling-dialog" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Після автоматичної перевірки все одно перечитайте текст самостійно. Програма може не помітити помилку, якщо помилково введене слово теж існує у словнику.</p>
+</section>
+</section>
+<section id="id24">
+<h3><span class="section-number">2.2.8. </span>Виділення фрагментів тексту<a class="headerlink" href="#id24" title="Link to this heading">#</a></h3>
+<p>Перед форматуванням, копіюванням або вилученням тексту потрібно показати програмі, з якою частиною документа ви працюєте. Для цього фрагмент тексту виділяють мишею або клавіатурою.</p>
+<p>Найуживаніші способи виділення:</p>
+<ul class="simple">
+<li><p>слово — двічі клацнути по слову;</p></li>
+<li><p>абзац — тричі клацнути всередині абзацу;</p></li>
+<li><p>кілька слів або рядків — протягнути мишею від початку до кінця фрагмента;</p></li>
+<li><p>великий фрагмент — клацнути на початку, утримати <kbd class="kbd docutils literal notranslate">Shift</kbd> і клацнути в кінці фрагмента;</p></li>
+<li><p>весь документ — натиснути <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">A</kbd>.</p></li>
+</ul>
+<p>Щоб скасувати виділення, клацніть у будь-якому місці документа поза виділеним фрагментом. Якщо почати набирати текст, коли фрагмент уже виділений, виділений текст буде замінено новим.</p>
+<div class="warning admonition">
+<p class="admonition-title">Типова помилка</p>
+<p>Не натискайте <kbd class="kbd docutils literal notranslate">Delete</kbd>, якщо випадково виділили великий фрагмент тексту. Спершу переконайтеся, що виділено саме те, що потрібно змінити або вилучити.</p>
+</div>
+</section>
+<section id="id25">
+<h3><span class="section-number">2.2.9. </span>Дії над фрагментами тексту<a class="headerlink" href="#id25" title="Link to this heading">#</a></h3>
+<p>З виділеним фрагментом можна виконувати стандартні дії: копіювати, вирізати, вставляти, вилучати або переміщувати. У LibreOffice Writer ці команди доступні через меню <strong>Edit</strong>, контекстне меню правої кнопки миші та клавіатурні скорочення.</p>
+<p>Основні комбінації клавіш:</p>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">C</kbd> — скопіювати виділений фрагмент;</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">X</kbd> — вирізати виділений фрагмент;</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">V</kbd> — вставити скопійований або вирізаний фрагмент;</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Delete</kbd> — вилучити виділений фрагмент.</p></li>
+</ul>
+<p>Щоб перемістити фрагмент тексту, можна скористатися послідовністю <strong>вирізати → поставити курсор у нове місце → вставити</strong>. Для невеликих фрагментів також можна використати перетягування мишею, але цей спосіб потребує уважності: легко випадково перенести текст не туди.</p>
+<p>Після вставлення фрагмента перевірте, чи не змінилося форматування навколишнього тексту. Якщо вставлений текст має інший вигляд, його можна відформатувати вручну або застосувати до нього потрібний стиль.</p>
+</section>
+<section id="id26">
+<h3><span class="section-number">2.2.10. </span>Форматування тексту<a class="headerlink" href="#id26" title="Link to this heading">#</a></h3>
+<p>Форматування змінює зовнішній вигляд тексту: шрифт, розмір, накреслення, колір, підкреслення та інші властивості символів. Перед форматуванням потрібно виділити фрагмент тексту або поставити курсор у місце, з якого буде вводитися текст із новими параметрами.</p>
+<p>У LibreOffice Writer базові інструменти форматування розташовані на панелі форматування. Якщо панелі не видно, її можна ввімкнути через <strong>View → Toolbars → Formatting</strong>. Основні інструменти форматування показано на рис. <a class="fig-num-reference" href="#lesson02-character-toolbar">2.11</a>.</p>
+<figure class="align-default" id="lesson02-character-toolbar">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vSk1W3V2W4vjuug9a79bjPsBWc5EYBR5cf9wNS8EXvpZAb_snbpqtTgVmCpApEgsK4RCVaNmUM6hVxJ/pub?w=960&amp;h=720"><img alt="Панель форматування символів у LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vSk1W3V2W4vjuug9a79bjPsBWc5EYBR5cf9wNS8EXvpZAb_snbpqtTgVmCpApEgsK4RCVaNmUM6hVxJ/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.11 </span><span class="caption-text">Панель форматування символів у LibreOffice Writer</span><a class="headerlink" href="#lesson02-character-toolbar" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="id27">
+<h4><span class="section-number">2.2.10.1. </span>Форматування шрифту<a class="headerlink" href="#id27" title="Link to this heading">#</a></h4>
+<p>Для зміни шрифту або розміру тексту виконайте такі дії:</p>
+<ol class="arabic simple">
+<li><p>Виділіть потрібний фрагмент тексту.</p></li>
+<li><p>Виберіть шрифт у списку назв шрифтів.</p></li>
+<li><p>Виберіть розмір шрифту у списку розмірів або введіть значення вручну.</p></li>
+<li><p>Перевірте, чи текст залишився читабельним і не порушив загальний вигляд документа.</p></li>
+</ol>
+<p>Для звичайних студентських робіт краще використовувати прості читабельні шрифти й не змішувати багато різних шрифтів в одному документі. Якщо викладач задає конкретні вимоги до шрифту й розміру, потрібно дотримуватися саме цих вимог.</p>
+</section>
+<section id="id28">
+<h4><span class="section-number">2.2.10.2. </span>Накреслення і колір<a class="headerlink" href="#id28" title="Link to this heading">#</a></h4>
+<p>До виділеного тексту можна застосувати базові атрибути:</p>
+<ul class="simple">
+<li><p><strong>Bold</strong> — напівжирне накреслення;</p></li>
+<li><p><strong>Italic</strong> — курсив;</p></li>
+<li><p><strong>Underline</strong> — підкреслення;</p></li>
+<li><p><strong>Strikethrough</strong> — закреслення;</p></li>
+<li><p><strong>Font Color</strong> — колір символів;</p></li>
+<li><p><strong>Highlighting</strong> — колір тла за текстом.</p></li>
+</ul>
+<p>Ці атрибути варто використовувати помірковано. Наприклад, напівжирне накреслення доречне для короткого смислового виділення, але цілий абзац напівжирним текстом читати важче.</p>
+</section>
+<section id="id29">
+<h4><span class="section-number">2.2.10.3. </span>Верхній і нижній індекс<a class="headerlink" href="#id29" title="Link to this heading">#</a></h4>
+<p>Верхній і нижній індекс використовують тоді, коли символ має бути зміщений відносно основного рядка. Наприклад, у формулах або позначеннях можна записати <strong>H₂O</strong>, <strong>x²</strong>, <strong>m³</strong>. У LibreOffice Writer ці параметри доступні на панелі форматування або через <strong>Format → Character</strong>.</p>
+</section>
+<section id="id30">
+<h4><span class="section-number">2.2.10.4. </span>Розширені параметри символів<a class="headerlink" href="#id30" title="Link to this heading">#</a></h4>
+<p>Детальніші параметри символів відкриваються через <strong>Format → Character</strong>. У цьому вікні можна налаштувати шрифт, накреслення, ефекти, положення символів, інтервал між символами та інші параметри. Приклад такого вікна показано на рис. <a class="fig-num-reference" href="#lesson02-character-dialog">2.12</a>.</p>
+<figure class="align-default" id="lesson02-character-dialog">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vQ0IQRFfHDSlnZ1UC19Kzf0w41kFkyRbZaDb1wWQkdhpiTLOK2WCPqwwNDh0HsSgzA3UAtyiqte17gb/pub?w=960&amp;h=720"><img alt="Розширені параметри символів у LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vQ0IQRFfHDSlnZ1UC19Kzf0w41kFkyRbZaDb1wWQkdhpiTLOK2WCPqwwNDh0HsSgzA3UAtyiqte17gb/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.12 </span><span class="caption-text">Розширені параметри символів у LibreOffice Writer</span><a class="headerlink" href="#lesson02-character-dialog" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Для більшості завдань достатньо панелі форматування. Вікно <strong>Character</strong> варто відкривати тоді, коли потрібно точно налаштувати параметри символів або виправити форматування, яке не вдається змінити звичайними кнопками.</p>
+</section>
+</section>
+<section id="id31">
+<h3><span class="section-number">2.2.11. </span>Форматування абзаців<a class="headerlink" href="#id31" title="Link to this heading">#</a></h3>
+<p>Форматування абзацу змінює вигляд цілого абзацу: вирівнювання, відступи, міжрядковий інтервал, інтервали перед і після абзацу, а також поведінку абзацу на межі сторінок. Щоб змінити параметри одного абзацу, достатньо поставити курсор усередину нього. Якщо потрібно змінити кілька абзаців, їх треба виділити.</p>
+<p>Базові параметри абзацу доступні на панелі форматування та в меню <strong>Format → Paragraph</strong>. Приклад інструментів для роботи з абзацом показано на рис. <a class="fig-num-reference" href="#lesson02-paragraph-toolbar">2.13</a>.</p>
+<figure class="align-default" id="lesson02-paragraph-toolbar">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vRqugMWls7ljYHP3HHjV8Jq7d7BkaiUY3Ol-7GybXgpoHTPhSUgbG7vuZ58T0scwh0B1Bvt8EWvIOqo/pub?w=960&amp;h=720"><img alt="Інструменти форматування абзаців у LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vRqugMWls7ljYHP3HHjV8Jq7d7BkaiUY3Ol-7GybXgpoHTPhSUgbG7vuZ58T0scwh0B1Bvt8EWvIOqo/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.13 </span><span class="caption-text">Інструменти форматування абзаців у LibreOffice Writer</span><a class="headerlink" href="#lesson02-paragraph-toolbar" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<section id="id32">
+<h4><span class="section-number">2.2.11.1. </span>Вирівнювання тексту<a class="headerlink" href="#id32" title="Link to this heading">#</a></h4>
+<p>Для абзацу можна вибрати один із типів вирівнювання:</p>
+<ul class="simple">
+<li><p><strong>Align Left</strong> — вирівнювання за лівим краєм;</p></li>
+<li><p><strong>Centered</strong> — вирівнювання по центру;</p></li>
+<li><p><strong>Align Right</strong> — вирівнювання за правим краєм;</p></li>
+<li><p><strong>Justified</strong> — вирівнювання за шириною.</p></li>
+</ul>
+<p>Для основного тексту зазвичай використовують вирівнювання за лівим краєм або за шириною. Вирівнювання по центру доречне для заголовків, але не для великих абзаців.</p>
+</section>
+<section id="id33">
+<h4><span class="section-number">2.2.11.2. </span>Міжрядковий інтервал<a class="headerlink" href="#id33" title="Link to this heading">#</a></h4>
+<p>Міжрядковий інтервал визначає відстань між рядками всередині абзацу. Найчастіше використовують одинарний, півторарядковий або подвійний інтервал. У LibreOffice Writer ці параметри можна змінити на панелі форматування або через <strong>Format → Paragraph → Indents &amp; Spacing</strong>.</p>
+<p>Окремо можна налаштувати інтервали <strong>Above paragraph</strong> і <strong>Below paragraph</strong>. Вони задають відстань перед абзацом і після нього. Це кращий спосіб відокремлювати абзаци, ніж вставляти порожні рядки клавішею <kbd class="kbd docutils literal notranslate">Enter</kbd>.</p>
+</section>
+<section id="id34">
+<h4><span class="section-number">2.2.11.3. </span>Відступи абзаців<a class="headerlink" href="#id34" title="Link to this heading">#</a></h4>
+<p>Відступи визначають, наскільки абзац зміщений відносно полів сторінки. У LibreOffice Writer можна налаштувати:</p>
+<ul class="simple">
+<li><p>відступ зліва;</p></li>
+<li><p>відступ справа;</p></li>
+<li><p>відступ першого рядка;</p></li>
+<li><p>виступ першого рядка.</p></li>
+</ul>
+<p>Для налаштування відступів використовуйте лінійку або вікно <strong>Format → Paragraph → Indents &amp; Spacing</strong>. Приклад налаштування відступів та інтервалів показано на рис. <a class="fig-num-reference" href="#lesson02-paragraph-toolbar">2.13</a>.</p>
+<p>Абзацний відступ першого рядка часто використовують в основному тексті. Виступ першого рядка частіше потрібний у списках, бібліографії або спеціально структурованих фрагментах.</p>
+</section>
+<section id="id35">
+<h4><span class="section-number">2.2.11.4. </span>Додаткові параметри абзацу<a class="headerlink" href="#id35" title="Link to this heading">#</a></h4>
+<p>У багатосторінковому документі важливо контролювати, як абзац поводиться на межі сторінок. Для цього в LibreOffice Writer використовується вкладка <strong>Text Flow</strong> у вікні <strong>Paragraph</strong>.</p>
+<p>Там можна налаштувати, наприклад, заборону висячих рядків або вимогу не відривати абзац від наступного. Такі параметри не потрібні для кожного короткого документа, але вони корисні, коли текст має виглядати акуратно після друку або експорту в PDF. Приклад вкладки <strong>Text Flow</strong> показано на рис. <a class="fig-num-reference" href="#lesson02-paragraph-text-flow">2.14</a>.</p>
+<figure class="align-default" id="lesson02-paragraph-text-flow">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vTZM-ROjKXibt5Zph7YkDxuYrgW4-kKpOPeYrkv6rQJ4FRr61IpJ1RWDps6F7QgtObyOcy1_yqGOCHl/pub?w=960&amp;h=720"><img alt="Параметри Text Flow для абзацу в LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vTZM-ROjKXibt5Zph7YkDxuYrgW4-kKpOPeYrkv6rQJ4FRr61IpJ1RWDps6F7QgtObyOcy1_yqGOCHl/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.14 </span><span class="caption-text">Параметри Text Flow для абзацу в LibreOffice Writer</span><a class="headerlink" href="#lesson02-paragraph-text-flow" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Для першого знайомства з форматуванням абзаців достатньо впевнено користуватися вирівнюванням, відступами та міжрядковим інтервалом. Розширені параметри варто відкривати тоді, коли потрібно виправити вигляд тексту на сторінці.</p>
+</section>
+</section>
+<section id="id36">
+<h3><span class="section-number">2.2.12. </span>Копіювання заданого форматування<a class="headerlink" href="#id36" title="Link to this heading">#</a></h3>
+<p>Якщо один фрагмент тексту вже оформлено правильно, його форматування можна скопіювати на інший фрагмент. У LibreOffice Writer для цього використовують інструмент <strong>Clone Formatting</strong> на панелі інструментів.</p>
+<p>Послідовність дій така:</p>
+<ol class="arabic simple">
+<li><p>Виділіть фрагмент, оформлення якого потрібно скопіювати.</p></li>
+<li><p>Натисніть кнопку <strong>Clone Formatting</strong>.</p></li>
+<li><p>Виділіть фрагмент, до якого потрібно застосувати таке саме оформлення.</p></li>
+</ol>
+<p>Інструмент копіює саме оформлення, а не текст. Це зручно, коли потрібно швидко зробити кілька заголовків, абзаців або підписів однаковими за виглядом. Приклад інструмента <strong>Clone Formatting</strong> показано на рис. <a class="fig-num-reference" href="#lesson02-clone-formatting">2.15</a>.</p>
+<figure class="align-default" id="lesson02-clone-formatting">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vRE_B3uEAGrGAIAUMQizNLwuCnOhMFZR6-SPLrm-L1ScfGfE--B-tlMP_CO91vRrNbL-SAtQtHXHVIN/pub?w=960&amp;h=720"><img alt="Інструмент Clone Formatting у LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vRE_B3uEAGrGAIAUMQizNLwuCnOhMFZR6-SPLrm-L1ScfGfE--B-tlMP_CO91vRrNbL-SAtQtHXHVIN/pub?w=960&amp;h=720" style="width: 50%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.15 </span><span class="caption-text">Інструмент Clone Formatting у LibreOffice Writer</span><a class="headerlink" href="#lesson02-clone-formatting" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id37">
+<h3><span class="section-number">2.2.13. </span>Табуляція<a class="headerlink" href="#id37" title="Link to this heading">#</a></h3>
+<p>Табуляцію використовують для точного розміщення тексту всередині абзацу. Символ табуляції вводять клавішею <kbd class="kbd docutils literal notranslate">Tab</kbd>. На відміну від кількох пробілів, табуляція прив’язує текст до заданої позиції, тому вирівнювання залишається стабільнішим.</p>
+<p>Табулятори можна встановлювати на горизонтальній лінійці. Для цього потрібно вибрати тип табулятора і клацнути на лінійці в потрібному місці. Найчастіше використовують такі типи:</p>
+<ul class="simple">
+<li><p>лівий табулятор — текст починається від позиції табулятора вправо;</p></li>
+<li><p>центральний табулятор — текст центрується відносно позиції табулятора;</p></li>
+<li><p>правий табулятор — текст закінчується біля позиції табулятора.</p></li>
+</ul>
+<p>Приклад розміщення табуляторів на лінійці показано на рис. <a class="fig-num-reference" href="#lesson02-tabs-ruler">2.16</a>.</p>
+<figure class="align-default" id="lesson02-tabs-ruler">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vTbJdQGX5j3VIdSZVhBPdNCLOMmagZOQLBoBDLVhkrPH58UZuY2HRZ6zQdrQoLXb9UjZFaohDVT2lpG/pub?w=960&amp;h=720"><img alt="Табулятори на лінійці LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vTbJdQGX5j3VIdSZVhBPdNCLOMmagZOQLBoBDLVhkrPH58UZuY2HRZ6zQdrQoLXb9UjZFaohDVT2lpG/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.16 </span><span class="caption-text">Табулятори на лінійці LibreOffice Writer</span><a class="headerlink" href="#lesson02-tabs-ruler" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Табуляцію не варто використовувати замість таблиць. Якщо потрібно оформити дані в кілька стовпців із багатьма рядками, краще створити таблицю через меню <strong>Table</strong>.</p>
+</section>
+<section id="id38">
+<h3><span class="section-number">2.2.14. </span>Пошук тексту в документах<a class="headerlink" href="#id38" title="Link to this heading">#</a></h3>
+<p>Для пошуку слова або фрагмента тексту використовуйте <strong>Edit → Find</strong> або комбінацію клавіш <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">F</kbd>. У полі пошуку введіть потрібне слово чи словосполучення. LibreOffice Writer покаже знайдені збіги в документі та дозволить переходити між ними.</p>
+<p>Пошук корисний не лише для знаходження потрібного місця, а й для перевірки повторюваних слів, однакових назв, імен, термінів або помилкових написань.</p>
+</section>
+<section id="id39">
+<h3><span class="section-number">2.2.15. </span>Заміна тексту в документах<a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
+<p>Для заміни тексту використовуйте <strong>Edit → Find and Replace</strong> або комбінацію клавіш <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">H</kbd>. У полі <strong>Find</strong> введіть текст, який потрібно знайти, а в полі <strong>Replace</strong> — текст, на який його потрібно замінити.</p>
+<p>Можна виконувати заміну двома способами:</p>
+<ul class="simple">
+<li><p><strong>Replace</strong> — переглядати знайдені фрагменти по одному й вирішувати, чи замінювати кожен випадок;</p></li>
+<li><p><strong>Replace All</strong> — замінити всі знайдені входження одразу.</p></li>
+</ul>
+<p>Команду <strong>Replace All</strong> потрібно використовувати обережно. Перед масовою заміною варто переконатися, що пошук знаходить саме ті фрагменти, які потрібно змінити. Вікно пошуку й заміни показано на рис. <a class="fig-num-reference" href="#lesson02-find-replace">2.17</a>.</p>
+<figure class="align-default" id="lesson02-find-replace">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vRp-GLBUNyyVYnROasgWWF0s0t1E_g7zsCF_qJPiLyZIX_asyHsqxqrAWpPzpPeFzbrxDVPkMQ6xS_C/pub?w=960&amp;h=720"><img alt="Пошук і заміна тексту в LibreOffice Writer" src="https://docs.google.com/drawings/d/e/2PACX-1vRp-GLBUNyyVYnROasgWWF0s0t1E_g7zsCF_qJPiLyZIX_asyHsqxqrAWpPzpPeFzbrxDVPkMQ6xS_C/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 2.17 </span><span class="caption-text">Пошук і заміна тексту в LibreOffice Writer</span><a class="headerlink" href="#lesson02-find-replace" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id40">
+<h3><span class="section-number">2.2.16. </span>Розширений пошук<a class="headerlink" href="#id40" title="Link to this heading">#</a></h3>
+<p>У LibreOffice Writer можна використовувати розширені параметри пошуку: врахування регістру, пошук цілих слів, пошук за форматуванням і регулярні вирази. Для цього відкрийте <strong>Edit → Find and Replace</strong> і розгорніть додаткові параметри пошуку.</p>
+<p>Регулярні вирази дають змогу шукати не лише конкретний текст, а й текст за шаблоном. Наприклад, можна знайти слова, які починаються з певної літери, містять цифри або мають повторювану структуру.</p>
+<p>Приклади простих регулярних виразів:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>.              будь-який один символ
+.*             будь-яка кількість будь-яких символів
+[aeiou]        одна голосна літера з указаного набору
+[0-9]          одна цифра
+\bword\b       слово word як окреме слово
+</pre></div>
+</div>
+<p>Регулярні вирази корисні для лінгвістичних завдань, але їх потрібно перевіряти на невеликому фрагменті тексту. Якщо шаблон задано неточно, пошук може знайти забагато або замало збігів.</p>
+</section>
+</section>
+<section id="id41">
+<h2><span class="section-number">2.3. </span>Практичні завдання<a class="headerlink" href="#id41" title="Link to this heading">#</a></h2>
+<p>Виконайте однаковий набір дій у трьох текстових процесорах:</p>
+<ol class="arabic simple">
+<li><p><strong>Microsoft Word</strong>: настільна версія або Word у Microsoft 365.</p></li>
+<li><p><strong>Локальний альтернативний редактор</strong>: LibreOffice Writer, OpenOffice Writer, Apple Pages, OnlyOffice, WPS Writer або інший доступний редактор.</p></li>
+<li><p><strong>Хмарний редактор</strong>: Google Docs, Word Online, OnlyOffice у хмарі або інший браузерний редактор.</p></li>
+</ol>
+<p>Команди в різних редакторах можуть називатися по-різному. Орієнтуйтеся не на точну назву кнопки, а на дію: створити документ, зберегти його, відформатувати текст, перевірити правопис, виконати пошук і експортувати результат у PDF.</p>
+<p>Для кожного редактора виконайте такі дії:</p>
+<ol class="arabic simple">
+<li><p>Створіть новий текстовий документ.</p></li>
+<li><p>Розгляньте вікно редактора. Знайдіть робочу область, головне меню або панель команд, панель форматування, лінійку, рядок стану або його аналог.</p></li>
+<li><p>Якщо лінійку не видно, увімкніть її, якщо така можливість є в редакторі.</p></li>
+<li><p>Налаштуйте зручний масштаб перегляду документа.</p></li>
+<li><p>Перевірте, чи для тексту встановлена українська мова або відповідна мова перевірки правопису.</p></li>
+<li><p>Збережіть документ у робочій папці або у хмарному сховищі. Назвіть файл за схемою <code class="docutils literal notranslate"><span class="pre">Редактор_Прізвище_група_ЛР1</span></code>.</p></li>
+<li><p>Наберіть короткий текст про себе або навчання обсягом не менше чотирьох абзаців.</p></li>
+<li><p>Застосуйте до різних абзаців різне вирівнювання: за лівим краєм, по центру, за правим краєм і за шириною.</p></li>
+<li><p>Змініть шрифт і розмір шрифту для заголовка. Основний текст залиште читабельним і однотипним.</p></li>
+<li><p>Виділіть одне ключове слово напівжирним, одне слово курсивом, одне слово підкресленням і одне слово кольором.</p></li>
+<li><p>Застосуйте підсвічування або інший спосіб виділення до одного короткого фрагмента тексту.</p></li>
+<li><p>Для одного абзацу встановіть абзацний відступ першого рядка приблизно 1 см або найближчий доступний еквівалент.</p></li>
+<li><p>Для одного абзацу змініть міжрядковий інтервал на 1,5 або подвійний.</p></li>
+<li><p>Додайте інтервал після одного з абзаців через параметри абзацу, якщо редактор це підтримує. Не замінюйте це багатьма порожніми рядками.</p></li>
+<li><p>Вставте розрив сторінки або його аналог.</p></li>
+<li><p>На новій сторінці створіть просту титульну сторінку звіту: назва закладу, назва лабораторної роботи, тема, виконавець, викладач, місто і рік.</p></li>
+<li><p>Відформатуйте титульну сторінку так, щоб текст був розміщений охайно і не виходив за межі сторінки.</p></li>
+<li><p>Скопіюйте оформлення одного фрагмента на інший за допомогою інструмента копіювання форматування, якщо він є в редакторі. Якщо такого інструмента немає, відтворіть оформлення вручну.</p></li>
+<li><p>Скопіюйте один абзац у кінець документа.</p></li>
+<li><p>Перемістіть інший абзац у нове місце.</p></li>
+<li><p>Вилучіть один зайвий фрагмент тексту. Якщо помилилися, скасуйте дію.</p></li>
+<li><p>За допомогою пошуку знайдіть у документі одне повторюване слово.</p></li>
+<li><p>За допомогою пошуку й заміни замініть одне слово в документі. Масову заміну використовуйте тільки після перевірки першого знайденого випадку.</p></li>
+<li><p>Знайдіть в інтернеті текст <em>Alice’s Adventures in Wonderland</em> Льюїса Керрола, наприклад на сайті <a class="reference external" href="https://www.gutenberg.org/">Project Gutenberg</a>. Скопіюйте невеликий фрагмент тексту в окремий документ або на окрему сторінку.</p></li>
+<li><p>У фрагменті англійського тексту знайдіть слово <code class="docutils literal notranslate"><span class="pre">child</span></code> як окреме слово або максимально близький до цього варіант пошуку.</p></li>
+<li><p>Спробуйте знайти кілька слів, які починаються на літеру <code class="docutils literal notranslate"><span class="pre">s</span></code>. Якщо редактор підтримує регулярні вирази або розширений пошук, використайте їх і зафіксуйте шаблон пошуку.</p></li>
+<li><p>За допомогою пошуку знайдіть кілька слів, що містять суфікс <code class="docutils literal notranslate"><span class="pre">tion</span></code>.</p></li>
+<li><p>Перевірте правопис документа.</p></li>
+<li><p>Перегляньте документ перед друком або експортом: перевірте сторінки, поля, заголовок, абзаци та розташування тексту.</p></li>
+<li><p>Експортуйте або завантажте готовий документ у PDF.</p></li>
+</ol>
+</section>
+<section id="id42">
+<h2><span class="section-number">2.4. </span>Контрольні питання<a class="headerlink" href="#id42" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Що таке текстовий процесор і для яких завдань його використовують?</p></li>
+<li><p>Які текстові процесори ви використовували під час виконання лабораторної роботи?</p></li>
+<li><p>Чим відрізняються настільні, хмарні та мобільні текстові редактори?</p></li>
+<li><p>З яких основних елементів складається вікно текстового процесора?</p></li>
+<li><p>Для чого потрібні робоча область, рядок меню, панель форматування, лінійка, рядок стану та бічна панель?</p></li>
+<li><p>Як створити новий текстовий документ у різних редакторах?</p></li>
+<li><p>Чому важливо зберігати робочий файл, а не лише експортувати документ у PDF?</p></li>
+<li><p>Для чого використовують формат PDF?</p></li>
+<li><p>Як відкрити вже створений документ у текстовому процесорі?</p></li>
+<li><p>Як змінити масштаб перегляду документа і чи впливає масштаб на друкований вигляд документа?</p></li>
+<li><p>Для чого потрібно встановлювати мову документа?</p></li>
+<li><p>Як перевірити правопис у текстовому процесорі?</p></li>
+<li><p>Чому автоматична перевірка правопису не гарантує відсутності помилок у тексті?</p></li>
+<li><p>Для чого використовують клавішу <kbd class="kbd docutils literal notranslate">Enter</kbd> під час набору тексту?</p></li>
+<li><p>Чому не варто натискати <kbd class="kbd docutils literal notranslate">Enter</kbd> у кінці кожного рядка?</p></li>
+<li><p>Для чого потрібний нерозривний пробіл?</p></li>
+<li><p>Як вставити розрив сторінки і чим він кращий за багато порожніх абзаців?</p></li>
+<li><p>Які способи виділення фрагментів тексту ви знаєте?</p></li>
+<li><p>Для чого використовують комбінації <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">C</kbd>, <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">X</kbd>, <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">V</kbd>, <kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">Z</kbd>?</p></li>
+<li><p>Чим відрізняється копіювання тексту від переміщення тексту?</p></li>
+<li><p>Що таке форматування символів?</p></li>
+<li><p>Які параметри символів можна змінювати в текстовому процесорі?</p></li>
+<li><p>Коли доречно використовувати напівжирне накреслення, курсив, підкреслення або колір тексту?</p></li>
+<li><p>Для чого використовують верхній і нижній індекс?</p></li>
+<li><p>Що таке форматування абзацу?</p></li>
+<li><p>Які типи вирівнювання абзаців ви знаєте?</p></li>
+<li><p>Чим відрізняється абзацний відступ від інтервалу між абзацами?</p></li>
+<li><p>Чому краще налаштовувати інтервал після абзацу, а не вставляти порожні рядки?</p></li>
+<li><p>Для чого використовують стилі в текстовому документі?</p></li>
+<li><p>Що робить інструмент копіювання форматування?</p></li>
+<li><p>Для чого використовують табуляцію?</p></li>
+<li><p>Коли краще використати таблицю замість табуляції?</p></li>
+<li><p>Як виконати пошук слова або фрагмента тексту в документі?</p></li>
+<li><p>Чим відрізняється пошук від пошуку й заміни?</p></li>
+<li><p>Чому команду “замінити все” потрібно використовувати обережно?</p></li>
+<li><p>Що таке регулярні вирази і для яких лінгвістичних завдань вони можуть бути корисними?</p></li>
+<li><p>Які відмінності ви помітили між Microsoft Word, Google Docs і третім редактором, який ви обрали?</p></li>
+<li><p>Які функції були однаковими або дуже подібними в усіх трьох редакторах?</p></li>
+<li><p>Яких функцій не було або вони працювали інакше в одному з редакторів?</p></li>
+<li><p>Який редактор був для вас найзручнішим і чому?</p></li>
+</ol>
+</section>
+<section id="id43">
+<h2><span class="section-number">2.5. </span>Вимоги до виконання і подання<a class="headerlink" href="#id43" title="Link to this heading">#</a></h2>
+<p><strong>Виконайте практичні завдання тричі:</strong></p>
+<ol class="arabic simple">
+<li><p>у <strong>Microsoft Word</strong> (настільна або веб-версія);</p></li>
+<li><p>у <strong>Google Docs</strong>;</p></li>
+<li><p>у <strong>третьому редакторі на вибір</strong>: LibreOffice Writer / OpenOffice Writer / Pages / WPS / OnlyOffice.</p></li>
+</ol>
+<p><strong>Подання в Google Classroom:</strong> завантажте <strong>три PDF-файли</strong>, кожен — експорт із відповідного редактора.</p>
+<p><strong>Схема імені файлу:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;назва</span> <span class="pre">текстового</span> <span class="pre">редактора&gt;_&lt;група&gt;_&lt;ПрізвищеІм’я&gt;_ЛР1.pdf</span></code></p>
+<p><strong>Приклади:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">Word_144_АлукіАнастасія_ЛР1.pdf</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">GoogleDocs_143_ПетренкоІван_ЛР1.pdf</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">LibreOffice_141_ПетренкоІван_ЛР1.pdf</span></code></p></li>
+</ul>
+<div class="note admonition">
+<p class="admonition-title">Коментар щодо недоступних опцій</p>
+<p>Якщо певної опції немає у вашому редакторі, у звіті коротко вкажіть це і опишіть обраний еквівалент дії. За потреби додайте скрін.</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lesson01.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Основи інформаційних технологій</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="lesson03.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>ЛАБОРАТОРНА РОБОТА №2</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.1. План</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.2. Методичні вказівки</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#libreoffice-writer">2.2.1. Інтерфейс LibreOffice Writer</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.2.1.1. Робоча область</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.2.1.2. Меню і панелі інструментів</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.2.1.3. Бічна панель і стилі</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.2.1.4. Лінійка, масштаб і режим перегляду</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.2.2. Налаштування робочого середовища</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2.2.2.1. Панелі інструментів</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.2.2.2. Мова документа і перевірка правопису</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2.2.2.3. Масштаб і зручність роботи</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2.2.3. Операції над файлами</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">2.2.3.1. Створення документа</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">2.2.3.2. Збереження документа</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">2.2.3.3. Відкриття документа</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pdf">2.2.3.4. Експорт у PDF</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">2.2.3.5. Одночасна робота з кількома документами</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2.2.4. Друк і попередній перегляд</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">2.2.5. Налаштування параметрів документа</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">2.2.6. Введення та редагування тексту</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">2.2.6.1. Розрив сторінки</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">2.2.6.2. Виправлення тексту</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">2.2.7. Перевірка правопису</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id22">2.2.7.1. Виправлення підкресленого слова</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id23">2.2.7.2. Повна перевірка документа</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id24">2.2.8. Виділення фрагментів тексту</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id25">2.2.9. Дії над фрагментами тексту</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id26">2.2.10. Форматування тексту</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id27">2.2.10.1. Форматування шрифту</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id28">2.2.10.2. Накреслення і колір</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id29">2.2.10.3. Верхній і нижній індекс</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id30">2.2.10.4. Розширені параметри символів</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id31">2.2.11. Форматування абзаців</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id32">2.2.11.1. Вирівнювання тексту</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id33">2.2.11.2. Міжрядковий інтервал</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id34">2.2.11.3. Відступи абзаців</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id35">2.2.11.4. Додаткові параметри абзацу</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id36">2.2.12. Копіювання заданого форматування</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id37">2.2.13. Табуляція</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id38">2.2.14. Пошук тексту в документах</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id39">2.2.15. Заміна тексту в документах</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id40">2.2.16. Розширений пошук</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id41">2.3. Практичні завдання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id42">2.4. Контрольні питання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id43">2.5. Вимоги до виконання і подання</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

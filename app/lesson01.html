@@ -1,0 +1,959 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>1. Основи інформаційних технологій &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/lab.css?v=9e99ccb3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/lesson01';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="2. ЛАБОРАТОРНА РОБОТА №1" href="lesson02.html" />
+    <link rel="prev" title="🔎 Зміст" href="../index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Основи інформаційних технологій</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson02.html">2. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson03.html">3. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson04.html">4. ЛАБОРАТОРНА РОБОТА №3</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/blob/main/docs/app/lesson01.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/edit/main/docs/app/lesson01.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/issues/new?title=Issue%20on%20page%20%2Fapp/lesson01.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/lesson01.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Основи інформаційних технологій</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.1. Поняття інформації та інформаційних процесів</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1.2. Подання інформації в комп’ютері. Одиниці даних</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">1.3. Системи числення та кодування числових даних</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unicode-utf-8">1.4. Кодування тексту: Unicode та UTF-8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">1.5. Кодування графічних зображень</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">1.6. Кодування звуку</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">1.6.1. Вправи для самостійної роботи</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">1.7. Структура інформаційної системи</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">1.7.1. Апаратне забезпечення інформаційної системи</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">1.7.2. Програмне забезпечення (ПЗ)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">1.7.3. Системне програмне забезпечення. Операційні системи</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">1.7.4. Прикладне програмне забезпечення. Його класифікація</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><span class="section-number">1. </span>Основи інформаційних технологій<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<section id="id2">
+<h2><span class="section-number">1.1. </span>Поняття інформації та інформаційних процесів<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Інформація є одним із ключових ресурсів сучасного суспільства. Вона може бути подана як текст, мовлення, числа, таблиці, графіки, зображення, аудіо, відео, сигнали датчиків та інші дані.</p>
+<p>У Законі України «Про інформацію» інформацію визначено як <strong>будь-які відомості та/або дані, які можуть бути збережені на матеріальних носіях або відображені в електронному вигляді</strong>.<a class="footnote-reference brackets" href="#law-info" id="id3" role="doc-noteref"><span class="fn-bracket">[</span>1<span class="fn-bracket">]</span></a></p>
+<div class="lab-term"><p class="lab-term-title">Інформація</p><p>Відомості та/або дані про об’єкти, події, процеси чи явища, які можна зберігати, передавати, опрацьовувати та інтерпретувати.</p>
+</div><div class="lab-term"><p class="lab-term-title">Дані</p><p>Формалізоване подання інформації у вигляді, придатному для зберігання, передавання або автоматизованого опрацювання.</p>
+</div><p>Те саме повідомлення можна подати різними способами. Наприклад, температуру можна записати числом, показати на графіку або передати усно. Для комп’ютера важливим є не зміст повідомлення сам по собі, а <strong>спосіб його кодування як даних</strong>.</p>
+<p>До основних інформаційних процесів належать:</p>
+<ul class="simple">
+<li><p>створення та збирання даних;</p></li>
+<li><p>пошук і добір;</p></li>
+<li><p>зберігання;</p></li>
+<li><p>передавання;</p></li>
+<li><p>опрацювання й аналіз;</p></li>
+<li><p>подання та візуалізація;</p></li>
+<li><p>поширення;</p></li>
+<li><p>захист і контроль доступу;</p></li>
+<li><p>архівування та видалення.</p></li>
+</ul>
+<div class="lab-term"><p class="lab-term-title">Інформаційна технологія</p><p>Сукупність методів, процесів і технічних та програмних засобів, які використовуються для роботи з інформацією й даними.</p>
+</div><p>Сучасні інформаційні технології охоплюють не лише персональний комп’ютер. Дані можуть опрацьовуватися локально, на мобільних пристроях, серверах, у хмарних сервісах, вбудованих системах та високопродуктивних обчислювальних середовищах.</p>
+<div class="lab-term"><p class="lab-term-title">Інформаційна грамотність</p><p>Здатність усвідомлювати інформаційну потребу, знаходити потрібну інформацію, оцінювати надійність джерел, коректно використовувати, створювати й поширювати інформацію з урахуванням безпеки, авторського права та етики.</p>
+</div><p>Для прикладної і комп’ютерної лінгвістики особливо важливими є текстові дані, аудіо, словники, корпуси, термінологічні бази, системи перекладу, засоби пошуку, розпізнавання й синтезу мовлення та інструменти автоматизованого аналізу мови.</p>
+</section>
+<section id="id4">
+<h2><span class="section-number">1.2. </span>Подання інформації в комп’ютері. Одиниці даних<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>Комп’ютер є цифровою системою. Для зберігання та опрацювання дані подаються скінченними послідовностями числових значень.</p>
+<p>Сигнал може бути:</p>
+<ul class="simple">
+<li><p><strong>аналоговим</strong> — змінюватися неперервно;</p></li>
+<li><p><strong>цифровим</strong> — бути поданим дискретними значеннями.</p></li>
+</ul>
+<p>Звук, температура або освітленість у фізичному світі можуть змінюватися неперервно. Щоб опрацьовувати такі сигнали цифровими засобами, виконують <strong>дискретизацію</strong> та <strong>квантування</strong>.</p>
+<p>Неперервний сигнал апроксимується послідовністю дискретних значень (рис. <a class="fig-num-reference" href="#puc-1">1.1</a>).</p>
+<figure class="align-default" id="puc-1">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vRI2METCk3yRmQ9iqqFmBb7_TKItQaz97_R0A_N_5jGMbo7qGurny2ZnnAFWmJl4hjD3KOy7nEi40aK/pub?w=960&amp;h=720"><img alt="Перетворення неперервного сигналу в дискретні значення" src="https://docs.google.com/drawings/d/e/2PACX-1vRI2METCk3yRmQ9iqqFmBb7_TKItQaz97_R0A_N_5jGMbo7qGurny2ZnnAFWmJl4hjD3KOy7nEi40aK/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 1.1 </span><span class="caption-text">Перетворення неперервного сигналу в дискретні значення</span><a class="headerlink" href="#puc-1" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>У більшості цифрових систем базовим є <strong>двійкове подання</strong>, у якому використовуються два стани — 0 і 1.</p>
+<div class="lab-term"><p class="lab-term-title">Біт</p><p>Найменша двійкова одиниця даних. Біт може набувати одного з двох значень: 0 або 1.</p>
+</div><div class="lab-term"><p class="lab-term-title">Байт</p><p>Група з 8 бітів. Символ байта — <strong>B</strong>, символ біта — <strong>bit</strong> або <strong>b</strong>.</p>
+</div><p>Для великих обсягів даних важливо розрізняти десяткові й двійкові префікси.<a class="footnote-reference brackets" href="#binary-prefixes" id="id5" role="doc-noteref"><span class="fn-bracket">[</span>2<span class="fn-bracket">]</span></a></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Позначення</p></th>
+<th class="head text-right"><p>Значення</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1 kB</p></td>
+<td class="text-right"><p>1 000 B</p></td>
+</tr>
+<tr class="row-odd"><td><p>1 MB</p></td>
+<td class="text-right"><p>1 000 000 B</p></td>
+</tr>
+<tr class="row-even"><td><p>1 GB</p></td>
+<td class="text-right"><p>1 000 000 000 B</p></td>
+</tr>
+<tr class="row-odd"><td><p>1 KiB</p></td>
+<td class="text-right"><p>1 024 B</p></td>
+</tr>
+<tr class="row-even"><td><p>1 MiB</p></td>
+<td class="text-right"><p>1 048 576 B</p></td>
+</tr>
+<tr class="row-odd"><td><p>1 GiB</p></td>
+<td class="text-right"><p>1 073 741 824 B</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Префікси <code class="docutils literal notranslate"><span class="pre">kilo</span></code>, <code class="docutils literal notranslate"><span class="pre">mega</span></code>, <code class="docutils literal notranslate"><span class="pre">giga</span></code> позначають степені 10. Для двійкових степенів використовують <code class="docutils literal notranslate"><span class="pre">kibi</span></code>, <code class="docutils literal notranslate"><span class="pre">mebi</span></code>, <code class="docutils literal notranslate"><span class="pre">gibi</span></code> (<code class="docutils literal notranslate"><span class="pre">Ki</span></code>, <code class="docutils literal notranslate"><span class="pre">Mi</span></code>, <code class="docutils literal notranslate"><span class="pre">Gi</span></code>). У програмних інтерфейсах досі можна зустріти історичне використання <code class="docutils literal notranslate"><span class="pre">KB</span></code>, <code class="docutils literal notranslate"><span class="pre">MB</span></code>, <code class="docutils literal notranslate"><span class="pre">GB</span></code> для двійкових величин, тому при точних розрахунках потрібно перевіряти, яке саме значення мається на увазі.</p>
+</section>
+<section id="id6">
+<h2><span class="section-number">1.3. </span>Системи числення та кодування числових даних<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<p>У повсякденних обчисленнях використовується десяткова система числення з основою 10. У цифровій техніці природною є двійкова система з основою 2.</p>
+<p>Запишемо десяткові цифри в чотирибітному двійковому поданні (табл. <a class="reference internal" href="#lesson01-binary-digit-codes"><span class="std std-numref">Таблиця 1.1</span></a>).</p>
+<div class="pst-scrollable-table-container"><table class="table" id="lesson01-binary-digit-codes">
+<caption><span class="caption-number">Таблиця 1.1 </span><span class="caption-text">Коди десяткових цифр у двійковій системі</span><a class="headerlink" href="#lesson01-binary-digit-codes" title="Link to this table">#</a></caption>
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Цифра</p></th>
+<th class="head"><p>0</p></th>
+<th class="head"><p>1</p></th>
+<th class="head"><p>2</p></th>
+<th class="head"><p>3</p></th>
+<th class="head"><p>4</p></th>
+<th class="head"><p>5</p></th>
+<th class="head"><p>6</p></th>
+<th class="head"><p>7</p></th>
+<th class="head"><p>8</p></th>
+<th class="head"><p>9</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p>Код</p></td>
+<td><p>0000</p></td>
+<td><p>0001</p></td>
+<td><p>0010</p></td>
+<td><p>0011</p></td>
+<td><p>0100</p></td>
+<td><p>0101</p></td>
+<td><p>0110</p></td>
+<td><p>0111</p></td>
+<td><p>1000</p></td>
+<td><p>1001</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Для компактного запису двійкових значень часто використовують <strong>шістнадцяткову систему</strong> з основою 16. Її цифри:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>0 1 2 3 4 5 6 7 8 9 A B C D E F
+</pre></div>
+</div>
+<p>Кожна шістнадцяткова цифра відповідає чотирьом бітам. Наприклад:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>0x7AB = 0111 1010 1011₂
+</pre></div>
+</div>
+<p>Запис із префіксом <code class="docutils literal notranslate"><span class="pre">0x</span></code> широко використовується в мовах програмування, документації, адресах пам’яті, кодах кольорів та інших технічних контекстах.</p>
+<p>Вісімкова система з основою 8 також пов’язана з двійковою, оскільки одна вісімкова цифра відповідає трьом бітам. Сьогодні вона використовується рідше, але, наприклад, зустрічається в записі прав доступу Unix-подібних систем.</p>
+<p>Розрядність процесора (<code class="docutils literal notranslate"><span class="pre">32-bit</span></code>, <code class="docutils literal notranslate"><span class="pre">64-bit</span></code>) не означає, що комп’ютер «за один такт опрацьовує рівно стільки бітів у всіх операціях». Вона пов’язана з архітектурою процесора, розміром регістрів, адресним простором та набором команд. Окремі SIMD-векторні інструкції можуть одночасно опрацьовувати значно ширші блоки даних.</p>
+</section>
+<section id="unicode-utf-8">
+<h2><span class="section-number">1.4. </span>Кодування тексту: Unicode та UTF-8<a class="headerlink" href="#unicode-utf-8" title="Link to this heading">#</a></h2>
+<p>Текст у комп’ютері складається не з «букв, записаних одним байтом», а з кодованих символів.</p>
+<div class="lab-term"><p class="lab-term-title">Символ</p><p>Абстрактна одиниця письма або позначення: літера, цифра, знак пунктуації, математичний знак, emoji тощо.</p>
+</div><div class="lab-term"><p class="lab-term-title">Кодова точка</p><p>Числовий ідентифікатор символу в стандарті Unicode. Кодову точку записують у вигляді <code class="docutils literal notranslate"><span class="pre">U+XXXX</span></code>, наприклад <code class="docutils literal notranslate"><span class="pre">U+0041</span></code>.</p>
+</div><p><strong>Unicode</strong> є універсальним стандартом кодування тексту. Він задає кодові точки та властивості символів для писемностей світу й лежить в основі сучасного багатомовного програмного забезпечення та вебу.<a class="footnote-reference brackets" href="#unicode" id="id7" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
+<p>Наприклад:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A   → U+0041 LATIN CAPITAL LETTER A
+А   → U+0410 CYRILLIC CAPITAL LETTER A
+</pre></div>
+</div>
+<p>Ці два символи виглядають дуже подібно, але належать до різних писемностей і мають різні кодові точки. Для лінгвістичної обробки це принципово: візуальна подібність не означає тотожність даних.</p>
+<p><strong>ASCII</strong> — історичне 7-бітове кодування, яке охоплює 128 значень: латинські літери, цифри, основні знаки пунктуації та керувальні коди. Unicode зберігає ASCII-сумісність для діапазону <code class="docutils literal notranslate"><span class="pre">U+0000–U+007F</span></code>, але сучасний багатомовний текст не обмежується ASCII.</p>
+<div class="lab-term"><p class="lab-term-title">Кодування символів</p><p>Правило перетворення кодових точок у послідовність кодових одиниць або байтів для зберігання й передавання тексту.</p>
+</div><p>Основні форми кодування Unicode — <strong>UTF-8</strong>, <strong>UTF-16</strong> і <strong>UTF-32</strong>. У UTF-8 одна кодова точка кодується від 1 до 4 байтів. Символи ASCII займають 1 байт, а багато кириличних літер — 2 байти.<a class="footnote-reference brackets" href="#unicode" id="id8" role="doc-noteref"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></a></p>
+<p>Наприклад:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>A (U+0041) → 41         у UTF-8
+А (U+0410) → D0 90      у UTF-8
+</pre></div>
+</div>
+<p>Тому твердження «один символ = один байт» для сучасного тексту неправильне.</p>
+<p>Для комп’ютерної лінгвістики важливо також розрізняти:</p>
+<ul class="simple">
+<li><p><strong>кодову точку</strong>;</p></li>
+<li><p><strong>байти конкретного кодування</strong>;</p></li>
+<li><p><strong>гліф</strong> — видиме графічне зображення символу;</p></li>
+<li><p><strong>текстовий елемент</strong>, який іноді може складатися з кількох кодових точок.</p></li>
+</ul>
+<p>Це має значення під час пошуку, сортування, підрахунку символів, нормалізації тексту та зіставлення рядків.</p>
+</section>
+<section id="id9">
+<h2><span class="section-number">1.5. </span>Кодування графічних зображень<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Цифрові зображення можуть бути <strong>растровими</strong> або <strong>векторними</strong>.</p>
+<p>У растровому зображенні площина поділена на пікселі.</p>
+<div class="lab-term"><p class="lab-term-title">Піксель</p><p>Найменший адресований елемент растрового зображення, для якого зберігається значення кольору.</p>
+</div><div class="lab-term"><p class="lab-term-title">Розмір растрового зображення</p><p>Кількість пікселів по горизонталі та вертикалі, наприклад <code class="docutils literal notranslate"><span class="pre">1920×1080</span></code>.</p>
+</div><p>Не слід змішувати три різні поняття:</p>
+<ul class="simple">
+<li><p><strong>розмір у пікселях</strong> (<code class="docutils literal notranslate"><span class="pre">1920×1080</span></code>);</p></li>
+<li><p><strong>щільність пікселів дисплея</strong> — зазвичай PPI (<em>pixels per inch</em>);</p></li>
+<li><p><strong>DPI</strong> (<em>dots per inch</em>) — насамперед характеристика кількості друкованих точок на одиницю довжини.</p></li>
+</ul>
+<p>Для файла зображення найважливішими є розміри в пікселях, глибина кольору й спосіб стиснення.</p>
+<div class="lab-term"><p class="lab-term-title">Глибина кольору</p><p>Кількість бітів, що використовується для кодування кольору одного пікселя.</p>
+</div><p>Якщо на піксель виділено <code class="docutils literal notranslate"><span class="pre">n</span></code> бітів, теоретично можна подати до <code class="docutils literal notranslate"><span class="pre">2^n</span></code> різних значень.</p>
+<p>Наприклад:</p>
+<ul class="simple">
+<li><p>1 біт → 2 значення;</p></li>
+<li><p>4 біти → 16 значень;</p></li>
+<li><p>8 біт → 256 значень;</p></li>
+<li><p>24 біти → 16 777 216 комбінацій RGB.</p></li>
+</ul>
+<p>Для звичайного RGB-зображення з глибиною 24 біти часто використовують по 8 бітів на кожну компоненту:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Red   0–255
+Green 0–255
+Blue  0–255
+</pre></div>
+</div>
+<p>Чорному відповідає <code class="docutils literal notranslate"><span class="pre">(0,</span> <span class="pre">0,</span> <span class="pre">0)</span></code>, білому — <code class="docutils literal notranslate"><span class="pre">(255,</span> <span class="pre">255,</span> <span class="pre">255)</span></code>.</p>
+<figure class="align-default" id="puc-2">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vTFHZqgQGpJcNjPjIZyFjrAZYNUq5ETiozPsk_nboQMhcmjOCioxY8SP_Ub1kcNP2WYKDOhZX9ODNS3/pub?w=960&amp;h=720"><img alt="Адитивне змішування компонентів RGB" src="https://docs.google.com/drawings/d/e/2PACX-1vTFHZqgQGpJcNjPjIZyFjrAZYNUq5ETiozPsk_nboQMhcmjOCioxY8SP_Ub1kcNP2WYKDOhZX9ODNS3/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 1.2 </span><span class="caption-text">Діаграма змішування кольорів RGB</span><a class="headerlink" href="#puc-2" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>У 32-бітному представленні часто до 24 бітів RGB додається 8-бітний <strong>альфа-канал</strong> прозорості. Це не означає появу «4 мільярдів видимих кольорів»: четверта компонента описує прозорість.</p>
+<p>Розмір <strong>нестисненого</strong> растрового зображення можна оцінити:</p>
+<div class="math notranslate nohighlight">
+\[
+V = W \cdot H \cdot D
+\]</div>
+<p>де <code class="docutils literal notranslate"><span class="pre">W</span></code> — ширина в пікселях, <code class="docutils literal notranslate"><span class="pre">H</span></code> — висота, <code class="docutils literal notranslate"><span class="pre">D</span></code> — кількість бітів на піксель. Для одержання байтів результат потрібно поділити на 8.</p>
+<p>Розмір файлів PNG, JPEG, WebP, AVIF та інших стиснених форматів не визначається лише цією формулою: він залежить також від алгоритму стиснення і вмісту зображення.</p>
+</section>
+<section id="id10">
+<h2><span class="section-number">1.6. </span>Кодування звуку<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>Звукова хвиля є неперервним фізичним сигналом. Для цифрового подання звук дискретизують у часі й квантують за амплітудою.</p>
+<div class="lab-term"><p class="lab-term-title">Частота дискретизації</p><p>Кількість вимірювань амплітуди сигналу за одну секунду. Вимірюється в герцах (Hz).</p>
+</div><p>Типові значення для цифрового аудіо — 44,1 kHz, 48 kHz, а в окремих професійних сценаріях — 96 kHz та інші.</p>
+<div class="lab-term"><p class="lab-term-title">Бітова глибина аудіо</p><p>Кількість бітів, що використовується для кодування одного відліку одного каналу.</p>
+</div><p>Наприклад, 16-бітне подання дає <code class="docutils literal notranslate"><span class="pre">2^16</span> <span class="pre">=</span> <span class="pre">65</span> <span class="pre">536</span></code> можливих дискретних рівнів для кожного відліку.</p>
+<p>Для <strong>нестисненого PCM-аудіо</strong> обсяг даних обчислюють за формулою:</p>
+<div class="math notranslate nohighlight">
+\[
+V = T \cdot F \cdot N \cdot C
+\]</div>
+<p>де:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">T</span></code> — тривалість у секундах;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">F</span></code> — частота дискретизації в Hz;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">N</span></code> — бітова глибина;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">C</span></code> — кількість каналів.</p></li>
+</ul>
+<p>Наприклад, для моно <code class="docutils literal notranslate"><span class="pre">C</span> <span class="pre">=</span> <span class="pre">1</span></code>, для стерео <code class="docutils literal notranslate"><span class="pre">C</span> <span class="pre">=</span> <span class="pre">2</span></code>.</p>
+<p>Формула дає кількість <strong>бітів</strong>. Щоб одержати байти, результат потрібно поділити на 8.</p>
+<p>Формати зі стисненням працюють інакше:</p>
+<ul class="simple">
+<li><p><strong>FLAC</strong> стискає без втрат;</p></li>
+<li><p><strong>MP3</strong>, <strong>AAC</strong>, <strong>Opus</strong> використовують стиснення з втратами;</p></li>
+<li><p>фактичний розмір такого файла залежить, зокрема, від бітрейту та режиму кодування.</p></li>
+</ul>
+<section id="id11">
+<h3><span class="section-number">1.6.1. </span>Вправи для самостійної роботи<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Текст містить 18 сторінок по 44 рядки і 65 символів у рядку. Вважайте, що всі символи належать до ASCII і займають по 1 байту в UTF-8. Визначте обсяг тексту в B, kB та KiB.</p></li>
+<li><p>Порівняйте обсяг у UTF-8 двох рядків по 2000 символів: перший складається лише з латинської <code class="docutils literal notranslate"><span class="pre">A</span></code>, другий — лише з кириличної <code class="docutils literal notranslate"><span class="pre">А</span></code>. Вважайте, що <code class="docutils literal notranslate"><span class="pre">A</span></code> займає 1 байт, а <code class="docutils literal notranslate"><span class="pre">А</span></code> — 2 байти.</p></li>
+<li><p>Знайдіть обсяг нестисненого растрового зображення <code class="docutils literal notranslate"><span class="pre">640×480</span></code> пікселів із глибиною кольору 4 біти на піксель. Подайте результат у B і KiB.</p></li>
+<li><p>Нестиснене растрове зображення <code class="docutils literal notranslate"><span class="pre">1024×768</span></code> займає рівно 768 KiB. Визначте кількість бітів на піксель і максимальну кількість значень кольору.</p></li>
+<li><p>Знайдіть обсяг нестисненого PCM-аудіо тривалістю 20 хвилин із частотою дискретизації 24 kHz і бітовою глибиною 6 бітів для моно та стерео. Подайте результат у MiB.</p></li>
+</ol>
+</section>
+</section>
+<section id="id12">
+<h2><span class="section-number">1.7. </span>Структура інформаційної системи<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<div class="lab-term"><p class="lab-term-title">Інформаційна система</p><p>Організована сукупність людей, даних, процесів, програмних і технічних засобів та засобів зв’язку, які взаємодіють для збирання, зберігання, опрацювання й використання інформації.</p>
+</div><p>У простому випадку інформаційною системою може бути один комп’ютер із програмами й файлами користувача. У складних системах використовуються сервери, бази даних, мережеві служби, хмарна інфраструктура, резервне копіювання, засоби автентифікації й багато взаємопов’язаних програмних компонентів.</p>
+<section id="id13">
+<h3><span class="section-number">1.7.1. </span>Апаратне забезпечення інформаційної системи<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<div class="lab-term"><p class="lab-term-title">Апаратне забезпечення</p><p>Фізичні компоненти обчислювальної системи: процесори, пам’ять, накопичувачі, мережеві адаптери, пристрої введення/виведення та інше обладнання.</p>
+</div><p>Типовий комп’ютер містить:</p>
+<ul class="simple">
+<li><p><strong>центральний процесор (CPU)</strong> — виконує машинні інструкції;</p></li>
+<li><p><strong>оперативну пам’ять (RAM)</strong> — швидке енергозалежне робоче сховище;</p></li>
+<li><p><strong>накопичувач</strong> — довготривале зберігання даних, найчастіше SSD або HDD;</p></li>
+<li><p><strong>графічний процесор (GPU)</strong> — прискорює обробку графіки й паралельні обчислення;</p></li>
+<li><p><strong>мережевий інтерфейс</strong> — забезпечує передавання даних мережею;</p></li>
+<li><p><strong>пристрої введення/виведення</strong> — клавіатура, миша, дисплей, камера, мікрофон, принтер тощо.</p></li>
+</ul>
+<div class="lab-term"><p class="lab-term-title">Енергозалежна пам’ять</p><p>Пам’ять, вміст якої втрачається після вимкнення живлення. Типовий приклад — RAM.</p>
+</div><div class="lab-term"><p class="lab-term-title">Постійне сховище</p><p>Носій або система, що зберігає дані після вимкнення живлення. До локальних сховищ належать SSD, HDD, карти пам’яті та інші накопичувачі.</p>
+</div><p><strong>Хмарне сховище</strong> не є особливим типом пам’яті всередині комп’ютера. Це мережевий сервіс, який зберігає дані на віддаленій інфраструктурі й надає до них доступ через мережу.</p>
+<p>Оптичні диски й USB-накопичувачі залишаються можливими носіями, але вже не є універсальною моделлю основного сховища сучасного ПК.</p>
+<div class="lab-term"><p class="lab-term-title">Периферійні пристрої</p><p>Пристрої, які розширюють функції комп’ютерної системи або забезпечують введення, виведення, зберігання чи обмін даними. Вони можуть бути як зовнішніми, так і фізично інтегрованими в корпус пристрою.</p>
+</div><p>Сучасні обчислювальні пристрої існують у різних форм-факторах: настільні ПК, ноутбуки, смартфони, планшети, сервери, одноплатні комп’ютери, вбудовані пристрої та високопродуктивні обчислювальні системи.</p>
+</section>
+<section id="id14">
+<h3><span class="section-number">1.7.2. </span>Програмне забезпечення (ПЗ)<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<div class="lab-term"><p class="lab-term-title">Програма</p><p>Набір інструкцій і даних, які задають виконання певної задачі обчислювальною системою.</p>
+</div><div class="lab-term"><p class="lab-term-title">Програмне забезпечення</p><p>Сукупність програм, бібліотек, конфігураційних даних та документації, необхідних для виконання комп’ютерних задач.</p>
+</div><p>За призначенням програмне забезпечення зручно поділяти на:</p>
+<ul class="simple">
+<li><p>системне програмне забезпечення;</p></li>
+<li><p>прикладне програмне забезпечення;</p></li>
+<li><p>інструменти розробки.</p></li>
+</ul>
+<figure class="align-default" id="software-classification">
+ digraph software_classification {
+   graph [rankdir=TB, bgcolor=&quot;transparent&quot;, margin=0]
+   node [
+     shape=box,
+     style=&quot;rounded,filled&quot;,
+     fillcolor=&quot;#f5f7fa&quot;,
+     color=&quot;#9aa4b2&quot;,
+     fontname=&quot;DejaVu Sans&quot;,
+     fontsize=12,
+     margin=&quot;0.16,0.10&quot;
+   ]
+   edge [color=&quot;#6b7280&quot;]
+
+   software [label=&quot;Програмне забезпечення&quot;, fillcolor=&quot;#e8f1ff&quot;, color=&quot;#5b8def&quot;]
+   system [label=&quot;Системне ПЗ&quot;]
+   applied [label=&quot;Прикладне ПЗ&quot;]
+   tools [label=&quot;Інструменти розробки&quot;]
+
+   software -&gt; system
+   software -&gt; applied
+   software -&gt; tools
+
+   { rank=same; system; applied; tools }
+ }<figcaption>
+<p><span class="caption-number">Рис. 1.3 </span><span class="caption-text">Класифікація програмного забезпечення</span><a class="headerlink" href="#software-classification" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<div class="lab-term"><p class="lab-term-title">Системне програмне забезпечення</p><p>Програми, що забезпечують базове функціонування комп’ютера, керування ресурсами, пристроями, файлами, мережею та запуском інших програм.</p>
+</div><div class="lab-term"><p class="lab-term-title">Прикладне програмне забезпечення</p><p>Програми, які допомагають користувачу виконувати прикладні задачі: створювати документи, аналізувати дані, працювати з графікою, комунікувати, перекладати, програмувати, навчатися тощо.</p>
+</div><div class="lab-term"><p class="lab-term-title">Інструменти розробки</p><p>Засоби створення програмного забезпечення: мови програмування, компілятори й інтерпретатори, редактори коду, IDE, системи контролю версій, засоби тестування та налагодження.</p>
+</div></section>
+<section id="id15">
+<h3><span class="section-number">1.7.3. </span>Системне програмне забезпечення. Операційні системи<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<p>До системного програмного забезпечення належать, зокрема:</p>
+<ul class="simple">
+<li><p>операційні системи;</p></li>
+<li><p>драйвери пристроїв;</p></li>
+<li><p>системні служби;</p></li>
+<li><p>утиліти;</p></li>
+<li><p>частина засобів захисту й адміністрування.</p></li>
+</ul>
+<div class="lab-term"><p class="lab-term-title">Операційна система</p><p>Комплекс системного програмного забезпечення, який керує апаратними ресурсами, процесами, пам’яттю, файловими системами, пристроями, мережею, безпекою та надає програмам стандартні механізми доступу до ресурсів.</p>
+</div><p>До сучасних сімейств операційних систем належать <strong>Linux</strong>, <strong>Windows</strong>, <strong>macOS</strong>, <strong>Android</strong>, <strong>iOS</strong> та інші.</p>
+<p>Операційна система виконує кілька ключових функцій:</p>
+<ul class="simple">
+<li><p>планує виконання процесів і потоків;</p></li>
+<li><p>розподіляє оперативну пам’ять;</p></li>
+<li><p>працює з файловими системами;</p></li>
+<li><p>керує доступом до пристроїв;</p></li>
+<li><p>реалізує мережеві функції;</p></li>
+<li><p>контролює користувачів, права доступу й ізоляцію;</p></li>
+<li><p>надає системні API для прикладних програм;</p></li>
+<li><p>забезпечує графічний, командний або інший інтерфейс взаємодії.</p></li>
+</ul>
+<div class="lab-term"><p class="lab-term-title">Ядро операційної системи</p><p>Центральна частина ОС, що працює з процесором, пам’яттю, пристроями та іншими низькорівневими ресурсами й надає системні механізми іншим компонентам.</p>
+</div><div class="lab-term"><p class="lab-term-title">Драйвер пристрою</p><p>Програмний компонент, який забезпечує взаємодію операційної системи з конкретним класом апаратних пристроїв.</p>
+</div><p>Сучасні ОС часто містять велику кількість драйверів у складі системи й автоматично підбирають їх для стандартного обладнання. Для окремих пристроїв драйвер може встановлюватися або оновлюватися окремо.</p>
+<div class="lab-term"><p class="lab-term-title">Прошивка (firmware)</p><p>Програмне забезпечення, що зберігається в пам’яті пристрою й виконує низькорівневе керування його апаратною частиною.</p>
+</div><p>У сучасних персональних комп’ютерах роль платформної прошивки зазвичай виконує <strong>UEFI</strong>. Специфікація UEFI визначає інтерфейс між платформною прошивкою та операційною системою, зокрема середовище для запуску завантажувача ОС.<a class="footnote-reference brackets" href="#uefi" id="id16" role="doc-noteref"><span class="fn-bracket">[</span>4<span class="fn-bracket">]</span></a></p>
+<p>Прошивка не є «незмінною»: виробники можуть випускати її оновлення для виправлення помилок, безпеки й підтримки обладнання.</p>
+<div class="lab-term"><p class="lab-term-title">Утиліти</p><p>Системні або допоміжні програми для діагностики, архівування, резервного копіювання, керування дисками, файлами, мережею, журналами, захистом та іншими службовими задачами.</p>
+</div></section>
+<section id="id17">
+<h3><span class="section-number">1.7.4. </span>Прикладне програмне забезпечення. Його класифікація<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<p>Прикладні програми доцільно класифікувати не лише за типом файла, а за задачами користувача.</p>
+<figure class="align-default" id="application-software-classification">
+ digraph application_software_classification {
+   graph [rankdir=TB, bgcolor=&quot;transparent&quot;, margin=0]
+   node [
+     shape=box,
+     style=&quot;rounded,filled&quot;,
+     fillcolor=&quot;#f5f7fa&quot;,
+     color=&quot;#9aa4b2&quot;,
+     fontname=&quot;DejaVu Sans&quot;,
+     fontsize=11,
+     margin=&quot;0.14,0.09&quot;
+   ]
+   edge [color=&quot;#6b7280&quot;]
+
+   app [label=&quot;Прикладне програмне забезпечення&quot;, fillcolor=&quot;#e8f1ff&quot;, color=&quot;#5b8def&quot;]
+   office [label=&quot;Документи й офісні задачі&quot;]
+   media [label=&quot;Графіка й мультимедіа&quot;]
+   data [label=&quot;Дані й СУБД&quot;]
+   web [label=&quot;Веб і хмарні сервіси&quot;]
+   language [label=&quot;Мовні технології&quot;]
+
+   app -&gt; office
+   app -&gt; media
+   app -&gt; data
+   app -&gt; web
+   app -&gt; language
+
+   { rank=same; office; media; data; web; language }
+ }<figcaption>
+<p><span class="caption-number">Рис. 1.4 </span><span class="caption-text">Приклади класів прикладного програмного забезпечення</span><a class="headerlink" href="#application-software-classification" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>До програм для <strong>створення документів</strong> належать текстові процесори, електронні таблиці та редактори презентацій. Типові сучасні середовища:</p>
+<ul class="simple">
+<li><p>LibreOffice Writer, Calc, Impress;</p></li>
+<li><p>Microsoft Word, Excel, PowerPoint;</p></li>
+<li><p>Google Docs, Sheets, Slides.</p></li>
+</ul>
+<p>Вони мають різні інтерфейси, але реалізують спільні операції: редагування, форматування, роботу зі стилями, таблицями, формулами, діаграмами, спільний доступ та експорт у стандартні формати.</p>
+<div class="lab-term"><p class="lab-term-title">Система управління базами даних (СУБД)</p><p>Програмна система для створення, зберігання, пошуку, зміни й адміністрування структурованих даних.</p>
+</div><p>Приклади різних класів СУБД: <strong>SQLite</strong>, <strong>PostgreSQL</strong>, <strong>MariaDB/MySQL</strong>, <strong>Microsoft Access</strong>. Серверні СУБД і настільні системи відрізняються масштабом, моделлю розгортання та сценаріями використання.</p>
+<p>До графічного та мультимедійного ПЗ належать растрові й векторні редактори, засоби макетування, аудіо- й відеоредактори та системи тривимірної графіки. Прикладами можуть бути <strong>GIMP</strong>, <strong>Krita</strong>, <strong>Inkscape</strong>, <strong>Blender</strong>, а також комерційні професійні пакети.</p>
+<p>Вебзастосунки й хмарні сервіси часто не потребують локального встановлення. Користувач працює через браузер або клієнтський застосунок, а дані й частина обчислень знаходяться на серверній інфраструктурі.</p>
+<div class="lab-term"><p class="lab-term-title">SaaS</p><p>Модель <em>Software as a Service</em>, за якої програмна функціональність надається як мережевий сервіс, зазвичай через вебінтерфейс або клієнтський застосунок.</p>
+</div><p>Окрему групу для цього курсу становлять <strong>мовні технології</strong>:</p>
+<ul class="simple">
+<li><p>електронні словники та термінологічні бази;</p></li>
+<li><p>корпусні менеджери й пошук у корпусах;</p></li>
+<li><p>CAT-системи та пам’ять перекладів;</p></li>
+<li><p>машинний переклад;</p></li>
+<li><p>OCR і розпізнавання документів;</p></li>
+<li><p>перевірка правопису й граматики;</p></li>
+<li><p>розпізнавання та синтез мовлення;</p></li>
+<li><p>морфологічний, синтаксичний і семантичний аналіз;</p></li>
+<li><p>інформаційний пошук;</p></li>
+<li><p>автоматичне реферування й класифікація текстів;</p></li>
+<li><p>генеративні мовні моделі.</p></li>
+</ul>
+<p>Конкретні продукти й вебсервіси швидко змінюються, тому в цьому курсі важливішими є <strong>тип задачі, формат даних, принцип роботи, обмеження й перевірка результату</strong>, а не запам’ятовування назв кнопок або версій програм.</p>
+<div class="lab-term"><p class="lab-term-title">Автоматизоване робоче середовище лінгвіста</p><p>Сукупність апаратних, програмних, інформаційних і мовних ресурсів, які використовуються для професійної роботи з мовними даними.</p>
+</div><div class="lab-term"><p class="lab-term-title">Комп’ютерна лінгвістика</p><p>Міждисциплінарна галузь, що досліджує формальні й обчислювальні методи подання, аналізу та породження природної мови.</p>
+</div><p>До сучасних напрямів комп’ютерної та прикладної лінгвістики належать:</p>
+<ul class="simple">
+<li><p>створення й аналіз текстових корпусів;</p></li>
+<li><p>морфологічний і синтаксичний аналіз;</p></li>
+<li><p>визначення значень, сутностей, тем і відношень у тексті;</p></li>
+<li><p>інформаційний пошук;</p></li>
+<li><p>класифікація текстів і аналіз тональності;</p></li>
+<li><p>машинний переклад і технології підтримки перекладача;</p></li>
+<li><p>автоматичне реферування;</p></li>
+<li><p>розпізнавання мовлення;</p></li>
+<li><p>синтез мовлення;</p></li>
+<li><p>OCR та опрацювання документів;</p></li>
+<li><p>побудова електронних словників і термінологічних ресурсів;</p></li>
+<li><p>діалогові системи;</p></li>
+<li><p>великі мовні моделі та інші генеративні системи.</p></li>
+</ul>
+<p>Технології штучного інтелекту можуть значно прискорювати мовну роботу, але їхній результат не слід автоматично вважати правильним. Переклад, факти, цитати, терміни й числові дані потрібно перевіряти за відповідними джерелами та професійними ресурсами.</p>
+</section>
+</section>
+</section>
+<hr class="footnotes docutils" />
+<aside class="footnote-list brackets">
+<aside class="footnote brackets" id="law-info" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">1</a><span class="fn-bracket">]</span></span>
+<p>Закон України «Про інформацію». URL: <a class="reference external" href="https://zakon.rada.gov.ua/laws/show/2657-12#Text">https://zakon.rada.gov.ua/laws/show/2657-12#Text</a></p>
+</aside>
+<aside class="footnote brackets" id="binary-prefixes" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id5">2</a><span class="fn-bracket">]</span></span>
+<p>NIST. <em>Definitions of the SI units: The binary prefixes</em>. URL: <a class="reference external" href="https://physics.nist.gov/cuu/Units/binary.html">https://physics.nist.gov/cuu/Units/binary.html</a></p>
+</aside>
+<aside class="footnote brackets" id="unicode" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span>3<span class="fn-bracket">]</span></span>
+<span class="backrefs">(<a role="doc-backlink" href="#id7">1</a>,<a role="doc-backlink" href="#id8">2</a>)</span>
+<p>Unicode Consortium. <em>The Unicode Standard, Version 17.0, Chapter 1</em>. URL: <a class="reference external" href="https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-1/">https://www.unicode.org/versions/Unicode17.0.0/core-spec/chapter-1/</a></p>
+</aside>
+<aside class="footnote brackets" id="uefi" role="doc-footnote">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id16">4</a><span class="fn-bracket">]</span></span>
+<p>UEFI Forum. <em>Unified Extensible Firmware Interface Specification 2.11</em>. URL: <a class="reference external" href="https://uefi.org/specifications">https://uefi.org/specifications</a></p>
+</aside>
+</aside>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title">🔎 Зміст</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="lesson02.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>ЛАБОРАТОРНА РОБОТА №1</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.1. Поняття інформації та інформаційних процесів</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1.2. Подання інформації в комп’ютері. Одиниці даних</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">1.3. Системи числення та кодування числових даних</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unicode-utf-8">1.4. Кодування тексту: Unicode та UTF-8</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">1.5. Кодування графічних зображень</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">1.6. Кодування звуку</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">1.6.1. Вправи для самостійної роботи</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">1.7. Структура інформаційної системи</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">1.7.1. Апаратне забезпечення інформаційної системи</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">1.7.2. Програмне забезпечення (ПЗ)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">1.7.3. Системне програмне забезпечення. Операційні системи</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">1.7.4. Прикладне програмне забезпечення. Його класифікація</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
