@@ -1,0 +1,755 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>6. ЛАБОРАТОРНА РОБОТА №5 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/lab.css?v=9e99ccb3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/lesson06';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="prev" title="5. ЛАБОРАТОРНА РОБОТА №4" href="lesson05.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lesson01.html">1. Основи інформаційних технологій</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson02.html">2. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson03.html">3. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson04.html">4. ЛАБОРАТОРНА РОБОТА №3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson05.html">5. ЛАБОРАТОРНА РОБОТА №4</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">6. ЛАБОРАТОРНА РОБОТА №5</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/blob/main/docs/app/lesson06.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/edit/main/docs/app/lesson06.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/issues/new?title=Issue%20on%20page%20%2Fapp/lesson06.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/lesson06.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №5</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.1. План</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">6.2. Методичні вказівки</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">6.2.1. Формули та прості обчислення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">6.2.2. Вбудовані функції</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">6.2.3. Відносні, абсолютні й змішані посилання</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">6.2.4. Іменовані комірки та діапазони</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">6.2.5. Текстові функції</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">6.2.6. Макроси та сценарії автоматизації</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">6.3. Практичні завдання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">6.4. Контрольні питання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">6.5. Вимоги до виконання і подання</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o5">
+<h1><span class="section-number">6. </span>ЛАБОРАТОРНА РОБОТА №5<a class="headerlink" href="#o5" title="Link to this heading">#</a></h1>
+<p><strong>Обчислення в електронних таблицях. Текстові функції</strong></p>
+<div class="lab-block lab-goal admonition">
+<p class="admonition-title">Мета роботи</p>
+<p>Опанувати роботу з формулами та вбудованими функціями електронних таблиць: виконувати обчислення, використовувати відносні, абсолютні й змішані посилання, працювати з іменованими діапазонами та текстовими функціями, а також ознайомитися з автоматизацією повторюваних дій за допомогою макросів і сценаріїв.</p>
+</div>
+<section id="id1">
+<h2><span class="section-number">6.1. </span>План<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="lab-block lab-plan docutils container">
+<ol class="arabic simple">
+<li><p>Формули та прості обчислення.</p></li>
+<li><p>Вбудовані функції.</p></li>
+<li><p>Відносні, абсолютні й змішані посилання. Іменовані діапазони.</p></li>
+<li><p>Текстові функції.</p></li>
+<li><p>Макроси та сценарії автоматизації.</p></li>
+</ol>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">6.2. </span>Методичні вказівки<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>У цій лабораторній роботі базовим середовищем для пояснень є <strong>LibreOffice Calc</strong>. Ті самі практичні дії потрібно відтворити також у Google Sheets і ще одному табличному процесорі. Назви команд, розташування інструментів, роздільники аргументів функцій і навіть окремі назви функцій можуть залежати від програми та мовних налаштувань, тому орієнтуйтеся насамперед на <strong>зміст формули та отриманий результат</strong>.</p>
+<section id="id3">
+<h3><span class="section-number">6.2.1. </span>Формули та прості обчислення<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p><strong>Формула</strong> — це вираз, за яким табличний процесор обчислює значення комірки. Формула зазвичай починається зі знака <code class="docutils literal notranslate"><span class="pre">=</span></code>.</p>
+<p>Формула може містити:</p>
+<ul class="simple">
+<li><p>числові й текстові константи;</p></li>
+<li><p>адреси комірок і діапазонів;</p></li>
+<li><p>арифметичні оператори <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>, <code class="docutils literal notranslate"><span class="pre">^</span></code>;</p></li>
+<li><p>оператори порівняння <code class="docutils literal notranslate"><span class="pre">=</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;</span></code>, <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;=</span></code>, <code class="docutils literal notranslate"><span class="pre">&lt;&gt;</span></code>;</p></li>
+<li><p>дужки;</p></li>
+<li><p>вбудовані функції.</p></li>
+</ul>
+<p>Наприклад:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=125*5+300
+=(A1+B1)*(C1-D1)
+=PI()*A21^2
+=A7-11*SQRT(B3)
+</pre></div>
+</div>
+<p>У більшості табличних процесорів у самій комірці відображається результат, а формулу можна побачити й редагувати в <strong>рядку формул</strong>. Рядок формул також дає змогу вводити значення, адреси комірок і функції.</p>
+<p>Зручний спосіб побудови формули — не вводити адреси вручну, а вибирати потрібні комірки мишею:</p>
+<ol class="arabic simple">
+<li><p>активуйте комірку, у якій має бути результат;</p></li>
+<li><p>введіть <code class="docutils literal notranslate"><span class="pre">=</span></code>;</p></li>
+<li><p>виберіть першу комірку або діапазон;</p></li>
+<li><p>введіть потрібний оператор;</p></li>
+<li><p>виберіть наступний операнд;</p></li>
+<li><p>підтвердьте формулу клавішею <kbd class="kbd docutils literal notranslate">Enter</kbd>.</p></li>
+</ol>
+<p>Після зміни даних у комірках, на які посилається формула, результат зазвичай перераховується автоматично.</p>
+<p>Якщо формула некоректна, редактор показує повідомлення або спеціальне значення помилки. Конкретне позначення залежить від програми, але типові причини однакові: неправильна назва функції, некоректне посилання, ділення на нуль, несумісний тип даних або помилка синтаксису.</p>
+</section>
+<section id="id4">
+<h3><span class="section-number">6.2.2. </span>Вбудовані функції<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p><strong>Функція</strong> — це готова формула з визначеним призначенням і набором аргументів. Загальна форма запису:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=FUNCTION(argument1; argument2; ...)
+</pre></div>
+</div>
+<p>У деяких редакторах або локалях аргументи відокремлюються комою, а не крапкою з комою.</p>
+<p>Приклади:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=SUM(B3:C3)
+=ROUND(D2;1)
+=SQRT(B3)
+=MAX(F4:F7)
+</pre></div>
+</div>
+<p>Функції об’єднуються в категорії: математичні, статистичні, логічні, текстові, дата й час, фінансові та інші.</p>
+<p>Якщо назва функції відома, її можна вводити безпосередньо у формулу. Під час введення сучасні табличні процесори зазвичай пропонують автодоповнення та коротку підказку щодо аргументів. Якщо потрібна функція невідома, скористайтеся засобом пошуку або вставлення функцій і підберіть її за категорією чи призначенням.</p>
+<p>Для швидкого підсумовування діапазону зручно використовувати <strong>Автосуму</strong> або еквівалентний інструмент редактора. Наприклад, для діапазону <code class="docutils literal notranslate"><span class="pre">B4:B7</span></code> результат може бути обчислений формулою:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=SUM(B4:B7)
+</pre></div>
+</div>
+</section>
+<section id="id5">
+<h3><span class="section-number">6.2.3. </span>Відносні, абсолютні й змішані посилання<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>За замовчуванням посилання у формулах є <strong>відносними</strong>. Під час копіювання формули вони зміщуються відповідно до нового положення формули.</p>
+<p>На рис. <a class="fig-num-reference" href="#lesson06-relative-reference-copy">6.1</a> показано принцип зміни відносних посилань під час копіювання формули.</p>
+<figure class="align-default" id="lesson06-relative-reference-copy">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vSTtFIEG-iHS_fgy6ku4I-RIYKIXYNUM8YrmnNpRLHWhCMg3hR7IYpGhhkQC96a4OiE4hsCfGU-oi6v/pub?w=960&amp;h=720"><img alt="Зміна відносних посилань у формулі під час копіювання комірки" src="https://docs.google.com/drawings/d/e/2PACX-1vSTtFIEG-iHS_fgy6ku4I-RIYKIXYNUM8YrmnNpRLHWhCMg3hR7IYpGhhkQC96a4OiE4hsCfGU-oi6v/pub?w=960&amp;h=720" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 6.1 </span><span class="caption-text">Зміна формули в результаті копіювання комірки</span><a class="headerlink" href="#lesson06-relative-reference-copy" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Якщо адресу потрібно зберегти незмінною, використовують <strong>абсолютне посилання</strong> зі знаком <code class="docutils literal notranslate"><span class="pre">$</span></code>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=$B$2
+</pre></div>
+</div>
+<p>Якщо зафіксовано тільки стовпець або тільки рядок, посилання є <strong>змішаним</strong>:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=$C5
+=E$11
+</pre></div>
+</div>
+<p>У LibreOffice Calc, Excel та багатьох інших настільних редакторах тип посилання можна змінювати клавішею <kbd class="kbd docutils literal notranslate">F4</kbd> під час редагування формули. Якщо у вашому редакторі ця клавіша виконує іншу дію, вставте <code class="docutils literal notranslate"><span class="pre">$</span></code> вручну або скористайтеся еквівалентним способом.</p>
+</section>
+<section id="id6">
+<h3><span class="section-number">6.2.4. </span>Іменовані комірки та діапазони<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Комірці або діапазону можна надати змістовне ім’я й використовувати його у формулах замість адреси. Наприклад:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=SUM(Продажі_1_квартал)
+</pre></div>
+</div>
+<p>Іменовані діапазони роблять складні формули зрозумілішими. Правила допустимих імен дещо відрізняються між редакторами, тому використовуйте короткі унікальні назви без пробілів і не робіть їх схожими на адреси комірок.</p>
+</section>
+<section id="id7">
+<h3><span class="section-number">6.2.5. </span>Текстові функції<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Текстові функції використовують для аналізу й перетворення рядків. У прикладах нижче наведено англомовні назви функцій, які поширені в сучасних табличних процесорах.</p>
+<p><strong>LEN(текст)</strong> повертає кількість символів, включно з пробілами.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=LEN(A1)
+</pre></div>
+</div>
+<p>Якщо в <code class="docutils literal notranslate"><span class="pre">A1</span></code> записано <code class="docutils literal notranslate"><span class="pre">Інформатика</span></code>, результат — <code class="docutils literal notranslate"><span class="pre">11</span></code>.</p>
+<p><strong>REPT(текст; кількість)</strong> повторює текст задану кількість разів.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=REPT(A1;2)
+</pre></div>
+</div>
+<p><strong>CONCAT(текст1; текст2; …)</strong> об’єднує кілька текстових фрагментів.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=CONCAT(A1;" ";B1)
+</pre></div>
+</div>
+<p><strong>EXACT(текст1; текст2)</strong> перевіряє повну ідентичність двох текстів із урахуванням регістру.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=EXACT(A1;B1)
+</pre></div>
+</div>
+<p><strong>FIND(шуканий_текст; текст)</strong> повертає позицію першого символу знайденого фрагмента й враховує регістр.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=FIND(B1;A1)
+</pre></div>
+</div>
+<p><strong>LOWER(текст)</strong> перетворює літери на малі.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=LOWER(A1)
+</pre></div>
+</div>
+<p><strong>LEFT(текст; кількість)</strong> повертає задану кількість символів зліва.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=LEFT(A1;5)
+</pre></div>
+</div>
+<p><strong>RIGHT(текст; кількість)</strong> повертає задану кількість символів справа.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=RIGHT(A1;7)
+</pre></div>
+</div>
+<p>Для інших операцій із текстом знайдіть потрібну функцію за категорією <strong>Текстові</strong> або через пошук функцій у вашому редакторі.</p>
+</section>
+<section id="id8">
+<h3><span class="section-number">6.2.6. </span>Макроси та сценарії автоматизації<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p><strong>Макрос або сценарій</strong> — це збережена послідовність команд чи програмний код, який автоматизує повторювану операцію.</p>
+<p>Конкретний механізм залежить від табличного процесора. В одному редакторі можна записати послідовність дій, в іншому — створити сценарій мовою програмування. LibreOffice Calc, Google Sheets і Microsoft Excel мають різні засоби автоматизації, але загальна логіка однакова:</p>
+<ol class="arabic simple">
+<li><p>визначити повторювану операцію;</p></li>
+<li><p>записати або запрограмувати її;</p></li>
+<li><p>зберегти автоматизацію;</p></li>
+<li><p>запустити її на тестових даних;</p></li>
+<li><p>перевірити отриманий результат.</p></li>
+</ol>
+<p>У цій роботі не потрібно прив’язуватися до конкретної мови макросів. Важливо зрозуміти сам принцип: <strong>одна й та сама послідовність дій може бути відтворена автоматично</strong>.</p>
+</section>
+</section>
+<section id="id9">
+<h2><span class="section-number">6.3. </span>Практичні завдання<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>Виконайте завдання в усіх трьох табличних процесорах, зазначених у вимогах до виконання і подання. Ілюстрації та пояснення орієнтовані на LibreOffice Calc; в інших редакторах використовуйте еквівалентні засоби.</p>
+<ol class="arabic simple">
+<li><p>Створіть таблицю за зразком на рис. <a class="fig-num-reference" href="#lesson06-calculation-table">6.2</a>.</p></li>
+<li><p>Введіть дані в діапазон <code class="docutils literal notranslate"><span class="pre">A3:E7</span></code> і переконайтеся, що він утворює прямокутний блок комірок.</p></li>
+<li><p>У комірці <code class="docutils literal notranslate"><span class="pre">B8</span></code> обчисліть суму значень <code class="docutils literal notranslate"><span class="pre">B4:B7</span></code> формулою <code class="docutils literal notranslate"><span class="pre">=SUM(B4:B7)</span></code>. Повторіть цю саму операцію за допомогою Автосуми або еквівалентного інструмента.</p></li>
+<li><p>Скопіюйте формулу з <code class="docutils literal notranslate"><span class="pre">B8</span></code> у <code class="docutils literal notranslate"><span class="pre">C8:E8</span></code> за допомогою маркера заповнення або іншого доступного способу копіювання формул.</p></li>
+</ol>
+<figure class="align-default" id="lesson06-calculation-table">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vSRHgMkYleuD_2AsB0DgNoNz_R2XVQApRctRfJddVcwjiKacI511U-Pk1gCGgPkiMvYG3m5ow3xeyiJ/pub?w=960&amp;h=720"><img alt="Зразок таблиці для виконання практичних обчислень" src="https://docs.google.com/drawings/d/e/2PACX-1vSRHgMkYleuD_2AsB0DgNoNz_R2XVQApRctRfJddVcwjiKacI511U-Pk1gCGgPkiMvYG3m5ow3xeyiJ/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 6.2 </span><span class="caption-text">Зразок таблиці для виконання практичних обчислень</span><a class="headerlink" href="#lesson06-calculation-table" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="5">
+<li><p>У комірці <code class="docutils literal notranslate"><span class="pre">F4</span></code> введіть формулу <code class="docutils literal notranslate"><span class="pre">=D4/B4*100</span></code>.</p></li>
+<li><p>Скопіюйте формулу з <code class="docutils literal notranslate"><span class="pre">F4</span></code> у <code class="docutils literal notranslate"><span class="pre">F5:F8</span></code> іншим способом, ніж у завданні 4, наприклад через буфер обміну. Перевірте, як змінилися відносні посилання.</p></li>
+<li><p>Перегляньте формули в діапазонах <code class="docutils literal notranslate"><span class="pre">F4:F8</span></code> та <code class="docutils literal notranslate"><span class="pre">B8:E8</span></code> і поясніть закономірність зміни адрес під час копіювання.</p></li>
+</ol>
+<div class="note admonition">
+<p class="admonition-title">Зауваження</p>
+<p>Під час копіювання формули відносні адреси змінюються разом із положенням формули. Якщо посилання потрібно зафіксувати, використовуйте <code class="docutils literal notranslate"><span class="pre">$</span></code>, наприклад <code class="docutils literal notranslate"><span class="pre">=$A$1+5</span></code>. Посилання з одним зафіксованим компонентом, наприклад <code class="docutils literal notranslate"><span class="pre">$C5</span></code> або <code class="docutils literal notranslate"><span class="pre">E$11</span></code>, є змішаним.</p>
+</div>
+<ol class="arabic simple" start="8">
+<li><p>Увімкніть режим відображення формул або скористайтеся іншим способом, який дозволяє одночасно переглянути формули на аркуші. Потім поверніться до звичайного режиму.</p></li>
+<li><p>Перейдіть на другий аркуш документа й перейменуйте його.</p></li>
+<li><p>Поверніться на перший аркуш.</p></li>
+<li><p>Змініть кілька значень у діапазоні <code class="docutils literal notranslate"><span class="pre">B4:E7</span></code> і простежте за автоматичним перерахунком комірок із формулами.</p></li>
+<li><p>Виділіть по черзі рядок, стовпець, суміжний діапазон, кілька несуміжних діапазонів і весь робочий аркуш.</p></li>
+<li><p>У першому рядку введіть заголовок <strong>«Злочинність в Україні»</strong> та розмістіть його по центру над таблицею. У другому рядку створіть підзаголовок <strong>«Показники стану злочинності»</strong>.</p></li>
+<li><p>Додайте стовпець для питомої ваги нерозкритих злочинів і введіть його назву в <code class="docutils literal notranslate"><span class="pre">G3</span></code>.</p></li>
+<li><p>У <code class="docutils literal notranslate"><span class="pre">G4</span></code> введіть формулу для розрахунку відповідної питомої ваги та скопіюйте її в <code class="docutils literal notranslate"><span class="pre">G5:G8</span></code>.</p></li>
+<li><p>Вирівняйте дані таблиці по центру горизонтально й вертикально.</p></li>
+<li><p>Для числових значень у стовпці <code class="docutils literal notranslate"><span class="pre">F</span></code> установіть відображення двох знаків після десяткового роздільника.</p></li>
+<li><p>У <code class="docutils literal notranslate"><span class="pre">F10</span></code> визначте максимальне значення питомої ваги розкритих злочинів за допомогою <code class="docutils literal notranslate"><span class="pre">MAX</span></code>.</p></li>
+<li><p>У <code class="docutils literal notranslate"><span class="pre">G10</span></code> визначте максимальне значення питомої ваги нерозкритих злочинів.</p></li>
+<li><p>Об’єднайте текстові фрагменти з трьох різних комірок в один рядок за допомогою <code class="docutils literal notranslate"><span class="pre">CONCAT</span></code>.</p></li>
+<li><p>Перевірте ідентичність двох текстів за допомогою <code class="docutils literal notranslate"><span class="pre">EXACT</span></code>, зокрема для рядків, що відрізняються лише регістром.</p></li>
+<li><p>Введіть у комірку <code class="docutils literal notranslate"><span class="pre">C4</span></code> текстовий фрагмент і визначте його довжину за допомогою <code class="docutils literal notranslate"><span class="pre">LEN</span></code>.</p></li>
+<li><p>Повторіть заданий текст кілька разів за допомогою <code class="docutils literal notranslate"><span class="pre">REPT</span></code>.</p></li>
+<li><p>Перетворіть усі літери заданого тексту на малі за допомогою <code class="docutils literal notranslate"><span class="pre">LOWER</span></code>.</p></li>
+<li><p>Виділіть сім правих символів тексту за допомогою <code class="docutils literal notranslate"><span class="pre">RIGHT</span></code>.</p></li>
+<li><p>Створіть іменований діапазон або іменовану комірку та використайте це ім’я в простій формулі.</p></li>
+<li><p>Автоматизуйте одну просту повторювану дію за допомогою макросу або сценарію, якщо редактор це підтримує. Наприклад, застосуйте однакове форматування до вибраного діапазону. Якщо така можливість недоступна, коротко опишіть це у звіті.</p></li>
+</ol>
+</section>
+<section id="id10">
+<h2><span class="section-number">6.4. </span>Контрольні питання<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Що таке формула і з яких елементів вона може складатися?</p></li>
+<li><p>Для чого призначений рядок формул?</p></li>
+<li><p>Якими способами можна ввести формулу в комірку?</p></li>
+<li><p>Що таке функція та що називають її аргументами?</p></li>
+<li><p>Як знайти потрібну функцію, якщо відома або невідома її назва?</p></li>
+<li><p>Чому роздільник аргументів функції може відрізнятися в різних редакторах?</p></li>
+<li><p>Що відбувається з формулами після зміни значень у комірках, на які вони посилаються?</p></li>
+<li><p>Які типові причини помилок у формулах?</p></li>
+<li><p>Чим відрізняються відносні, абсолютні та змішані посилання?</p></li>
+<li><p>Для чого використовують іменовані комірки та діапазони?</p></li>
+<li><p>Які текстові функції ви використали в цій роботі та яке їх призначення?</p></li>
+<li><p>Чим <code class="docutils literal notranslate"><span class="pre">EXACT</span></code> відрізняється від звичайного візуального порівняння двох текстів?</p></li>
+<li><p>Як скопіювати формулу в інші комірки й що при цьому відбувається з відносними посиланнями?</p></li>
+<li><p>Як переглянути формули, а не результати обчислень?</p></li>
+<li><p>Яке значення поверне формула <code class="docutils literal notranslate"><span class="pre">=IF(1&gt;2;3;4)</span></code> за умови, що у вашій локалі аргументи розділяються крапкою з комою?</p></li>
+<li><p>Що таке макрос або сценарій і для яких повторюваних дій його доцільно використовувати?</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id11">
+<h2><span class="section-number">6.5. </span>Вимоги до виконання і подання<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p><strong>Виконайте практичні завдання тричі:</strong></p>
+<ol class="arabic simple">
+<li><p>у <strong>LibreOffice Calc</strong>;</p></li>
+<li><p>у <strong>Google Sheets</strong>;</p></li>
+<li><p>у <strong>ще одному табличному процесорі на вибір</strong>: Microsoft Excel / WPS Spreadsheets / OnlyOffice / Apple Numbers.</p></li>
+</ol>
+<p><strong>Подання в Google Classroom:</strong> завантажте <strong>три PDF-файли</strong>, кожен — експорт із відповідного табличного процесора. Якщо для перевірки формул або макросів потрібен редагований файл, додайте його разом із PDF у форматі, який підтримує відповідний редактор.</p>
+<p>Редагований файл, якщо він потрібен, назвіть за тією самою базовою схемою; змініть лише розширення файла відповідно до формату редактора.</p>
+<p><strong>Схема імені файлу:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;назва</span> <span class="pre">табличного</span> <span class="pre">процесора&gt;_&lt;група&gt;_&lt;ПрізвищеІм’я&gt;_ЛР5.pdf</span></code></p>
+<p><strong>Приклади:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>LibreOfficeCalc_141_ПетренкоІван_ЛР5.pdf
+GoogleSheets_143_ПетренкоІван_ЛР5.pdf
+Excel_144_АлукіАнастасія_ЛР5.pdf
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Коментар щодо відмінностей між редакторами</p>
+<p>Якщо певної функції або способу автоматизації немає у вашому табличному процесорі, коротко вкажіть це у звіті й опишіть використаний еквівалент або найближчий доступний спосіб виконання.</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lesson05.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>ЛАБОРАТОРНА РОБОТА №4</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">6.1. План</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">6.2. Методичні вказівки</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">6.2.1. Формули та прості обчислення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">6.2.2. Вбудовані функції</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">6.2.3. Відносні, абсолютні й змішані посилання</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">6.2.4. Іменовані комірки та діапазони</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">6.2.5. Текстові функції</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">6.2.6. Макроси та сценарії автоматизації</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">6.3. Практичні завдання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">6.4. Контрольні питання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">6.5. Вимоги до виконання і подання</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

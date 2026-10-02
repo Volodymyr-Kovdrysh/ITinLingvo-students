@@ -1,0 +1,75 @@
+.admonition.lab-block,
+.lab-block:not(.admonition) {
+  border-left-width: 0.25rem;
+}
+
+.lab-block:not(.admonition) {
+  border-left-style: solid;
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+}
+
+.admonition.lab-goal {
+  border-left-color: var(--pst-color-primary);
+}
+
+.admonition.lab-goal > .admonition-title {
+  background-color: color-mix(in srgb, var(--pst-color-primary) 12%, transparent);
+}
+
+.admonition.lab-plan,
+.lab-plan:not(.admonition) {
+  border-left-color: var(--pst-color-info);
+}
+
+.admonition.lab-plan > .admonition-title {
+  background-color: color-mix(in srgb, var(--pst-color-info) 12%, transparent);
+}
+
+.lab-term {
+  border-left: 0.25rem solid var(--pst-color-success);
+  background: color-mix(in srgb, var(--pst-color-success) 7%, transparent);
+  margin: 1rem 0;
+  padding: 0.8rem 1rem;
+}
+
+.lab-term-title {
+  align-items: center;
+  display: flex;
+  font-weight: 700;
+  gap: 0.4rem;
+  margin: 0 0 0.35rem;
+}
+
+.lab-term-title::before {
+  align-items: center;
+  background: color-mix(in srgb, var(--pst-color-success) 18%, transparent);
+  border-radius: 50%;
+  color: var(--pst-color-success);
+  content: "i";
+  display: inline-flex;
+  flex: 0 0 1.1rem;
+  font-family: var(--pst-font-family-base);
+  font-size: 0.75rem;
+  height: 1.1rem;
+  justify-content: center;
+  line-height: 1;
+  width: 1.1rem;
+}
+
+.lab-term > :last-child {
+  margin-bottom: 0;
+}
+
+.fig-num-reference {
+  color: var(--pst-color-link);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+.fig-num-reference:hover,
+.fig-num-reference:focus {
+  color: var(--pst-color-link-hover);
+  text-decoration-thickness: 0.12em;
+}

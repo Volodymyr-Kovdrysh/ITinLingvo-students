@@ -1,0 +1,13 @@
+# 🔎 Зміст
+
+```{toctree}
+:maxdepth: 2
+:numbered:
+
+app/lesson01
+app/lesson02
+app/lesson03
+app/lesson04
+app/lesson05
+app/lesson06
+```

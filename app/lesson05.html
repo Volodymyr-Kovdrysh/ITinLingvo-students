@@ -1,0 +1,837 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>5. ЛАБОРАТОРНА РОБОТА №4 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/lab.css?v=9e99ccb3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/lesson05';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="6. ЛАБОРАТОРНА РОБОТА №5" href="lesson06.html" />
+    <link rel="prev" title="4. ЛАБОРАТОРНА РОБОТА №3" href="lesson04.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lesson01.html">1. Основи інформаційних технологій</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson02.html">2. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson03.html">3. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson04.html">4. ЛАБОРАТОРНА РОБОТА №3</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. ЛАБОРАТОРНА РОБОТА №4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson06.html">6. ЛАБОРАТОРНА РОБОТА №5</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/blob/main/docs/app/lesson05.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/edit/main/docs/app/lesson05.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/issues/new?title=Issue%20on%20page%20%2Fapp/lesson05.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/lesson05.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №4</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.1. План</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.2. Методичні вказівки</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5.2.1. Запуск табличного процесора</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5.2.2. Інтерфейс табличного процесора</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">5.2.3. Створення, відкриття та збереження табличних документів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">5.2.4. Основні об’єкти табличного документа</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">5.2.5. Закриття табличного документа</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">5.2.6. Типи даних</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">5.2.7. Введення числових значень, дат і часу</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">5.2.8. Введення текстових значень та формул</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">5.2.9. Виділення, копіювання та переміщення даних</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">5.2.10. Вилучення та очищення комірок, рядків, стовпців і аркушів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">5.2.11. Створення рядів даних та автозаповнення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">5.2.12. Найпоширеніші інструменти оформлення таблиці</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">5.2.13. Форматування комірок</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">5.2.14. Форматування та вирівнювання даних</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">5.2.15. Відображення рядків і стовпців</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">5.2.16. Застосування стилів і готового оформлення</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">5.3. Практичні завдання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">5.4. Контрольні питання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">5.5. Вимоги до виконання і подання</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o4">
+<h1><span class="section-number">5. </span>ЛАБОРАТОРНА РОБОТА №4<a class="headerlink" href="#o4" title="Link to this heading">#</a></h1>
+<p><strong>Створення, редагування та форматування електронних таблиць</strong></p>
+<div class="lab-block lab-goal admonition">
+<p class="admonition-title">Мета роботи</p>
+<p>Опанувати основні прийоми роботи з електронними таблицями: структуру табличного документа, типи даних, введення й редагування значень і формул, автозаповнення, форматування комірок, керування рядками, стовпцями та аркушами.</p>
+</div>
+<section id="id1">
+<h2><span class="section-number">5.1. </span>План<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="lab-block lab-plan docutils container">
+<ol class="arabic simple">
+<li><p>Запуск табличного процесора та ознайомлення з його інтерфейсом.</p></li>
+<li><p>Створення, відкриття та збереження табличних документів.</p></li>
+<li><p>Робота з аркушами, рядками, стовпцями та комірками.</p></li>
+<li><p>Типи даних в електронних таблицях.</p></li>
+<li><p>Введення числових, текстових даних, дат і часу.</p></li>
+<li><p>Введення та використання формул.</p></li>
+<li><p>Основні дії над даними.</p></li>
+<li><p>Форматування даних і таблиць.</p></li>
+</ol>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">5.2. </span>Методичні вказівки<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>У цій лабораторній роботі базовим середовищем для пояснень та ілюстрацій є <strong>LibreOffice Calc</strong>. Ті самі практичні завдання потрібно виконати також у Google Sheets і ще одному табличному процесорі. Назви меню, кнопок і панелей у різних програмах відрізняються, тому орієнтуйтеся насамперед на <strong>зміст операції та кінцевий результат</strong>, а не на конкретний шлях до команди.</p>
+<section id="id3">
+<h3><span class="section-number">5.2.1. </span>Запуск табличного процесора<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Табличний процесор можна запустити як звичайну програму або відкрити в ньому вже наявний табличний документ. Для локальних програм типовими форматами є <code class="docutils literal notranslate"><span class="pre">.ods</span></code> і <code class="docutils literal notranslate"><span class="pre">.xlsx</span></code>; вебредактори можуть зберігати документ у хмарному сховищі та експортувати його в один із поширених файлових форматів.</p>
+<p>Після запуску відкрийте новий порожній табличний документ.</p>
+</section>
+<section id="id4">
+<h3><span class="section-number">5.2.2. </span>Інтерфейс табличного процесора<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Незалежно від конкретної програми, робоче вікно табличного процесора містить кілька основних областей:</p>
+<ul class="simple">
+<li><p>команди для роботи з файлами та налаштування програми;</p></li>
+<li><p>панелі або меню з інструментами редагування й форматування;</p></li>
+<li><p>рядок формул;</p></li>
+<li><p>робочий аркуш із рядками, стовпцями та комірками;</p></li>
+<li><p>ярлики аркушів;</p></li>
+<li><p>рядок стану;</p></li>
+<li><p>засоби масштабування та зміни режиму перегляду.</p></li>
+</ul>
+<p>У LibreOffice Calc основні команди доступні через головне меню, панелі інструментів, контекстні меню та бічну панель. В інших табличних процесорах ті самі функції можуть бути згруповані інакше.</p>
+<p>Рядок стану зазвичай відображає інформацію про поточний документ і виділений діапазон. У багатьох редакторах для виділених числових даних можна одразу побачити суму, середнє значення, кількість елементів або інші короткі статистичні показники. Склад рядка стану в окремих програмах можна налаштовувати.</p>
+</section>
+<section id="id5">
+<h3><span class="section-number">5.2.3. </span>Створення, відкриття та збереження табличних документів<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Табличний документ може містити один або кілька аркушів. У різних програмах такий документ називають <strong>книгою</strong>, <strong>робочою книгою</strong> або просто <strong>таблицею</strong>.</p>
+<p>Основні файлові операції однакові за змістом у різних редакторах:</p>
+<ol class="arabic simple">
+<li><p>створити новий документ;</p></li>
+<li><p>відкрити наявний документ;</p></li>
+<li><p>зберегти зміни;</p></li>
+<li><p>зберегти копію в іншому форматі;</p></li>
+<li><p>експортувати документ, наприклад у PDF;</p></li>
+<li><p>закрити документ.</p></li>
+</ol>
+<p>Для редагованої версії роботи використовуйте основний формат вашого табличного процесора. Якщо документ має відкриватися в інших програмах, за потреби збережіть або експортуйте копію в сумісний формат. Після завершення лабораторної роботи окремо експортуйте результат у PDF відповідно до вимог до подання.</p>
+</section>
+<section id="id6">
+<h3><span class="section-number">5.2.4. </span>Основні об’єкти табличного документа<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Основними об’єктами електронної таблиці є <strong>аркуші, рядки, стовпці, комірки та діапазони комірок</strong>. Їх взаємне розташування показано на рис. <a class="fig-num-reference" href="#lesson05-spreadsheet-elements">5.1</a>.</p>
+<figure class="align-default" id="lesson05-spreadsheet-elements">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vT4HDxLBdhSjkaplgfR7tpVv0HjnAKeSzIxjRQM71n7CcI4VZrDwe7S_xRW0bgOKFSFBI5_MTYWBlth/pub?w=960&amp;h=720"><img alt="Основні елементи електронної таблиці: рядки, стовпці, комірки та ярлики аркушів" src="https://docs.google.com/drawings/d/e/2PACX-1vT4HDxLBdhSjkaplgfR7tpVv0HjnAKeSzIxjRQM71n7CcI4VZrDwe7S_xRW0bgOKFSFBI5_MTYWBlth/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 5.1 </span><span class="caption-text">Елементи електронної таблиці</span><a class="headerlink" href="#lesson05-spreadsheet-elements" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Рядки зазвичай нумеруються числами, а стовпці позначаються літерами. На перетині рядка і стовпця розташована комірка. Її адреса в стилі <strong>A1</strong> складається з назви стовпця та номера рядка: <code class="docutils literal notranslate"><span class="pre">A1</span></code>, <code class="docutils literal notranslate"><span class="pre">C2</span></code>, <code class="docutils literal notranslate"><span class="pre">F15</span></code>.</p>
+<p><strong>Діапазон</strong> — це група комірок. Наприклад, запис <code class="docutils literal notranslate"><span class="pre">A1:C5</span></code> означає прямокутний діапазон від комірки <code class="docutils literal notranslate"><span class="pre">A1</span></code> до <code class="docutils literal notranslate"><span class="pre">C5</span></code>.</p>
+<p>Документ може містити кілька аркушів. Аркуші можна створювати, перейменовувати, переміщувати, копіювати та вилучати.
+Для посилання на комірку іншого аркуша до адреси комірки додається назва аркуша. Точний синтаксис такого посилання залежить від табличного процесора.</p>
+<p>Крім найпоширенішого стилю A1, деякі програми підтримують альтернативний стиль адресації <strong>R1C1</strong>, у якому рядки й стовпці позначаються числами. У цій лабораторній потрібно з’ясувати, чи підтримує ваш редактор такий режим. Якщо підтримує — увімкніть його й поверніться до A1; якщо ні — зафіксуйте цю відмінність у звіті.</p>
+</section>
+<section id="id7">
+<h3><span class="section-number">5.2.5. </span>Закриття табличного документа<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Перед закриттям документа переконайтеся, що зміни збережено. Якщо є незбережені зміни, більшість настільних програм запропонує зберегти їх або відмовитися від збереження. У вебредакторах зміни часто зберігаються автоматично, однак перед завершенням роботи перевірте стан синхронізації документа.</p>
+</section>
+<section id="id8">
+<h3><span class="section-number">5.2.6. </span>Типи даних<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>У комірках електронної таблиці найчастіше використовують такі типи даних:</p>
+<ul class="simple">
+<li><p><strong>текст</strong> — назви, прізвища, коди, пояснення;</p></li>
+<li><p><strong>числа</strong> — цілі та дробові числові значення;</p></li>
+<li><p><strong>дати й час</strong> — значення, які редактор може відображати у різних форматах і використовувати в обчисленнях;</p></li>
+<li><p><strong>формули</strong> — вирази, за якими табличний процесор обчислює результат.</p></li>
+</ul>
+<p>Те, як значення <strong>зберігається</strong>, і те, як воно <strong>відображається</strong>, — не одне й те саме. Наприклад, числове значення можна показати як відсоток, грошову суму або число з певною кількістю десяткових знаків, не змінюючи самого значення.</p>
+<p>Формула зазвичай починається зі знака <code class="docutils literal notranslate"><span class="pre">=</span></code> і може містити числа, адреси комірок, арифметичні оператори, дужки та вбудовані функції. Наприклад:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>=A1+1
+=(B2+C2)/2
+=SUM(A1:A10)
+</pre></div>
+</div>
+<p>Назви окремих функцій і роздільники аргументів можуть відрізнятися залежно від програми та мовних налаштувань.</p>
+</section>
+<section id="id9">
+<h3><span class="section-number">5.2.7. </span>Введення числових значень, дат і часу<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Щоб ввести дані:</p>
+<ol class="arabic simple">
+<li><p>виберіть потрібну комірку;</p></li>
+<li><p>введіть значення;</p></li>
+<li><p>підтвердьте введення клавішею <kbd class="kbd docutils literal notranslate">Enter</kbd> або переходом до іншої комірки.</p></li>
+</ol>
+<p>Вміст активної комірки можна редагувати безпосередньо в комірці або в рядку формул.</p>
+<p>Табличний процесор намагається автоматично визначити тип введених даних. Якщо значення має сприйматися як текст, хоча складається з цифр, наприклад код або номер із початковими нулями, доцільно заздалегідь застосувати текстовий формат або скористатися способом введення текстового значення, який підтримує ваш редактор.</p>
+<p>Для дат і часу використовуйте формат, який коректно розпізнається у вашій локалі. Після введення перевірте, чи редактор дійсно розпізнав значення як дату або час, а не як звичайний текст.</p>
+<p>Якщо числове значення не поміщається у видиму ширину комірки, програма може показувати скорочене представлення, науковий формат або спеціальне позначення. У такому разі збільште ширину стовпця або змініть формат відображення.</p>
+</section>
+<section id="id10">
+<h3><span class="section-number">5.2.8. </span>Введення текстових значень та формул<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Текст вводиться так само, як інші дані: виберіть комірку, введіть текст і підтвердьте введення.</p>
+<p>Для формули:</p>
+<ol class="arabic simple">
+<li><p>виберіть комірку, у якій має бути результат;</p></li>
+<li><p>введіть знак <code class="docutils literal notranslate"><span class="pre">=</span></code>;</p></li>
+<li><p>задайте вираз, використовуючи числа, адреси комірок, оператори або функції;</p></li>
+<li><p>підтвердьте введення.</p></li>
+</ol>
+<p>Після зміни значень у комірках, на які посилається формула, результат зазвичай перераховується автоматично.</p>
+<p>Щоб відредагувати вже введене значення, активуйте комірку й перейдіть у режим редагування або скористайтеся рядком формул. Конкретний спосіб може відрізнятися між редакторами.</p>
+</section>
+<section id="id11">
+<h3><span class="section-number">5.2.9. </span>Виділення, копіювання та переміщення даних<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<p>Перед більшістю операцій потрібно вказати, з якими комірками вони виконуватимуться.</p>
+<p>Основні способи виділення:</p>
+<ul class="simple">
+<li><p>одна комірка — клацанням миші або клавішами переміщення;</p></li>
+<li><p>суміжний діапазон — протягуванням миші від одного кута діапазону до іншого;</p></li>
+<li><p>великий діапазон — вибором першої й останньої комірок із використанням <kbd class="kbd docutils literal notranslate">Shift</kbd>;</p></li>
+<li><p>несуміжні діапазони — із використанням клавіші-модифікатора, яку підтримує редактор;</p></li>
+<li><p>увесь рядок або стовпець — вибором його заголовка;</p></li>
+<li><p>увесь аркуш — командою виділення всіх комірок.</p></li>
+</ul>
+<p>Дані можна копіювати або переміщувати перетягуванням, через буфер обміну або стандартними сполученнями клавіш. Найпоширеніші сполучення:</p>
+<ul class="simple">
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">C</kbd> — копіювати;</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">X</kbd> — вирізати;</p></li>
+<li><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> + <kbd class="kbd docutils literal notranslate">V</kbd> — вставити.</p></li>
+</ul>
+<p>Під час копіювання формул звертайте увагу на те, як змінюються адреси комірок у формулах. Це демонструє принцип відносних посилань.</p>
+</section>
+<section id="id12">
+<h3><span class="section-number">5.2.10. </span>Вилучення та очищення комірок, рядків, стовпців і аркушів<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p><strong>Очищення</strong> і <strong>вилучення</strong> — різні операції.</p>
+<p>Під час очищення сама комірка залишається на аркуші, але видаляється її вміст, а за вибором — також форматування, примітки чи інші властивості.</p>
+<p>Під час вилучення комірок, рядків або стовпців змінюється структура аркуша: сусідні елементи зсуваються, щоб зайняти звільнене місце.</p>
+<p>Перед виконанням операції перевірте, чи потрібно:</p>
+<ul class="simple">
+<li><p>очистити лише значення;</p></li>
+<li><p>очистити форматування;</p></li>
+<li><p>вилучити комірки зі зсувом;</p></li>
+<li><p>вилучити цілий рядок або стовпець;</p></li>
+<li><p>вилучити аркуш.</p></li>
+</ul>
+</section>
+<section id="id13">
+<h3><span class="section-number">5.2.11. </span>Створення рядів даних та автозаповнення<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p><strong>Автозаповнення</strong> дає змогу швидко створювати повторювані дані та послідовності: числа, дати, місяці, дні тижня або комбінації тексту й чисел.</p>
+<p>Для простого копіювання введіть початкове значення та протягніть маркер заповнення на потрібний діапазон.</p>
+<p>Для числової послідовності з певним кроком надійний універсальний спосіб такий:</p>
+<ol class="arabic simple">
+<li><p>введіть перші два значення ряду, наприклад <code class="docutils literal notranslate"><span class="pre">2</span></code> і <code class="docutils literal notranslate"><span class="pre">4</span></code>;</p></li>
+<li><p>виділіть обидві комірки;</p></li>
+<li><p>протягніть маркер заповнення.</p></li>
+</ol>
+<p>За двома початковими значеннями табличний процесор визначає крок послідовності. Аналогічно можна створювати послідовності дат.</p>
+<p>Для текстових послідовностей, наприклад назв місяців або днів тижня, результат залежить від можливостей і локалі конкретного редактора. Якщо автоматичне продовження такої послідовності не підтримується, заповніть її іншим доступним способом і зафіксуйте відмінність.</p>
+</section>
+<section id="id14">
+<h3><span class="section-number">5.2.12. </span>Найпоширеніші інструменти оформлення таблиці<a class="headerlink" href="#id14" title="Link to this heading">#</a></h3>
+<p>Форматування допомагає відокремити заголовки, числові дані, підсумки та інші логічні частини таблиці. У різних програмах інструменти оформлення можуть бути розміщені на панелі інструментів, у меню форматування, на бічній панелі або в контекстному меню.</p>
+<p>Основні групи параметрів:</p>
+<ul class="simple">
+<li><p>шрифт і накреслення;</p></li>
+<li><p>колір тексту й тла;</p></li>
+<li><p>межі комірок;</p></li>
+<li><p>числовий формат;</p></li>
+<li><p>горизонтальне та вертикальне вирівнювання;</p></li>
+<li><p>перенесення тексту;</p></li>
+<li><p>розміри рядків і стовпців.</p></li>
+</ul>
+</section>
+<section id="id15">
+<h3><span class="section-number">5.2.13. </span>Форматування комірок<a class="headerlink" href="#id15" title="Link to this heading">#</a></h3>
+<p>Перед форматуванням виділіть комірку або діапазон комірок.</p>
+<p>Засоби форматування комірки зазвичай дозволяють змінити:</p>
+<ul class="simple">
+<li><p>шрифт, розмір і накреслення тексту;</p></li>
+<li><p>колір тексту;</p></li>
+<li><p>фон комірки;</p></li>
+<li><p>стиль, товщину й колір меж;</p></li>
+<li><p>числовий формат;</p></li>
+<li><p>вирівнювання;</p></li>
+<li><p>перенесення та орієнтацію тексту;</p></li>
+<li><p>захист комірки, якщо редактор підтримує таку функцію.</p></li>
+</ul>
+<p>У LibreOffice Calc детальні параметри зібрані у вікні форматування комірок; в інших редакторах вони можуть бути розподілені між панеллю інструментів, бічною панеллю й окремими діалогами.</p>
+</section>
+<section id="id16">
+<h3><span class="section-number">5.2.14. </span>Форматування та вирівнювання даних<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
+<p>Одна й та сама числова величина може відображатися по-різному. Найпоширеніші числові формати:</p>
+<ul class="simple">
+<li><p>звичайний числовий;</p></li>
+<li><p>грошовий;</p></li>
+<li><p>відсотковий;</p></li>
+<li><p>дата;</p></li>
+<li><p>час;</p></li>
+<li><p>дробовий;</p></li>
+<li><p>науковий;</p></li>
+<li><p>текстовий.</p></li>
+</ul>
+<p>Формат відображення не повинен змінювати саме числове значення. Наприклад, якщо число показано з двома десятковими знаками, для обчислень редактор може використовувати точніше внутрішнє значення.</p>
+<p>Для вмісту комірок можна задавати горизонтальне й вертикальне вирівнювання, перенесення тексту та, якщо редактор підтримує, кут повороту тексту.</p>
+<p>Щоб створити заголовок над кількома стовпцями, можна об’єднати відповідні комірки й відцентрувати текст. Використовуйте об’єднання обережно: воно доречне для оформлення заголовків, але може ускладнювати сортування та подальшу обробку даних.</p>
+</section>
+<section id="id17">
+<h3><span class="section-number">5.2.15. </span>Відображення рядків і стовпців<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
+<p>Ширину стовпців і висоту рядків можна змінювати вручну або автоматично підбирати за вмістом.</p>
+<p>Для швидкого налаштування перетягніть межу між заголовками сусідніх стовпців або рядків. Якщо потрібен точний розмір, використайте параметри ширини стовпця чи висоти рядка, доступні у вашому редакторі.</p>
+<p>Рядки та стовпці можна тимчасово приховувати, не вилучаючи даних. Щоб повернути приховані дані, скористайтеся командою відображення або виберіть сусідні рядки чи стовпці й застосуйте відповідну операцію.</p>
+</section>
+<section id="id18">
+<h3><span class="section-number">5.2.16. </span>Застосування стилів і готового оформлення<a class="headerlink" href="#id18" title="Link to this heading">#</a></h3>
+<p>Багато табличних процесорів підтримують готові стилі комірок або набори оформлення. Вони дають змогу застосувати одразу кілька параметрів форматування й підтримувати однаковий вигляд однотипних елементів таблиці.</p>
+<p>Якщо ваш редактор підтримує стилі комірок, спробуйте застосувати готовий стиль до заголовка або підсумкового рядка, а потім змініть один із його параметрів. Якщо окремого механізму стилів немає, відтворіть аналогічне оформлення звичайними засобами форматування.</p>
+</section>
+</section>
+<section id="id19">
+<h2><span class="section-number">5.3. </span>Практичні завдання<a class="headerlink" href="#id19" title="Link to this heading">#</a></h2>
+<p>Виконайте завдання в усіх трьох табличних процесорах, зазначених у вимогах до виконання і подання. Методичні вказівки та ілюстрації орієнтовані на LibreOffice Calc; в інших редакторах використовуйте еквівалентні інструменти. Якщо певної функції немає, отримайте максимально близький результат і коротко зафіксуйте відмінність у звіті.</p>
+<ol class="arabic simple">
+<li><p>Ознайомтеся з інтерфейсом табличного процесора. Знайдіть засоби створення й відкриття документа, рядок формул, робочий аркуш, ярлики аркушів, рядок стану та масштабування.</p></li>
+<li><p>Дослідіть рядок стану. Виділіть діапазон числових даних і визначте, яку зведену інформацію показує редактор. Якщо рядок стану можна налаштовувати — змініть набір показників.</p></li>
+<li><p>З’ясуйте, чи підтримує редактор стиль адресації R1C1. Якщо підтримує — увімкніть його, перегляньте адреси комірок і поверніться до стилю A1. Якщо не підтримує — зазначте це у звіті.</p></li>
+<li><p>Введіть у комірку <code class="docutils literal notranslate"><span class="pre">A1</span></code> число <code class="docutils literal notranslate"><span class="pre">5</span></code>, а в комірку <code class="docutils literal notranslate"><span class="pre">C2</span></code> — формулу <code class="docutils literal notranslate"><span class="pre">=A1+1</span></code>. Перевірте результат.</p></li>
+<li><p>Перемістіть значення з <code class="docutils literal notranslate"><span class="pre">A1</span></code> в іншу комірку та скопіюйте комірку <code class="docutils literal notranslate"><span class="pre">C2</span></code> на інший аркуш. Зверніть увагу, як редактор поводиться з посиланням у формулі.</p></li>
+<li><p>Очистіть створені для попередніх вправ дані, не вилучаючи самі рядки й стовпці.</p></li>
+<li><p>Заповніть стовпець назвами місяців року за допомогою автозаповнення або еквівалентного механізму вашого редактора.</p></li>
+<li><p>Створіть послідовність чисел від <code class="docutils literal notranslate"><span class="pre">1</span></code> до <code class="docutils literal notranslate"><span class="pre">100</span></code>.</p></li>
+<li><p>Створіть послідовність парних чисел від <code class="docutils literal notranslate"><span class="pre">2</span></code> до <code class="docutils literal notranslate"><span class="pre">200</span></code>.</p></li>
+<li><p>Відкрийте засоби детального форматування комірки та перегляньте доступні категорії параметрів.</p></li>
+<li><p>Для комірки <code class="docutils literal notranslate"><span class="pre">B2</span></code> задайте видимі межі та змініть щонайменше один параметр їх оформлення.</p></li>
+<li><p>Для комірки <code class="docutils literal notranslate"><span class="pre">C3</span></code> задайте колір тла. Якщо редактор підтримує візерунки або інші способи заливки, застосуйте один із них; якщо ні — використайте звичайну заливку.</p></li>
+<li><p>Для кількох числових комірок застосуйте різні числові формати. Для одного діапазону встановіть відображення двох знаків після десяткового роздільника.</p></li>
+<li><p>Продемонструйте горизонтальне й вертикальне вирівнювання даних у комірках, а також перенесення довгого тексту.</p></li>
+<li><p>Створіть назву таблиці над кількома стовпцями: об’єднайте потрібні комірки й відцентруйте заголовок. Якщо редактор пропонує спосіб центрування без об’єднання, дослідіть і його.</p></li>
+<li><p>Змініть висоту трьох рядків: одного вручну, одного точним значенням і одного автоматичним підбором за вмістом, якщо така функція доступна.</p></li>
+<li><p>Приховайте кілька стовпців, переконайтеся, що дані не вилучені, а потім знову відобразіть ці стовпці.</p></li>
+</ol>
+</section>
+<section id="id20">
+<h2><span class="section-number">5.4. </span>Контрольні питання<a class="headerlink" href="#id20" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Які основні області та елементи містить інтерфейс табличного процесора?</p></li>
+<li><p>Яку інформацію може відображати рядок стану та як її використовувати під час роботи з даними?</p></li>
+<li><p>Що таке табличний документ (робоча книга) і з яких основних об’єктів він складається?</p></li>
+<li><p>Як створити, відкрити, зберегти та експортувати табличний документ?</p></li>
+<li><p>Які параметри сторінки важливі під час підготовки електронної таблиці до друку або експорту в PDF?</p></li>
+<li><p>Як утворюється адреса комірки в стилі A1? Чим від нього відрізняється стиль R1C1?</p></li>
+<li><p>Які основні типи даних можна зберігати в комірках електронної таблиці?</p></li>
+<li><p>Якими способами можна ввести однакове значення відразу в кілька комірок?</p></li>
+<li><p>Як табличний процесор розпізнає та зберігає дати? Як перевірити, що введене значення є датою, а не текстом?</p></li>
+<li><p>Як вводити й форматувати значення часу?</p></li>
+<li><p>Як виділити одну комірку, суміжний діапазон, несуміжні діапазони, рядок і стовпець?</p></li>
+<li><p>Як змінити межі окремої комірки або діапазону?</p></li>
+<li><p>Як змінити колір тла та інші параметри оформлення комірки?</p></li>
+<li><p>Як працює автозаповнення і як створити числову послідовність із заданим кроком?</p></li>
+<li><p>Як відредагувати вже введені дані або формулу в комірці?</p></li>
+<li><p>Для чого потрібні числові формати і чим формат відображення відрізняється від фактичного значення комірки?</p></li>
+<li><p>Як змінити ширину стовпця та виконати автоматичний підбір ширини за вмістом?</p></li>
+<li><p>Як приховати й знову відобразити рядки або стовпці без вилучення даних?</p></li>
+<li><p>Для чого об’єднують комірки та які обмеження може створювати об’єднання?</p></li>
+<li><p>Як змінити вертикальне розташування або орієнтацію тексту в комірці?</p></li>
+<li><p>Які способи горизонтального й вертикального вирівнювання даних доступні в електронних таблицях?</p></li>
+<li><p>Як повернути текст у комірці на довільний кут, якщо редактор підтримує таку можливість?</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id21">
+<h2><span class="section-number">5.5. </span>Вимоги до виконання і подання<a class="headerlink" href="#id21" title="Link to this heading">#</a></h2>
+<p><strong>Виконайте практичні завдання тричі:</strong></p>
+<ol class="arabic simple">
+<li><p>у <strong>LibreOffice Calc</strong>;</p></li>
+<li><p>у <strong>Google Sheets</strong>;</p></li>
+<li><p>у <strong>ще одному табличному процесорі на вибір</strong>: Microsoft Excel / Apple Numbers / WPS Spreadsheets / OnlyOffice.</p></li>
+</ol>
+<p><strong>Подання в Google Classroom:</strong> завантажте <strong>три PDF-файли</strong>, кожен — експорт із відповідного табличного процесора.</p>
+<p><strong>Схема імені файлу:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;назва</span> <span class="pre">табличного</span> <span class="pre">процесора&gt;_&lt;група&gt;_&lt;ПрізвищеІм’я&gt;_ЛР4.pdf</span></code></p>
+<p><strong>Приклади:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>LibreOfficeCalc_141_ПетренкоІван_ЛР4.pdf
+GoogleSheets_143_ПетренкоІван_ЛР4.pdf
+Excel_144_АлукіАнастасія_ЛР4.pdf
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Коментар щодо недоступних опцій</p>
+<p>Якщо певної опції немає у вашому табличному процесорі, у звіті коротко вкажіть це й опишіть обраний еквівалент дії. За можливості додайте скріншот.</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lesson04.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>ЛАБОРАТОРНА РОБОТА №3</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="lesson06.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>ЛАБОРАТОРНА РОБОТА №5</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">5.1. План</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">5.2. Методичні вказівки</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">5.2.1. Запуск табличного процесора</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">5.2.2. Інтерфейс табличного процесора</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">5.2.3. Створення, відкриття та збереження табличних документів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">5.2.4. Основні об’єкти табличного документа</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">5.2.5. Закриття табличного документа</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">5.2.6. Типи даних</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">5.2.7. Введення числових значень, дат і часу</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">5.2.8. Введення текстових значень та формул</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">5.2.9. Виділення, копіювання та переміщення даних</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">5.2.10. Вилучення та очищення комірок, рядків, стовпців і аркушів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">5.2.11. Створення рядів даних та автозаповнення</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">5.2.12. Найпоширеніші інструменти оформлення таблиці</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">5.2.13. Форматування комірок</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">5.2.14. Форматування та вирівнювання даних</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">5.2.15. Відображення рядків і стовпців</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">5.2.16. Застосування стилів і готового оформлення</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id19">5.3. Практичні завдання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id20">5.4. Контрольні питання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id21">5.5. Вимоги до виконання і подання</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
