@@ -1,0 +1,796 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>8. ЛАБОРАТОРНА РОБОТА №7 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/lab.css?v=9e99ccb3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/lesson08';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="9. ЛАБОРАТОРНА РОБОТА №8" href="lesson09.html" />
+    <link rel="prev" title="7. ЛАБОРАТОРНА РОБОТА №6" href="lesson07.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lesson01.html">1. Основи інформаційних технологій</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson02.html">2. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson03.html">3. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson04.html">4. ЛАБОРАТОРНА РОБОТА №3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson05.html">5. ЛАБОРАТОРНА РОБОТА №4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson06.html">6. ЛАБОРАТОРНА РОБОТА №5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson07.html">7. ЛАБОРАТОРНА РОБОТА №6</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. ЛАБОРАТОРНА РОБОТА №7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson09.html">9. ЛАБОРАТОРНА РОБОТА №8</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/blob/main/docs/app/lesson08.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/edit/main/docs/app/lesson08.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/issues/new?title=Issue%20on%20page%20%2Fapp/lesson08.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/lesson08.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №7</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">8.1. План</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">8.2. Методичні вказівки</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">8.2.1. Призначення та можливості редакторів презентацій</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">8.2.2. Структура робочого вікна</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">8.2.3. Створення слайдів, вибір розміру й макета</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">8.2.4. Введення та редагування тексту</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">8.2.5. Анімація об’єктів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">8.2.6. Графічне оформлення презентації</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">8.2.7. Переходи та демонстрація слайдів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">8.2.8. Інтерактивні й нелінійні презентації</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">8.3. Практичні завдання</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">8.3.1. Завдання 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">8.3.2. Завдання 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">8.4. Контрольні питання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">8.5. Вимоги до виконання і подання</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o7">
+<h1><span class="section-number">8. </span>ЛАБОРАТОРНА РОБОТА №7<a class="headerlink" href="#o7" title="Link to this heading">#</a></h1>
+<p><strong>Створення презентацій. Інтерактивні презентації</strong></p>
+<div class="lab-block lab-goal admonition">
+<p class="admonition-title">Мета роботи</p>
+<p>Опанувати основні прийоми створення й демонстрації презентацій: роботу зі слайдами та макетами, введення й оформлення тексту, додавання графічних і мультимедійних об’єктів, налаштування анімації та переходів, а також створення нелінійної інтерактивної навігації.</p>
+</div>
+<section id="id1">
+<h2><span class="section-number">8.1. </span>План<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="lab-block lab-plan docutils container">
+<ol class="arabic simple">
+<li><p>Призначення та можливості редакторів презентацій.</p></li>
+<li><p>Структура робочого вікна.</p></li>
+<li><p>Створення слайдів, вибір розміру й макета.</p></li>
+<li><p>Введення та редагування тексту.</p></li>
+<li><p>Анімація об’єктів.</p></li>
+<li><p>Графічне оформлення презентації.</p></li>
+<li><p>Демонстрація слайдів.</p></li>
+<li><p>Інтерактивні й нелінійні презентації.</p></li>
+</ol>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">8.2. </span>Методичні вказівки<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>У цій лабораторній роботі базовим середовищем для пояснень та ілюстрацій є <strong>LibreOffice Impress</strong>. Завдання 1 потрібно відтворити також у Google Slides і ще одному редакторі презентацій. Назви меню, кнопок і панелей у різних програмах відрізняються, тому орієнтуйтеся насамперед на <strong>зміст операції та кінцевий результат</strong>.</p>
+<section id="id3">
+<h3><span class="section-number">8.2.1. </span>Призначення та можливості редакторів презентацій<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p><strong>Презентація</strong> — це логічно пов’язана послідовність слайдів, об’єднана спільною темою та принципами оформлення й призначена для супроводу доповіді, лекції, захисту проєкту або іншого публічного виступу.</p>
+<p><strong>Слайд</strong> — окрема сторінка презентації. Він може містити:</p>
+<ul class="simple">
+<li><p>текст;</p></li>
+<li><p>зображення;</p></li>
+<li><p>таблиці й діаграми;</p></li>
+<li><p>аудіо та відео;</p></li>
+<li><p>фігури й інші графічні об’єкти;</p></li>
+<li><p>елементи навігації;</p></li>
+<li><p>анімаційні ефекти.</p></li>
+</ul>
+<p>Редактори презентацій дають змогу створювати слайди, змінювати їх порядок і макети, оформлювати вміст, додавати мультимедіа, налаштовувати переходи й анімацію та демонструвати готову роботу в повноекранному режимі.</p>
+<p>Під час оформлення презентації дотримуйтеся кількох базових принципів:</p>
+<ul class="simple">
+<li><p>використовуйте єдиний візуальний стиль;</p></li>
+<li><p>забезпечуйте достатній контраст між текстом і тлом;</p></li>
+<li><p>не перевантажуйте слайд великим обсягом тексту;</p></li>
+<li><p>використовуйте заголовки й короткі смислові блоки;</p></li>
+<li><p>добирайте шрифт такого розміру, щоб його було легко читати з відстані;</p></li>
+<li><p>застосовуйте анімацію лише тоді, коли вона допомагає пояснити зміст;</p></li>
+<li><p>не використовуйте декоративні ефекти, які відволікають від повідомлення.</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3><span class="section-number">8.2.2. </span>Структура робочого вікна<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Більшість редакторів презентацій має подібну будову:</p>
+<ul class="simple">
+<li><p>панель або область із мініатюрами слайдів;</p></li>
+<li><p>робочу область поточного слайда;</p></li>
+<li><p>меню, панелі інструментів або бічні панелі;</p></li>
+<li><p>засоби вибору макета, теми й властивостей об’єктів;</p></li>
+<li><p>область нотаток доповідача, якщо редактор її підтримує.</p></li>
+</ul>
+<p>Основну частину вікна займає поточний слайд, а список мініатюр дозволяє швидко переходити між слайдами, змінювати їх порядок, дублювати або вилучати їх.</p>
+</section>
+<section id="id5">
+<h3><span class="section-number">8.2.3. </span>Створення слайдів, вибір розміру й макета<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Для презентацій, які демонструються на сучасних екранах і проєкторах, найчастіше використовують співвідношення сторін <strong>16:9</strong>. Формат <strong>4:3</strong> може знадобитися для старішого обладнання або спеціальних сценаріїв.</p>
+<p>Перед початком роботи перевірте розмір слайда й за потреби змініть його.</p>
+<p>Новий слайд можна створити порожнім або на основі готового <strong>макета</strong>. Макет визначає розташування типових областей: заголовка, тексту, зображення, таблиці, діаграми або іншого вмісту.</p>
+<p>Приклади типових макетів слайда показано на рис. <a class="fig-num-reference" href="#lesson08-slide-layout">8.1</a>.</p>
+<figure class="align-default" id="lesson08-slide-layout">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vQJzJg3c-Fd9_QUspQZBdZlH4Q4_dO6Xk5aP2K6uEXYCFx-cJLZ5vJHAQsi6B1CJqEr_IZwBNtvA0Mr/pub?w=960&amp;h=720"><img alt="Приклади макетів слайда" src="https://docs.google.com/drawings/d/e/2PACX-1vQJzJg3c-Fd9_QUspQZBdZlH4Q4_dO6Xk5aP2K6uEXYCFx-cJLZ5vJHAQsi6B1CJqEr_IZwBNtvA0Mr/pub?w=960&amp;h=720" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 8.1 </span><span class="caption-text">Вибір макета слайда</span><a class="headerlink" href="#lesson08-slide-layout" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Макет можна змінити й після створення слайда. При цьому потрібно перевірити, чи всі наявні об’єкти залишилися на правильних місцях.</p>
+<p>Корисна операція — <strong>дублювання слайда</strong>. Вона дає змогу створити новий слайд на основі вже оформленого й замінити тільки його зміст.</p>
+</section>
+<section id="id6">
+<h3><span class="section-number">8.2.4. </span>Введення та редагування тексту<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Текст можна вводити в готові місцезаповнювачі макета або в окремі текстові блоки.</p>
+<p>Для тексту можна змінювати:</p>
+<ul class="simple">
+<li><p>шрифт;</p></li>
+<li><p>розмір;</p></li>
+<li><p>накреслення;</p></li>
+<li><p>колір;</p></li>
+<li><p>вирівнювання;</p></li>
+<li><p>міжрядкові та абзацні інтервали;</p></li>
+<li><p>маркери й нумерацію.</p></li>
+</ul>
+<p>Текстовий блок можна переміщувати й змінювати його розміри. Намагайтеся зберігати однакові принципи оформлення заголовків і основного тексту на всіх слайдах.</p>
+</section>
+<section id="id7">
+<h3><span class="section-number">8.2.5. </span>Анімація об’єктів<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p><strong>Анімація</strong> змінює спосіб появи, руху, виділення або зникнення окремого об’єкта на слайді.</p>
+<p>Типові групи ефектів:</p>
+<ul class="simple">
+<li><p>поява;</p></li>
+<li><p>виділення;</p></li>
+<li><p>переміщення;</p></li>
+<li><p>зникнення.</p></li>
+</ul>
+<p>Для кожного ефекту редактор може дозволяти змінювати:</p>
+<ul class="simple">
+<li><p>порядок запуску;</p></li>
+<li><p>момент запуску — за клацанням, разом із попереднім або після попереднього;</p></li>
+<li><p>тривалість;</p></li>
+<li><p>затримку;</p></li>
+<li><p>напрям або інші параметри ефекту.</p></li>
+</ul>
+<p>Не використовуйте багато різних ефектів без змістовної потреби. Анімація має допомагати керувати увагою аудиторії.</p>
+</section>
+<section id="id8">
+<h3><span class="section-number">8.2.6. </span>Графічне оформлення презентації<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Для цілісного оформлення використовують тему, шаблон або набір стилів. Вони можуть визначати:</p>
+<ul class="simple">
+<li><p>тло;</p></li>
+<li><p>шрифти;</p></li>
+<li><p>кольорову палітру;</p></li>
+<li><p>оформлення заголовків;</p></li>
+<li><p>типові стилі графічних елементів.</p></li>
+</ul>
+<p>За потреби тло окремого слайда можна змінити незалежно від решти презентації. Для графічних об’єктів можна налаштовувати розміри, положення, порядок накладання, межі та інші властивості.</p>
+<p>Під час використання зображень перевіряйте їхню якість і пропорції. Не розтягуйте зображення непропорційно.</p>
+</section>
+<section id="id9">
+<h3><span class="section-number">8.2.7. </span>Переходи та демонстрація слайдів<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p><strong>Перехід</strong> — це ефект зміни одного слайда іншим. Він застосовується до слайда або групи слайдів, а не до окремого об’єкта.</p>
+<p>Для переходу можна задавати тип ефекту, тривалість і спосіб переходу до наступного слайда. Якщо презентація супроводжує живу доповідь, найзручніше перемикати слайди вручну.</p>
+<p>Перед завершенням роботи обов’язково перегляньте презентацію в режимі демонстрації й перевірте:</p>
+<ul class="simple">
+<li><p>порядок слайдів;</p></li>
+<li><p>читабельність тексту;</p></li>
+<li><p>роботу анімацій і переходів;</p></li>
+<li><p>відтворення мультимедіа;</p></li>
+<li><p>відсутність об’єктів, що виходять за межі слайда.</p></li>
+</ul>
+</section>
+<section id="id10">
+<h3><span class="section-number">8.2.8. </span>Інтерактивні й нелінійні презентації<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p><strong>Інтерактивна презентація</strong> дає користувачеві можливість впливати на послідовність перегляду. На відміну від звичайної лінійної демонстрації, перехід між частинами такої презентації може залежати від вибору користувача.</p>
+<p>Для нелінійної навігації можна використовувати:</p>
+<ul class="simple">
+<li><p>внутрішні гіперпосилання;</p></li>
+<li><p>кнопки або інші інтерактивні об’єкти;</p></li>
+<li><p>меню чи зміст;</p></li>
+<li><p>переходи до тематичних розділів;</p></li>
+<li><p>повернення на головний або оглядовий слайд;</p></li>
+<li><p>вкладені або асоційовані розділи, якщо редактор підтримує таку модель.</p></li>
+</ul>
+<p>Таку презентацію можна створювати в різних середовищах. Наприклад, Prezi використовує просторову модель полотна й масштабування, тоді як у класичних редакторах нелінійність зазвичай реалізують через гіперпосилання, кнопки дій або навігацію між слайдами.</p>
+<p>Головна вимога — не конкретний інструмент, а <strong>можливість перейти з одного розділу до іншого не лише в послідовності «наступний слайд»</strong>.</p>
+</section>
+</section>
+<section id="id11">
+<h2><span class="section-number">8.3. </span>Практичні завдання<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<section id="id12">
+<h3><span class="section-number">8.3.1. </span>Завдання 1<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<p>Створіть презентацію <strong>«Програма курсу із сучасних інформаційних технологій»</strong>.</p>
+<ol class="arabic simple">
+<li><p>Створіть нову порожню презентацію.</p></li>
+<li><p>Перевірте розмір слайдів і встановіть формат 16:9, якщо він ще не використовується.</p></li>
+<li><p>Для першого слайда виберіть титульний макет і введіть назву презентації.</p></li>
+<li><p>На другому слайді створіть список розділів курсу:</p>
+<ul class="simple">
+<li><p>Вступ до інформатики;</p></li>
+<li><p>Операційна система;</p></li>
+<li><p>Текстовий процесор;</p></li>
+<li><p>Електронні таблиці;</p></li>
+<li><p>Комп’ютерні мережі;</p></li>
+<li><p>Створення презентацій.</p></li>
+</ul>
+</li>
+<li><p>Застосуйте до презентації цілісну тему або інший узгоджений стиль оформлення.</p></li>
+<li><p>Створіть слайд <strong>«Вступ до інформатики»</strong> з такими пунктами:</p>
+<ul class="simple">
+<li><p>Інформатика та інформаційні процеси;</p></li>
+<li><p>Предмет інформатики та її задачі;</p></li>
+<li><p>Кодування інформації.</p></li>
+</ul>
+</li>
+<li><p>Створіть слайд <strong>«Операційна система»</strong> з коротким переліком основних тем: інтерфейс, робота з файлами й папками, стандартні програми, безпека та архівація.</p></li>
+<li><p>Створіть слайд <strong>«Текстовий процесор»</strong> із темами: створення й редагування документів, форматування, інтеграція об’єктів, таблиці та графічні елементи.</p></li>
+<li><p>До заголовка й текстового блоку одного зі слайдів застосуйте два різні, але стримані ефекти анімації.</p></li>
+<li><p>Продублюйте попередній слайд і на його основі створіть слайд <strong>«Електронні таблиці»</strong> з темами: створення й форматування таблиць, функції, списки, діаграми та графіки.</p></li>
+<li><p>Створіть слайд <strong>«Комп’ютерні мережі»</strong> з темами: локальна мережа, Інтернет, електронна пошта та вебресурси.</p></li>
+<li><p>Створіть слайд <strong>«Створення презентацій»</strong> з темами: створення слайдів, оформлення, анімація й демонстрація.</p></li>
+<li><p>Додайте до титульного слайда тематичне зображення з локального файла або іншого доступного джерела.</p></li>
+<li><p>Для вставленого зображення задайте один доречний анімаційний ефект і налаштуйте його запуск.</p></li>
+<li><p>Додайте однаковий стриманий перехід між кількома слайдами й налаштуйте його тривалість.</p></li>
+<li><p>Змініть тло щонайменше двох слайдів: для одного використайте суцільний колір, для другого — градієнт або інший доступний варіант.</p></li>
+<li><p>Запустіть демонстрацію з першого слайда та перевірте всю презентацію.</p></li>
+<li><p>Змініть порядок щонайменше двох слайдів у режимі, де видно кілька мініатюр одночасно.</p></li>
+<li><p>Збережіть редаговану версію презентації та експортуйте її в PDF.</p></li>
+</ol>
+</section>
+<section id="id13">
+<h3><span class="section-number">8.3.2. </span>Завдання 2<a class="headerlink" href="#id13" title="Link to this heading">#</a></h3>
+<p>Створіть <strong>інтерактивну нелінійну презентацію</strong>. Це завдання виконується один раз у будь-якому редакторі, який підтримує внутрішню навігацію або аналогічну інтерактивність.</p>
+<ol class="arabic simple">
+<li><p>Створіть нову презентацію та визначте її тему.</p></li>
+<li><p>Створіть головний або оглядовий слайд із назвою презентації та щонайменше трьома тематичними розділами.</p></li>
+<li><p>Для кожного розділу створіть окремий слайд або групу слайдів.</p></li>
+<li><p>Побудуйте нелінійну структуру: з головного слайда користувач повинен мати змогу перейти безпосередньо до кожного розділу.</p></li>
+<li><p>Додайте до кожного тематичного розділу спосіб повернення на головний або оглядовий слайд.</p></li>
+<li><p>Змініть порядок розділів або їх візуальне розташування й переконайтеся, що навігація продовжує працювати.</p></li>
+<li><p>Для одного розділу створіть вкладений підрозділ або додатковий рівень навігації.</p></li>
+<li><p>Додайте щонайменше одне зображення й відформатуйте його розмір та положення.</p></li>
+<li><p>Додайте щонайменше один текстовий блок і відформатуйте заголовок та основний текст різними стилями.</p></li>
+<li><p>Додайте відео або посилання на відеоматеріал, якщо обраний редактор це підтримує.</p></li>
+<li><p>Додайте один доречний ефект анімації або масштабування для об’єкта чи переходу між частинами презентації.</p></li>
+<li><p>Перевірте презентацію в режимі демонстрації, переходячи між розділами не лише послідовно.</p></li>
+<li><p>Перевірте всі елементи повернення на головний слайд.</p></li>
+<li><p>Виправте щонайменше один елемент навігації після тестового перегляду.</p></li>
+<li><p>Переконайтеся, що користувач може зрозуміти структуру презентації без усного пояснення автора.</p></li>
+<li><p>Якщо редактор підтримує спільний доступ, відкрийте презентацію за посиланням із правами лише на перегляд.</p></li>
+<li><p>Якщо редактор підтримує спільне редагування, ознайомтеся з механізмом надання доступу конкретному користувачеві, але не надсилайте запрошення без потреби.</p></li>
+<li><p>Збережіть або опублікуйте інтерактивну версію так, щоб її навігація залишалася працездатною.</p></li>
+<li><p>Додайте до звіту посилання на інтерактивну презентацію або інший спосіб доступу до неї.</p></li>
+</ol>
+</section>
+</section>
+<section id="id14">
+<h2><span class="section-number">8.4. </span>Контрольні питання<a class="headerlink" href="#id14" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Що таке презентація та що таке інтерактивна презентація?</p></li>
+<li><p>Які основні області містить робоче вікно редактора презентацій?</p></li>
+<li><p>Які базові параметри презентації доцільно перевірити перед початком роботи?</p></li>
+<li><p>Які режими перегляду презентації використовують під час редагування та демонстрації?</p></li>
+<li><p>Які об’єкти може містити слайд і якими способами їх додають?</p></li>
+<li><p>Як створити, продублювати, вилучити та змінити порядок слайдів?</p></li>
+<li><p>Що таке тема, шаблон і макет слайда та чим вони відрізняються?</p></li>
+<li><p>Як змінювати розміри й положення текстових і графічних об’єктів на слайді?</p></li>
+<li><p>Якими способами можна додати текст на слайд?</p></li>
+<li><p>Для чого використовують анімацію і які основні типи ефектів застосовують до об’єктів?</p></li>
+<li><p>Які параметри анімації можна змінювати після її додавання?</p></li>
+<li><p>Чим перехід між слайдами відрізняється від анімації об’єкта?</p></li>
+<li><p>Як змінити тло та загальне графічне оформлення презентації?</p></li>
+<li><p>Що потрібно перевірити перед демонстрацією готової презентації?</p></li>
+<li><p>У чому полягає нелінійність інтерактивної презентації?</p></li>
+<li><p>Якими засобами можна реалізувати переходи між тематичними розділами?</p></li>
+<li><p>Для чого в інтерактивній презентації потрібні елементи повернення на головний або оглядовий слайд?</p></li>
+<li><p>Як надати доступ до інтерактивної презентації, не відкриваючи зайвих прав на редагування?</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id15">
+<h2><span class="section-number">8.5. </span>Вимоги до виконання і подання<a class="headerlink" href="#id15" title="Link to this heading">#</a></h2>
+<p><strong>Виконайте завдання 1 тричі:</strong></p>
+<ol class="arabic simple">
+<li><p>у <strong>LibreOffice Impress</strong>;</p></li>
+<li><p>у <strong>Google Slides</strong>;</p></li>
+<li><p>у <strong>ще одному редакторі презентацій на вибір</strong>: Microsoft PowerPoint / OnlyOffice Presentation Editor / WPS Presentation / Apple Keynote / Canva.</p></li>
+</ol>
+<p><strong>Завдання 2 виконайте один раз</strong> у будь-якому редакторі, який підтримує нелінійну навігацію: внутрішні посилання, кнопки дій, просторові переходи або інший аналогічний механізм.</p>
+<p><strong>Подання в Google Classroom:</strong> завантажте <strong>три PDF-файли</strong> із завдання 1 та додайте <strong>посилання на інтерактивну презентацію</strong> із завдання 2.</p>
+<p><strong>Схема імені файлу:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;назва</span> <span class="pre">редактора&gt;_&lt;група&gt;_&lt;ПрізвищеІм’я&gt;_ЛР7.pdf</span></code></p>
+<p><strong>Приклади:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>LibreOfficeImpress_141_ПетренкоІван_ЛР7.pdf
+GoogleSlides_143_ПетренкоІван_ЛР7.pdf
+PowerPoint_144_АлукіАнастасія_ЛР7.pdf
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lesson07.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>ЛАБОРАТОРНА РОБОТА №6</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="lesson09.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><span class="section-number">9. </span>ЛАБОРАТОРНА РОБОТА №8</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">8.1. План</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">8.2. Методичні вказівки</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">8.2.1. Призначення та можливості редакторів презентацій</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">8.2.2. Структура робочого вікна</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">8.2.3. Створення слайдів, вибір розміру й макета</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">8.2.4. Введення та редагування тексту</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">8.2.5. Анімація об’єктів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">8.2.6. Графічне оформлення презентації</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">8.2.7. Переходи та демонстрація слайдів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">8.2.8. Інтерактивні й нелінійні презентації</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">8.3. Практичні завдання</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">8.3.1. Завдання 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">8.3.2. Завдання 2</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">8.4. Контрольні питання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">8.5. Вимоги до виконання і подання</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

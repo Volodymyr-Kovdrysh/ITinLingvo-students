@@ -1,0 +1,763 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>7. ЛАБОРАТОРНА РОБОТА №6 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/lab.css?v=9e99ccb3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/lesson07';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="next" title="8. ЛАБОРАТОРНА РОБОТА №7" href="lesson08.html" />
+    <link rel="prev" title="6. ЛАБОРАТОРНА РОБОТА №5" href="lesson06.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lesson01.html">1. Основи інформаційних технологій</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson02.html">2. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson03.html">3. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson04.html">4. ЛАБОРАТОРНА РОБОТА №3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson05.html">5. ЛАБОРАТОРНА РОБОТА №4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson06.html">6. ЛАБОРАТОРНА РОБОТА №5</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">7. ЛАБОРАТОРНА РОБОТА №6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson08.html">8. ЛАБОРАТОРНА РОБОТА №7</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson09.html">9. ЛАБОРАТОРНА РОБОТА №8</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/blob/main/docs/app/lesson07.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/edit/main/docs/app/lesson07.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/issues/new?title=Issue%20on%20page%20%2Fapp/lesson07.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/lesson07.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №6</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.1. План</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">7.2. Методичні вказівки</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">7.2.1. Пошук і заміна даних</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">7.2.2. Сортування даних</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">7.2.3. Фільтрування даних</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">7.2.4. Створення діаграм</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">7.2.5. Редагування діаграм</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">7.2.6. Побудова графіків функцій</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">7.2.7. Закріплення областей</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">7.2.8. Імпорт даних</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">7.3. Практичні завдання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">7.4. Контрольні питання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">7.5. Вимоги до виконання і подання</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o6">
+<h1><span class="section-number">7. </span>ЛАБОРАТОРНА РОБОТА №6<a class="headerlink" href="#o6" title="Link to this heading">#</a></h1>
+<p><strong>Пошук, сортування та фільтрація даних. Оформлення діаграм</strong></p>
+<div class="lab-block lab-goal admonition">
+<p class="admonition-title">Мета роботи</p>
+<p>Опанувати пошук і заміну даних, сортування та фільтрування таблиць, створення й редагування діаграм, побудову графіків функцій, закріплення областей та імпорт даних у табличному процесорі.</p>
+</div>
+<section id="id1">
+<h2><span class="section-number">7.1. </span>План<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="lab-block lab-plan docutils container">
+<ol class="arabic simple">
+<li><p>Пошук і заміна даних.</p></li>
+<li><p>Сортування даних.</p></li>
+<li><p>Фільтрування даних.</p></li>
+<li><p>Створення діаграм.</p></li>
+<li><p>Редагування діаграм.</p></li>
+<li><p>Побудова графіків функцій.</p></li>
+<li><p>Закріплення областей.</p></li>
+<li><p>Імпорт даних.</p></li>
+</ol>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">7.2. </span>Методичні вказівки<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>У цій лабораторній роботі базовим середовищем для пояснень є <strong>LibreOffice Calc</strong>. Ті самі практичні дії потрібно відтворити також у Google Sheets і ще одному табличному процесорі. Назви меню, кнопок і панелей у різних програмах відрізняються, тому орієнтуйтеся насамперед на <strong>зміст операції та отриманий результат</strong>.</p>
+<section id="id3">
+<h3><span class="section-number">7.2.1. </span>Пошук і заміна даних<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p>Пошук дає змогу швидко знаходити в таблиці текст, числа, дати або інші значення без ручного перегляду всього аркуша.</p>
+<p>Перед пошуком визначте його область:</p>
+<ul class="simple">
+<li><p>виділений діапазон;</p></li>
+<li><p>поточний аркуш;</p></li>
+<li><p>увесь табличний документ, якщо редактор підтримує такий режим.</p></li>
+</ul>
+<p>Засоби пошуку зазвичай дозволяють переходити між знайденими входженнями або одразу переглянути список результатів. Додаткові параметри можуть враховувати регістр, повний збіг вмісту комірки, напрям пошуку чи тип даних.</p>
+<p><strong>Заміна</strong> виконується за тією самою логікою: задається значення, яке потрібно знайти, і нове значення. Перед використанням команди на кшталт <strong>Замінити все</strong> перевірте область пошуку, щоб випадково не змінити дані поза потрібним діапазоном.</p>
+<p>Деякі табличні процесори вміють шукати не лише значення, а й формули або параметри форматування. Якщо такої можливості у вашому редакторі немає, зафіксуйте цю відмінність у звіті.</p>
+</section>
+<section id="id4">
+<h3><span class="section-number">7.2.2. </span>Сортування даних<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p><strong>Сортування</strong> змінює порядок рядків або стовпців за значеннями одного чи кількох полів.</p>
+<p>Найпоширеніші варіанти:</p>
+<ul class="simple">
+<li><p>числа — за зростанням або спаданням;</p></li>
+<li><p>текст — за абеткою;</p></li>
+<li><p>дати й час — від раніших до пізніших або навпаки;</p></li>
+<li><p>кілька ключів — спочатку за одним стовпцем, потім за другим.</p></li>
+</ul>
+<p>Перед сортуванням переконайтеся, що весь запис зберігається як один рядок таблиці. Якщо сортувати лише один стовпець без пов’язаних із ним даних, можна порушити відповідність між полями запису.</p>
+<p>Якщо перший рядок містить назви полів, позначте його як <strong>рядок заголовків</strong>, щоб він не потрапив у звичайне сортування.</p>
+<p>Для багаторівневого сортування задайте пріоритет ключів. Наприклад, список студентів можна спочатку впорядкувати за прізвищем, а для однакових прізвищ — за ім’ям.</p>
+</section>
+<section id="id5">
+<h3><span class="section-number">7.2.3. </span>Фільтрування даних<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p><strong>Фільтрування</strong> тимчасово приховує рядки, які не відповідають заданим умовам, але не змінює самі дані та їх порядок.</p>
+<p>Умови фільтра можуть залежати від типу даних. Наприклад:</p>
+<ul class="simple">
+<li><p>для тексту — містить, починається з, дорівнює;</p></li>
+<li><p>для чисел — більше, менше, між заданими значеннями;</p></li>
+<li><p>для дат — до, після або в межах періоду;</p></li>
+<li><p>для категорій — вибір одного чи кількох конкретних значень.</p></li>
+</ul>
+<p>До різних стовпців можна застосовувати кілька умов одночасно. Після завершення аналізу очистьте або вимкніть фільтр і перевірте, що всі рядки знову відображаються.</p>
+</section>
+<section id="id6">
+<h3><span class="section-number">7.2.4. </span>Створення діаграм<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p>Діаграма подає табличні дані графічно й допомагає побачити співвідношення, структуру або тенденцію зміни значень.</p>
+<p>Тип діаграми потрібно добирати відповідно до задачі:</p>
+<ul class="simple">
+<li><p><strong>стовпчаста</strong> або <strong>смугова</strong> — для порівняння категорій;</p></li>
+<li><p><strong>лінійна</strong> — для відображення послідовної зміни значень;</p></li>
+<li><p><strong>кругова</strong> або <strong>кільцева</strong> — для показу часток цілого за невеликої кількості категорій;</p></li>
+<li><p><strong>точкова (XY)</strong> — для залежності однієї числової величини від іншої;</p></li>
+<li><p><strong>діаграма з областями</strong> — для демонстрації зміни значень і внеску рядів у загальну величину.</p></li>
+</ul>
+<p>Приклади типів діаграм показано на рис. <a class="fig-num-reference" href="#lesson07-chart-types">7.1</a> і <a class="fig-num-reference" href="#lesson07-circular-charts">7.2</a>.</p>
+<figure class="align-default" id="lesson07-chart-types">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vSg4sEWu37weUJVU_KfUC7Ujru_Z6EAG55tKC1l77uJfrVTSeGjmq_OlHVG3YKV5t_VWRV4nmvNLwLS/pub?w=960&amp;h=720"><img alt="Приклади різних типів діаграм, побудованих на основі однієї таблиці даних" src="https://docs.google.com/drawings/d/e/2PACX-1vSg4sEWu37weUJVU_KfUC7Ujru_Z6EAG55tKC1l77uJfrVTSeGjmq_OlHVG3YKV5t_VWRV4nmvNLwLS/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 7.1 </span><span class="caption-text">Приклади різних типів діаграм, побудованих на основі однієї таблиці даних</span><a class="headerlink" href="#lesson07-chart-types" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="lesson07-circular-charts">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vSdSXbY58afnquRGnL-2b5vEPdb9VMjhK4Z1LHkPC3nQc-wL5Pk5E83B2S5weufuOenjvSDP2XZeAdt/pub?w=960&amp;h=720"><img alt="Приклади кільцевої та кругової діаграм" src="https://docs.google.com/drawings/d/e/2PACX-1vSdSXbY58afnquRGnL-2b5vEPdb9VMjhK4Z1LHkPC3nQc-wL5Pk5E83B2S5weufuOenjvSDP2XZeAdt/pub?w=960&amp;h=720" style="width: 80%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 7.2 </span><span class="caption-text">Приклади кільцевої та кругової діаграм</span><a class="headerlink" href="#lesson07-circular-charts" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>Для побудови діаграми виберіть діапазон вихідних даних. Якщо в першому рядку або стовпці містяться підписи категорій чи назви рядів, включіть їх у виділення. Для несуміжних діапазонів використовуйте спосіб множинного виділення, який підтримує ваш редактор.</p>
+<p>Після створення перевірте:</p>
+<ol class="arabic simple">
+<li><p>чи правильно визначено категорії й ряди даних;</p></li>
+<li><p>чи потрібна легенда;</p></li>
+<li><p>чи зрозумілий заголовок;</p></li>
+<li><p>чи відповідає обраний тип діаграми характеру даних;</p></li>
+<li><p>чи не перевантажена діаграма зайвими підписами та декоративними елементами.</p></li>
+</ol>
+</section>
+<section id="id7">
+<h3><span class="section-number">7.2.5. </span>Редагування діаграм<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Після створення діаграми можна змінити:</p>
+<ul class="simple">
+<li><p>тип діаграми;</p></li>
+<li><p>вихідний діапазон даних;</p></li>
+<li><p>орієнтацію рядів і категорій;</p></li>
+<li><p>заголовок і легенду;</p></li>
+<li><p>підписи даних;</p></li>
+<li><p>осі та їх параметри;</p></li>
+<li><p>розмір і положення діаграми;</p></li>
+<li><p>оформлення окремих рядів або інших елементів.</p></li>
+</ul>
+<p>У різних табличних процесорах ці засоби можуть бути розташовані в контекстному меню, бічній панелі, окремому вікні властивостей або на спеціальних панелях.</p>
+<p>Оформлення має допомагати читати дані. Не використовуйте тривимірні ефекти лише заради декоративності: вони можуть ускладнювати точне порівняння значень.</p>
+</section>
+<section id="id8">
+<h3><span class="section-number">7.2.6. </span>Побудова графіків функцій<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Щоб побудувати графік функції <span class="math notranslate nohighlight">\(y=f(x)\)</span>:</p>
+<ol class="arabic simple">
+<li><p>створіть стовпець значень аргументу <span class="math notranslate nohighlight">\(x\)</span>;</p></li>
+<li><p>у сусідньому стовпці обчисліть відповідні значення <span class="math notranslate nohighlight">\(f(x)\)</span>;</p></li>
+<li><p>виберіть обидва числові стовпці;</p></li>
+<li><p>побудуйте <strong>точкову (XY) діаграму</strong> або її аналог із лініями.</p></li>
+</ol>
+<p>Точкова діаграма використовує числові значення <span class="math notranslate nohighlight">\(x\)</span> як координати й тому придатна для графіків функцій навіть тоді, коли крок між сусідніми значеннями аргументу нерівномірний.</p>
+<p>Приклад табулювання та графіка <span class="math notranslate nohighlight">\(y=\cos(x)\)</span> показано на рис. <a class="fig-num-reference" href="#lesson07-function-plot">7.3</a>.</p>
+<figure class="align-default" id="lesson07-function-plot">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vTZN83ZXIVAwvXT3UxexR8nDI_j9hv4UD1gc7ZIxbIl84GK8g2Qr0739A3OkKt9wq1adruTpS-OkgMj/pub?w=960&amp;h=720"><img alt="Приклад табулювання значень і побудови графіка функції y = cos(x)" src="https://docs.google.com/drawings/d/e/2PACX-1vTZN83ZXIVAwvXT3UxexR8nDI_j9hv4UD1gc7ZIxbIl84GK8g2Qr0739A3OkKt9wq1adruTpS-OkgMj/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 7.3 </span><span class="caption-text">Приклад табулювання і графік функції <span class="math notranslate nohighlight">\(y=\cos(x)\)</span></span><a class="headerlink" href="#lesson07-function-plot" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="id9">
+<h3><span class="section-number">7.2.7. </span>Закріплення областей<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Під час роботи з великими таблицями зручно залишати заголовки видимими під час прокручування.</p>
+<p><strong>Закріплення областей</strong> фіксує один або кілька верхніх рядків, лівих стовпців або їх поєднання. Конкретний спосіб залежить від редактора.</p>
+<p>Після закріплення прокрутіть таблицю й перевірте, що заголовки залишаються на екрані. Потім зніміть закріплення та порівняйте поведінку аркуша.</p>
+</section>
+<section id="id10">
+<h3><span class="section-number">7.2.8. </span>Імпорт даних<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
+<p>Дані для електронної таблиці не завжди вводяться вручну. Їх можна імпортувати з інших джерел, наприклад:</p>
+<ul class="simple">
+<li><p>CSV або TSV-файлів;</p></li>
+<li><p>текстових файлів із заданим роздільником;</p></li>
+<li><p>інших табличних форматів;</p></li>
+<li><p>скопійованого структурованого тексту;</p></li>
+<li><p>вебджерел або баз даних, якщо редактор підтримує відповідні підключення.</p></li>
+</ul>
+<p>Під час імпорту текстових даних перевірте:</p>
+<ul class="simple">
+<li><p>кодування;</p></li>
+<li><p>символ-роздільник;</p></li>
+<li><p>розпізнавання заголовків;</p></li>
+<li><p>числові формати;</p></li>
+<li><p>дати;</p></li>
+<li><p>десятковий роздільник.</p></li>
+</ul>
+<p>Після імпорту перегляньте отриману таблицю й переконайтеся, що дані розподілено по стовпцях правильно.</p>
+</section>
+</section>
+<section id="id11">
+<h2><span class="section-number">7.3. </span>Практичні завдання<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<p>Виконайте завдання в усіх трьох табличних процесорах, зазначених у вимогах до виконання і подання. Пояснення орієнтовані на LibreOffice Calc; в інших редакторах використовуйте еквівалентні засоби.</p>
+<p>Створіть таблицю за зразком на рис. <a class="fig-num-reference" href="#lesson07-interest-table">7.4</a>, продовживши розрахунки до 2025 року.</p>
+<ol class="arabic simple">
+<li><p>Створіть новий табличний документ.</p></li>
+<li><p>У комірку <code class="docutils literal notranslate"><span class="pre">A3</span></code> введіть рік <code class="docutils literal notranslate"><span class="pre">2001</span></code>.</p></li>
+<li><p>Заповніть діапазон <code class="docutils literal notranslate"><span class="pre">A3:A27</span></code> послідовністю років від 2001 до 2025.</p></li>
+<li><p>У <code class="docutils literal notranslate"><span class="pre">A1</span></code> введіть число <code class="docutils literal notranslate"><span class="pre">14</span></code> — річну процентну ставку, %.</p></li>
+<li><p>У <code class="docutils literal notranslate"><span class="pre">B3</span></code> введіть початкову суму <code class="docutils literal notranslate"><span class="pre">2500</span></code>.</p></li>
+<li><p>У <code class="docutils literal notranslate"><span class="pre">C3</span></code> введіть формулу нарахування процентів <code class="docutils literal notranslate"><span class="pre">=B3*$A$1/100</span></code>.</p></li>
+<li><p>У <code class="docutils literal notranslate"><span class="pre">D3</span></code> введіть формулу підсумкової суми <code class="docutils literal notranslate"><span class="pre">=B3+C3</span></code>.</p></li>
+<li><p>У <code class="docutils literal notranslate"><span class="pre">B4</span></code> введіть формулу <code class="docutils literal notranslate"><span class="pre">=D3</span></code>, а потім продовжте розрахунок до 2025 року: скопіюйте формули так, щоб у кожному наступному рядку початкова сума дорівнювала підсумковій сумі попереднього року, проценти обчислювалися за ставкою з абсолютним посиланням <code class="docutils literal notranslate"><span class="pre">$A$1</span></code>, а підсумок дорівнював сумі початкової суми та процентів.</p></li>
+</ol>
+<figure class="align-default" id="lesson07-interest-table">
+<a class="reference internal image-reference" href="https://docs.google.com/drawings/d/e/2PACX-1vRmEyIS1RwodfhCdoxQaRe01ODsIa8-NvkFwPES1MjvcQEjFHlHVMJDKXv6qNJ8T6d8SCI7LExSjU4W/pub?w=960&amp;h=720"><img alt="Зразок таблиці нарахування процентів у режимі відображення формул" src="https://docs.google.com/drawings/d/e/2PACX-1vRmEyIS1RwodfhCdoxQaRe01ODsIa8-NvkFwPES1MjvcQEjFHlHVMJDKXv6qNJ8T6d8SCI7LExSjU4W/pub?w=960&amp;h=720" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Рис. 7.4 </span><span class="caption-text">Зразок розв’язування задачі в режимі формул</span><a class="headerlink" href="#lesson07-interest-table" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ol class="arabic simple" start="9">
+<li><p>Увімкніть режим відображення формул і перевірте формули в діапазоні <code class="docutils literal notranslate"><span class="pre">B3:D27</span></code>. Потім поверніться до звичайного відображення результатів.</p></li>
+<li><p>Для числових значень у таблиці встановіть відображення двох знаків після десяткового роздільника.</p></li>
+<li><p>Заповніть комірки <code class="docutils literal notranslate"><span class="pre">A2:D2</span></code> відповідними заголовками стовпців.</p></li>
+<li><p>Над таблицею створіть і відцентруйте заголовок <strong>«Нарахування процентів»</strong>.</p></li>
+<li><p>Скопіюйте таблицю на другий аркуш і на ньому увімкніть режим відображення формул.</p></li>
+<li><p>Для тексту <strong>«Рік»</strong> у <code class="docutils literal notranslate"><span class="pre">A2</span></code> задайте вертикальну орієнтацію або поворот на 90°, якщо редактор це підтримує.</p></li>
+<li><p>Задайте колір тла комірки <code class="docutils literal notranslate"><span class="pre">A1</span></code>.</p></li>
+<li><p>Відформатуйте заголовок таблиці: розмір шрифту 14 пт, напівжирне курсивне накреслення.</p></li>
+<li><p>Виділіть межами рядки, що відповідають 2001 і 2005 рокам.</p></li>
+<li><p>Відцентруйте значення років у діапазоні <code class="docutils literal notranslate"><span class="pre">A3:A27</span></code>.</p></li>
+<li><p>Збільште висоту першого рядка таблиці перетягуванням його межі або еквівалентним способом.</p></li>
+<li><p>Змініть процентну ставку в <code class="docutils literal notranslate"><span class="pre">A1</span></code> і простежте, як автоматично перерахуються залежні значення.</p></li>
+<li><p>Задайте однаковий колір тла для комірок із роками.</p></li>
+<li><p>Завершіть оформлення таблиці так, щоб заголовки, числа й межі утворювали зрозумілу візуальну ієрархію.</p></li>
+<li><p>Закріпіть заголовки або іншу доцільну область таблиці, перевірте її поведінку під час прокручування, а потім зніміть закріплення.</p></li>
+<li><p>Збережіть робочий табличний документ у форматі редактора, в якому виконуєте завдання.</p></li>
+<li><p>Побудуйте <strong>кругову діаграму</strong> для значень початкової суми за перші 12 років (<code class="docutils literal notranslate"><span class="pre">A3:A14</span></code> і <code class="docutils literal notranslate"><span class="pre">B3:B14</span></code>). Додайте зрозумілий заголовок і, якщо це покращує читання, підписи даних.</p></li>
+<li><p>Відредагуйте створену діаграму: змініть оформлення заголовка, випробуйте інший різновид кругової діаграми, якщо він доступний, а потім змініть тип діаграми на стовпчасту. Порівняйте, який тип краще показує зміну значень за роками.</p></li>
+</ol>
+</section>
+<section id="id12">
+<h2><span class="section-number">7.4. </span>Контрольні питання<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Як виконати пошук і заміну даних у визначеному діапазоні або на всьому аркуші?</p></li>
+<li><p>Як відсортувати таблицю за одним і кількома стовпцями, не порушивши цілісність рядків?</p></li>
+<li><p>Що таке фільтрування даних і чим воно відрізняється від сортування?</p></li>
+<li><p>Як вибрати тип діаграми відповідно до характеру даних і побудувати її?</p></li>
+<li><p>Які властивості вже створеної діаграми можна змінювати?</p></li>
+<li><p>Для чого використовують закріплення областей і як перевірити результат його застосування?</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="id13">
+<h2><span class="section-number">7.5. </span>Вимоги до виконання і подання<a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<p><strong>Виконайте практичні завдання тричі:</strong></p>
+<ol class="arabic simple">
+<li><p>у <strong>LibreOffice Calc</strong>;</p></li>
+<li><p>у <strong>Google Sheets</strong>;</p></li>
+<li><p>у <strong>ще одному табличному процесорі на вибір</strong>: Microsoft Excel / WPS Spreadsheets / OnlyOffice / Apple Numbers.</p></li>
+</ol>
+<p><strong>Подання в Google Classroom:</strong> завантажте <strong>три PDF-файли</strong>, кожен — експорт із відповідного табличного процесора.</p>
+<p><strong>Схема імені файлу:</strong> <code class="docutils literal notranslate"><span class="pre">&lt;назва</span> <span class="pre">табличного</span> <span class="pre">процесора&gt;_&lt;група&gt;_&lt;ПрізвищеІм’я&gt;_ЛР6.pdf</span></code></p>
+<p><strong>Приклади:</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>LibreOfficeCalc_141_ПетренкоІван_ЛР6.pdf
+GoogleSheets_143_ПетренкоІван_ЛР6.pdf
+Excel_144_АлукіАнастасія_ЛР6.pdf
+</pre></div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Коментар щодо відмінностей між редакторами</p>
+<p>Якщо певної функції або способу виконання немає у вашому табличному процесорі, коротко вкажіть це у звіті й опишіть використаний еквівалент або найближчий доступний спосіб.</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lesson06.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">6. </span>ЛАБОРАТОРНА РОБОТА №5</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="lesson08.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">наступний</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>ЛАБОРАТОРНА РОБОТА №7</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">7.1. План</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">7.2. Методичні вказівки</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">7.2.1. Пошук і заміна даних</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">7.2.2. Сортування даних</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">7.2.3. Фільтрування даних</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">7.2.4. Створення діаграм</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">7.2.5. Редагування діаграм</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">7.2.6. Побудова графіків функцій</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">7.2.7. Закріплення областей</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">7.2.8. Імпорт даних</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">7.3. Практичні завдання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">7.4. Контрольні питання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">7.5. Вимоги до виконання і подання</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,955 @@
+
+<!DOCTYPE html>
+
+
+<html lang="uk" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>9. ЛАБОРАТОРНА РОБОТА №8 &#8212; Інформаційні технології у лінгвістиці</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=8f2a1f02" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/lab.css?v=9e99ccb3" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=0a3c33aa"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'app/lesson09';</script>
+    <link rel="index" title="Індекс" href="../genindex.html" />
+    <link rel="search" title="Пошук" href="../search.html" />
+    <link rel="prev" title="8. ЛАБОРАТОРНА РОБОТА №7" href="lesson08.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="uk"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Інформаційні технології у лінгвістиці</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Пошук</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lesson01.html">1. Основи інформаційних технологій</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson02.html">2. ЛАБОРАТОРНА РОБОТА №1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson03.html">3. ЛАБОРАТОРНА РОБОТА №2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson04.html">4. ЛАБОРАТОРНА РОБОТА №3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson05.html">5. ЛАБОРАТОРНА РОБОТА №4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson06.html">6. ЛАБОРАТОРНА РОБОТА №5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson07.html">7. ЛАБОРАТОРНА РОБОТА №6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson08.html">8. ЛАБОРАТОРНА РОБОТА №7</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">9. ЛАБОРАТОРНА РОБОТА №8</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/blob/main/docs/app/lesson09.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/edit/main/docs/app/lesson09.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Volodymyr-Kovdrysh/ITinLingvo-students/issues/new?title=Issue%20on%20page%20%2Fapp/lesson09.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Відкрийте випуск"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Завантажте цю сторінку">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/app/lesson09.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Завантажити вихідний файл"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Друк у форматі PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Повноекранний режим"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Пошук" aria-label="Пошук" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ЛАБОРАТОРНА РОБОТА №8</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Зміст </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.1. План</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">9.2. Методичні вказівки</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">9.2.1. Основні поняття комп’ютерних мереж</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dns-url">9.2.2. Інтернет: адресація, DNS і URL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">9.2.3. Основні служби Інтернету</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">9.2.4. Пошукові системи</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#google-search">9.2.5. Робота з Google Search і мовою пошукових запитів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">9.2.6. Інформаційно-пошукові системи та лінгвістичний пошук</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">9.2.7. Питально-відповідні та ШІ-системи</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ftp">9.2.8. Передавання файлів і FTP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">9.2.9. Електронна пошта</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qr">9.2.10. QR-коди</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">9.2.11. Перевірені вебресурси</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">9.3. Практичні завдання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">9.4. Контрольні питання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">9.5. Вимоги до виконання і подання</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="o8">
+<h1><span class="section-number">9. </span>ЛАБОРАТОРНА РОБОТА №8<a class="headerlink" href="#o8" title="Link to this heading">#</a></h1>
+<p><strong>Інформаційний пошук</strong></p>
+<div class="lab-block lab-goal admonition">
+<p class="admonition-title">Мета роботи</p>
+<p>Опанувати сучасні прийоми інформаційного пошуку в Інтернеті: формулювати й уточнювати запити, оцінювати достовірність джерел, працювати з пошуковими системами, електронними бібліотеками та лінгвістичними ресурсами, використовувати питально-відповідні й ШІ-системи з перевіркою джерел, а також ознайомитися з електронною поштою, передаванням файлів і QR-кодами.</p>
+</div>
+<section id="id1">
+<h2><span class="section-number">9.1. </span>План<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="lab-block lab-plan docutils container">
+<ol class="arabic simple">
+<li><p>Основні поняття комп’ютерних мереж.</p></li>
+<li><p>Інтернет: адресація, DNS і URL.</p></li>
+<li><p>Основні служби Інтернету.</p></li>
+<li><p>Пошукові системи.</p></li>
+<li><p>Робота з Google Search і мовою пошукових запитів.</p></li>
+<li><p>Інформаційно-пошукові системи. Лінгвістичний пошук.</p></li>
+<li><p>Питально-відповідні та ШІ-системи.</p></li>
+<li><p>Передавання файлів і FTP.</p></li>
+<li><p>Електронна пошта.</p></li>
+<li><p>QR-коди.</p></li>
+</ol>
+</div>
+</section>
+<section id="id2">
+<h2><span class="section-number">9.2. </span>Методичні вказівки<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Вебресурси та посилання в цій лабораторній роботі перевірено <strong>22.08.2026</strong>. Вебсайти змінюються, тому під час виконання завдань фіксуйте не лише результат, а й <strong>URL та дату доступу</strong>. Якщо сторінка переміщена або сервіс змінив інтерфейс, знайдіть актуальну сторінку на офіційному домені й зазначте це у звіті.</p>
+<section id="id3">
+<h3><span class="section-number">9.2.1. </span>Основні поняття комп’ютерних мереж<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p><strong>Комп’ютерна мережа</strong> — це сукупність пристроїв, які можуть обмінюватися даними через дротові або бездротові канали зв’язку.</p>
+<p>За масштабом часто розрізняють:</p>
+<ul class="simple">
+<li><p><strong>LAN</strong> (<em>Local Area Network</em>) — локальну мережу в межах приміщення, будівлі або організації;</p></li>
+<li><p><strong>WAN</strong> (<em>Wide Area Network</em>) — мережу, що об’єднує вузли на значних відстанях.</p></li>
+</ul>
+<p>У мережі пристрої можуть використовувати спільні ресурси: файли, сховища, принтери, вебзастосунки, бази даних та інші сервіси.</p>
+<p>У моделі <strong>клієнт — сервер</strong> клієнтська програма надсилає запит, а серверна програма надає ресурс або виконує потрібну операцію. Один фізичний або віртуальний комп’ютер може одночасно обслуговувати багато серверних програм.</p>
+</section>
+<section id="dns-url">
+<h3><span class="section-number">9.2.2. </span>Інтернет: адресація, DNS і URL<a class="headerlink" href="#dns-url" title="Link to this heading">#</a></h3>
+<p><strong>Інтернет</strong> — глобальна система взаємопов’язаних комп’ютерних мереж, що використовує сімейство протоколів TCP/IP.</p>
+<p>Для доставки даних вузли використовують <strong>IP-адреси</strong>. У сучасних мережах застосовують IPv4 та IPv6. IP-адреса не обов’язково є постійною або безпосередньо видимою з Інтернету: вона може змінюватися, а пристрої локальної мережі можуть виходити в Інтернет через спільну зовнішню адресу.</p>
+<p>Людині зручніше працювати з доменними іменами, наприклад <code class="docutils literal notranslate"><span class="pre">www.chnu.edu.ua</span></code>. <strong>DNS</strong> (<em>Domain Name System</em>) допомагає зіставляти доменні імена з мережевими адресами та іншими службовими записами.</p>
+<p>Адресу конкретного ресурсу задає <strong>URL</strong> (<em>Uniform Resource Locator</em>). Типовий URL містить:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>scheme://host/path?query#fragment
+</pre></div>
+</div>
+<p>Наприклад:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>https://www.chnu.edu.ua/
+</pre></div>
+</div>
+<p>Тут <code class="docutils literal notranslate"><span class="pre">https</span></code> — схема доступу, <code class="docutils literal notranslate"><span class="pre">www.chnu.edu.ua</span></code> — ім’я вузла, <code class="docutils literal notranslate"><span class="pre">/</span></code> — шлях до ресурсу.</p>
+</section>
+<section id="id4">
+<h3><span class="section-number">9.2.3. </span>Основні служби Інтернету<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<p>Інтернет і Веб — не тотожні поняття. <strong>Веб</strong> (<em>World Wide Web</em>) є однією зі служб Інтернету.</p>
+<p>До поширених мережевих служб належать:</p>
+<ul class="simple">
+<li><p>вебдоступ через HTTP/HTTPS;</p></li>
+<li><p>електронна пошта;</p></li>
+<li><p>передавання та синхронізація файлів;</p></li>
+<li><p>хмарні сховища;</p></li>
+<li><p>обмін повідомленнями, аудіо- й відеозв’язок;</p></li>
+<li><p>пошукові та інформаційно-пошукові системи;</p></li>
+<li><p>віддалений доступ до комп’ютерів і серверів.</p></li>
+</ul>
+<p><strong>HTTPS</strong> захищає передавання даних між браузером і вебсервером за допомогою шифрування. Наявність HTTPS не гарантує правдивості інформації на сайті, але відсутність захищеного з’єднання є додатковим фактором ризику.</p>
+<p><strong>Браузер</strong> — програма для роботи з вебресурсами. Сучасні браузери підтримують вкладки, історію, закладки, завантаження, інструменти пошуку на сторінці, керування дозволами сайтів та інші засоби.</p>
+</section>
+<section id="id5">
+<h3><span class="section-number">9.2.4. </span>Пошукові системи<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<p>Пошукова система зазвичай виконує три основні групи операцій:</p>
+<ol class="arabic simple">
+<li><p>автоматично знаходить доступні вебресурси;</p></li>
+<li><p>створює й оновлює пошуковий індекс;</p></li>
+<li><p>за запитом користувача ранжує документи й формує сторінку результатів.</p></li>
+</ol>
+<p>Результати різних пошукових систем можуть відрізнятися через різний індекс, алгоритми ранжування, локалізацію, персоналізацію та спосіб обробки запиту.</p>
+<p>Для порівняння в цій роботі використовуються:</p>
+<ul class="simple">
+<li><p>Google Search;</p></li>
+<li><p>Microsoft Bing;</p></li>
+<li><p>DuckDuckGo;</p></li>
+<li><p>Brave Search.</p></li>
+</ul>
+<p>Під час оцінювання результату дивіться не лише на позицію сторінки, а й на:</p>
+<ul class="simple">
+<li><p>автора або організацію;</p></li>
+<li><p>домен;</p></li>
+<li><p>дату публікації й оновлення;</p></li>
+<li><p>наявність першоджерел;</p></li>
+<li><p>відповідність запиту;</p></li>
+<li><p>можливі комерційні або рекламні мотиви;</p></li>
+<li><p>узгодженість із незалежними джерелами.</p></li>
+</ul>
+</section>
+<section id="google-search">
+<h3><span class="section-number">9.2.5. </span>Робота з Google Search і мовою пошукових запитів<a class="headerlink" href="#google-search" title="Link to this heading">#</a></h3>
+<p>Пошуковий запит має бути достатньо конкретним, але не перевантаженим непотрібними словами. Якщо результатів забагато або вони нерелевантні, запит потрібно уточнювати.</p>
+<p>Станом на дату перевірки офіційна довідка Google описує, зокрема, такі способи уточнення пошуку:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;точна</span> <span class="pre">фраза&quot;</span></code> — точний збіг;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">site:example.org</span></code> — пошук у межах сайту або домену;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-слово</span></code> — виключення слова;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">filetype:pdf</span></code> — пошук файлів певного типу;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">before:2025-01-01</span></code> — документи до заданої дати;</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">after:2025-01-01</span></code> — документи після заданої дати.</p></li>
+</ul>
+<p>Приклади:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>"computer linguistics"
+site:chnu.edu.ua "кафедра англійської мови"
+corpus linguistics -medicine
+"machine translation" filetype:pdf
+"artificial intelligence" after:2025-01-01
+</pre></div>
+</div>
+<p>Не покладайтеся на старі списки операторів із випадкових сайтів: підтримка пошукових операторів із часом змінюється.</p>
+<p>Для пошуку тексту <strong>в уже відкритій вебсторінці</strong> використовуйте вбудований пошук браузера, зазвичай <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+F.</p>
+</section>
+<section id="id6">
+<h3><span class="section-number">9.2.6. </span>Інформаційно-пошукові системи та лінгвістичний пошук<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<p><strong>Інформаційний пошук</strong> — процес знаходження документів або відомостей, що відповідають інформаційній потребі користувача.</p>
+<p>Для різних задач доцільно використовувати різні типи джерел:</p>
+<ul class="simple">
+<li><p>офіційні сайти органів влади — для законодавства й нормативної інформації;</p></li>
+<li><p>сайти університетів і наукових установ — для академічної та організаційної інформації;</p></li>
+<li><p>бібліотеки й цифрові колекції — для повних текстів і бібліографії;</p></li>
+<li><p>наукові пошукові системи — для статей і цитувань;</p></li>
+<li><p>спеціалізовані лінгвістичні бази — для мовних характеристик.</p></li>
+</ul>
+<p>Для лінгвістичних досліджень у цій роботі використовуються, зокрема:</p>
+<ul class="simple">
+<li><p><strong>WALS Online</strong> — типологічні характеристики мов;</p></li>
+<li><p><strong>World Loanword Database (WOLD)</strong> — запозичення та донорсько-реципієнтні зв’язки;</p></li>
+<li><p><strong>Glottolog</strong> — каталог мов, мовних сімей і бібліографічних джерел.</p></li>
+</ul>
+<p>Під час пошуку мовознавчої інформації віддавайте перевагу спеціалізованій базі над випадковою вебсторінкою, якщо база безпосередньо описує потрібне явище.</p>
+</section>
+<section id="id7">
+<h3><span class="section-number">9.2.7. </span>Питально-відповідні та ШІ-системи<a class="headerlink" href="#id7" title="Link to this heading">#</a></h3>
+<p>Питально-відповідні системи намагаються надати безпосередню відповідь, а не лише список документів.</p>
+<p>У цій роботі можна порівняти:</p>
+<ul class="simple">
+<li><p><strong>WolframAlpha</strong> — обчислювальні та структуровані фактичні запити;</p></li>
+<li><p><strong>ChatGPT</strong> — діалогову роботу з інформацією та вебпошуком;</p></li>
+<li><p><strong>Perplexity</strong> — відповіді з акцентом на пошук і посилання на джерела.</p></li>
+</ul>
+<p>Відповідь ШІ-системи <strong>не є першоджерелом</strong>. Для фактичних тверджень:</p>
+<ol class="arabic simple">
+<li><p>перевірте наведені посилання;</p></li>
+<li><p>відкрийте першоджерело;</p></li>
+<li><p>перевірте дату й контекст;</p></li>
+<li><p>за важливих розбіжностей знайдіть друге незалежне джерело.</p></li>
+</ol>
+<p>Не використовуйте вигадане або неперевірене посилання лише тому, що його навела система.</p>
+</section>
+<section id="ftp">
+<h3><span class="section-number">9.2.8. </span>Передавання файлів і FTP<a class="headerlink" href="#ftp" title="Link to this heading">#</a></h3>
+<p><strong>FTP</strong> (<em>File Transfer Protocol</em>) — класичний протокол передавання файлів. Звичайний FTP не шифрує облікові дані й трафік, тому для конфіденційних даних його використовувати не слід.</p>
+<p>Сучасні браузери більше не є повноцінними FTP-клієнтами. Наприклад, Firefox вилучив вбудовану підтримку FTP. Для роботи з FTP використовують окремий клієнт, наприклад <strong>FileZilla</strong>.</p>
+<p>На практиці замість незахищеного FTP перевагу часто надають:</p>
+<ul class="simple">
+<li><p>HTTPS для публічного завантаження;</p></li>
+<li><p>SFTP для захищеного передавання файлів через SSH;</p></li>
+<li><p>FTPS, якщо сервер підтримує FTP із TLS.</p></li>
+</ul>
+<p>Архів GNU зберігає історичну FTP-інфраструктуру, але сам проєкт рекомендує для автоматизованого доступу використовувати HTTPS.</p>
+</section>
+<section id="id8">
+<h3><span class="section-number">9.2.9. </span>Електронна пошта<a class="headerlink" href="#id8" title="Link to this heading">#</a></h3>
+<p>Адреса електронної пошти має загальний формат:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>local-part@example.org
+</pre></div>
+</div>
+<p>Основні поля листа:</p>
+<ul class="simple">
+<li><p><strong>To / Кому</strong> — основний одержувач;</p></li>
+<li><p><strong>Cc / Копія</strong> — одержувачі, адреси яких видно всім учасникам;</p></li>
+<li><p><strong>Bcc / Прихована копія</strong> — адреси, які не показуються іншим одержувачам;</p></li>
+<li><p><strong>Subject / Тема</strong> — короткий опис змісту листа.</p></li>
+</ul>
+<p>Вебінтерфейс пошти приховує від користувача більшість технічних деталей, але для передавання пошти між серверами використовується SMTP, а для доступу поштових клієнтів до скриньки часто застосовують IMAP.</p>
+<p>Основні правила безпеки:</p>
+<ul class="simple">
+<li><p>перевіряйте домен відправника;</p></li>
+<li><p>не відкривайте підозрілі вкладення;</p></li>
+<li><p>не вводьте пароль після переходу за сумнівним посиланням;</p></li>
+<li><p>використовуйте багатофакторну автентифікацію, якщо вона доступна;</p></li>
+<li><p>не публікуйте пароль, коди підтвердження та вміст приватної пошти у звіті.</p></li>
+</ul>
+</section>
+<section id="qr">
+<h3><span class="section-number">9.2.10. </span>QR-коди<a class="headerlink" href="#qr" title="Link to this heading">#</a></h3>
+<p><strong>QR-код</strong> — двовимірний матричний код, у якому можна закодувати текст, URL, контактні дані або іншу структуровану інформацію.</p>
+<p>Більшість сучасних смартфонів розпізнає QR-коди через камеру без окремої програми.</p>
+<p>QR-код не робить посилання безпечним. Перед відкриттям перевірте:</p>
+<ul class="simple">
+<li><p>який домен буде відкрито;</p></li>
+<li><p>чи використовує сайт HTTPS;</p></li>
+<li><p>чи не маскує код скорочене або підозріле посилання;</p></li>
+<li><p>чи очікували ви саме таку дію.</p></li>
+</ul>
+<p>Для навчального завдання достатньо <strong>статичного QR-коду</strong>, в якому URL зберігається безпосередньо в самому коді.</p>
+</section>
+<section id="id9">
+<h3><span class="section-number">9.2.11. </span>Перевірені вебресурси<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
+<p>Нижче наведено ресурси, які використовуються в практичній частині та були перевірені 22.08.2026.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Ресурс</p></th>
+<th class="head"><p>Призначення</p></th>
+<th class="head"><p>URL</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ЧНУ</p></td>
+<td><p>офіційний сайт університету</p></td>
+<td><p><a class="reference external" href="https://www.chnu.edu.ua/">https://www.chnu.edu.ua/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Факультет іноземних мов ЧНУ</p></td>
+<td><p>перелік кафедр</p></td>
+<td><p><a class="reference external" href="https://mel.chnu.edu.ua/kafedry/">https://mel.chnu.edu.ua/kafedry/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>КНУ імені Тараса Шевченка</p></td>
+<td><p>офіційний сайт</p></td>
+<td><p><a class="reference external" href="https://knu.ua/">https://knu.ua/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Законодавство України</p></td>
+<td><p>офіційна база Верховної Ради</p></td>
+<td><p><a class="reference external" href="https://zakon.rada.gov.ua/">https://zakon.rada.gov.ua/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Дія</p></td>
+<td><p>державні послуги онлайн</p></td>
+<td><p><a class="reference external" href="https://diia.gov.ua/">https://diia.gov.ua/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>МОН: Український правопис</p></td>
+<td><p>чинний офіційний текст правопису</p></td>
+<td><p><a class="reference external" href="https://mon.gov.ua/osvita-2/zagalna-serednya-osvita/ukrainskiy-pravopis">https://mon.gov.ua/osvita-2/zagalna-serednya-osvita/ukrainskiy-pravopis</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Google</p></td>
+<td><p>вебпошук</p></td>
+<td><p><a class="reference external" href="https://www.google.com/">https://www.google.com/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Bing</p></td>
+<td><p>вебпошук</p></td>
+<td><p><a class="reference external" href="https://www.bing.com/">https://www.bing.com/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>DuckDuckGo</p></td>
+<td><p>вебпошук</p></td>
+<td><p><a class="reference external" href="https://duckduckgo.com/">https://duckduckgo.com/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Brave Search</p></td>
+<td><p>вебпошук</p></td>
+<td><p><a class="reference external" href="https://search.brave.com/">https://search.brave.com/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Google Search Help</p></td>
+<td><p>актуальні оператори пошуку</p></td>
+<td><p><a class="reference external" href="https://support.google.com/websearch/answer/2466433?hl=uk">https://support.google.com/websearch/answer/2466433?hl=uk</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>УкрЛіт</p></td>
+<td><p>українська література</p></td>
+<td><p><a class="reference external" href="https://ukrlit.org/">https://ukrlit.org/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>УкрЛіб</p></td>
+<td><p>українська електронна бібліотека</p></td>
+<td><p><a class="reference external" href="https://www.ukrlib.com.ua/">https://www.ukrlib.com.ua/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Project Gutenberg</p></td>
+<td><p>електронні книги</p></td>
+<td><p><a class="reference external" href="https://www.gutenberg.org/">https://www.gutenberg.org/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Google Books</p></td>
+<td><p>пошук книг</p></td>
+<td><p><a class="reference external" href="https://books.google.com/">https://books.google.com/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Wikimedia Commons</p></td>
+<td><p>зображення з відомими умовами ліцензування</p></td>
+<td><p><a class="reference external" href="https://commons.wikimedia.org/">https://commons.wikimedia.org/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>YouTube</p></td>
+<td><p>пошук навчального відео</p></td>
+<td><p><a class="reference external" href="https://www.youtube.com/">https://www.youtube.com/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>WALS Online</p></td>
+<td><p>лінгвістична типологія</p></td>
+<td><p><a class="reference external" href="https://wals.info/">https://wals.info/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>WOLD</p></td>
+<td><p>база лексичних запозичень</p></td>
+<td><p><a class="reference external" href="https://wold.clld.org/">https://wold.clld.org/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Glottolog</p></td>
+<td><p>каталог мов і мовних сімей</p></td>
+<td><p><a class="reference external" href="https://glottolog.org/">https://glottolog.org/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>WolframAlpha</p></td>
+<td><p>обчислювальна питально-відповідна система</p></td>
+<td><p><a class="reference external" href="https://www.wolframalpha.com/">https://www.wolframalpha.com/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>ChatGPT</p></td>
+<td><p>діалогова й пошукова ШІ-система</p></td>
+<td><p><a class="reference external" href="https://chatgpt.com/">https://chatgpt.com/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Perplexity</p></td>
+<td><p>пошукова ШІ-система</p></td>
+<td><p><a class="reference external" href="https://www.perplexity.ai/">https://www.perplexity.ai/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>FileZilla</p></td>
+<td><p>FTP/SFTP-клієнт</p></td>
+<td><p><a class="reference external" href="https://filezilla-project.org/">https://filezilla-project.org/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>GNU Archives</p></td>
+<td><p>публічний файловий архів</p></td>
+<td><p><a class="reference external" href="https://ftp.gnu.org/">https://ftp.gnu.org/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Gmail</p></td>
+<td><p>електронна пошта</p></td>
+<td><p><a class="reference external" href="https://mail.google.com/">https://mail.google.com/</a></p></td>
+</tr>
+<tr class="row-even"><td><p>Outlook</p></td>
+<td><p>електронна пошта</p></td>
+<td><p><a class="reference external" href="https://outlook.live.com/">https://outlook.live.com/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>Proton Mail</p></td>
+<td><p>електронна пошта</p></td>
+<td><p><a class="reference external" href="https://proton.me/mail">https://proton.me/mail</a></p></td>
+</tr>
+<tr class="row-even"><td><p>QR Code Generator</p></td>
+<td><p>генератор QR-кодів</p></td>
+<td><p><a class="reference external" href="https://www.qr-code-generator.com/">https://www.qr-code-generator.com/</a></p></td>
+</tr>
+<tr class="row-odd"><td><p>goQR</p></td>
+<td><p>генератор QR-кодів</p></td>
+<td><p><a class="reference external" href="https://goqr.me/">https://goqr.me/</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</section>
+<section id="id10">
+<h2><span class="section-number">9.3. </span>Практичні завдання<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Відкрийте офіційний сайт Чернівецького національного університету через HTTPS. Запишіть назву сторінки, її URL і дату доступу.</p></li>
+<li><p>Через навігацію сайту ЧНУ знайдіть сторінку свого факультету або іншого структурного підрозділу. Зафіксуйте шлях переходу.</p></li>
+<li><p>Збережіть одну сторінку сайту ЧНУ як PDF або HTML. Порівняйте збережену копію з онлайн-версією та зазначте, які динамічні елементи могли не зберегтися.</p></li>
+<li><p>Збережіть одне зображення з вебсторінки, для якого зрозуміло джерело або умови використання. У звіті вкажіть URL сторінки-джерела, а не лише адресу самого файла.</p></li>
+<li><p>Відкрийте офіційний сайт Київського національного університету імені Тараса Шевченка та знайдіть актуальну інформацію про навчальний підрозділ, пов’язаний із філологією. Зафіксуйте його сучасну назву.</p></li>
+<li><p>Відкрийте офіційну базу <strong>«Законодавство України»</strong> Верховної Ради. Знайдіть сторінку пошуку нормативних документів і визначте, які реквізити документа можна використати для пошуку.</p></li>
+<li><p>У базі Верховної Ради знайдіть чинні документи <strong>«Про захист інформації в інформаційно-комунікаційних системах»</strong> та <strong>«Про електронну ідентифікацію та електронні довірчі послуги»</strong>. Запишіть номер, дату прийняття та статус кожного документа.</p></li>
+<li><p>Знайдіть інформацію про <strong>Миколу Лисенка</strong> щонайменше у двох джерелах різного типу. Порівняйте автора/установу, дату й обсяг інформації.</p></li>
+<li><p>Знайдіть загальну інформацію про <strong>Томаса Манна</strong> у двох авторитетних енциклопедичних або бібліографічних джерелах. Визначте, яке з них краще придатне для академічного посилання й чому.</p></li>
+<li><p>Відкрийте портал <strong>Дія</strong> та знайдіть щонайменше три категорії електронних державних послуг. Запишіть їх назви й URL відповідних сторінок.</p></li>
+<li><p>У базі Верховної Ради знайдіть <strong>Державну національну програму «Освіта» («Україна XXI століття»)</strong>. Зверніть увагу, що це історичний документ 1993 року: запишіть дату прийняття, поточний статус і дату останньої редакції.</p></li>
+<li><p>На офіційній сторінці МОН відкрийте чинний <strong>Український правопис</strong> і знайдіть правило вживання апострофа у словах іншомовного походження. Наведіть один приклад із нормативного тексту.</p></li>
+<li><p>На сайті <strong>УкрЛіт</strong> знайдіть матеріали, пов’язані з 1601 роком, і один приклад твору, який ресурс відносить до балад або баладної традиції. Зафіксуйте URL.</p></li>
+<li><p>На <strong>УкрЛіб</strong> знайдіть твір Остапа Вишні <strong>«Веселі артисти»</strong>, а в Project Gutenberg — A. Hamilton Thompson <strong>English Monasteries</strong>. Для обох ресурсів запишіть автора, назву, URL та доступні формати читання або завантаження.</p></li>
+<li><p>Знайдіть інформацію про переклади Святого Письма українською мовою. Окремо знайдіть довідкові відомості про Синодальний переклад і <strong>King James Version</strong>. Порівняйте щонайменше три джерела й визначте, які з них є першоджерелами або профільними ресурсами.</p></li>
+<li><p>Виконайте пошук теми <strong>«комп’ютерна лінгвістика»</strong> українською й англійською мовами в Google та Bing. Для кожної мови сформулюйте не менше двох варіантів запиту й порівняйте перші п’ять доменів у результатах.</p></li>
+<li><p>За допомогою оператора <code class="docutils literal notranslate"><span class="pre">site:</span></code> знайдіть на домені <code class="docutils literal notranslate"><span class="pre">chnu.edu.ua</span></code> сторінку <strong>кафедри англійської мови</strong>. Порівняйте цей результат із навігацією через сторінку кафедр Факультету іноземних мов.</p></li>
+<li><p>На сторінці кафедр Факультету іноземних мов ЧНУ скористайтеся <kbd class="kbd docutils literal notranslate">Ctrl</kbd>+F і знайдіть назви, що містять послідовність символів <code class="docutils literal notranslate"><span class="pre">но</span></code>. Зафіксуйте кількість збігів.</p></li>
+<li><p>Виконайте однаковий запит <code class="docutils literal notranslate"><span class="pre">corpus</span> <span class="pre">linguistics</span></code> у Google, Bing, DuckDuckGo та Brave Search. Для кожної системи зафіксуйте перші п’ять різних доменів і коротко поясніть відмінності.</p></li>
+<li><p>Продемонструйте роботу щонайменше чотирьох актуальних засобів уточнення Google Search: точної фрази, <code class="docutils literal notranslate"><span class="pre">site:</span></code>, виключення <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">filetype:</span></code>, <code class="docutils literal notranslate"><span class="pre">before:</span></code> або <code class="docutils literal notranslate"><span class="pre">after:</span></code>. Для кожного наведіть свій запит і поясніть, як змінився результат.</p></li>
+<li><p>Поставте одне й те саме фактичне запитання WolframAlpha та одній із ШІ-систем — ChatGPT або Perplexity. Перевірте фактичну відповідь за незалежним першоджерелом і порівняйте, як системи показують джерела.</p></li>
+<li><p>Знайдіть зображення <strong>Niagara Falls</strong> у Google або Bing Images і в Wikimedia Commons. Для зображення з Wikimedia Commons зафіксуйте автора, ліцензію та сторінку файла.</p></li>
+<li><p>У Wikimedia Commons знайдіть фотографію метелика, яку можна законно використати в навчальній презентації. Запишіть назву файла, автора та ліцензію.</p></li>
+<li><p>У Google Books знайдіть книги Л. Ю. Щипіциної <strong>«Інформаційні технології в лінгвістиці»</strong>, Yorick Wilks <strong>Machine Translation</strong> та Bill Readings <strong>The University in Ruins</strong>. Для кожної зафіксуйте, які бібліографічні дані та режими перегляду доступні.</p></li>
+<li><p>На YouTube знайдіть сучасний навчальний матеріал про машинний переклад. Запишіть назву, канал, дату публікації та поясніть, за якими ознаками ви оцінюєте надійність автора.</p></li>
+<li><p>Завантажте до Google Drive невеликий файл <code class="docutils literal notranslate"><span class="pre">.docx</span></code>, відкрийте його в Google Docs, внесіть одну тестову зміну й перевірте, як документ можна завантажити назад. Не використовуйте конфіденційний документ.</p></li>
+<li><p>У поштовій системі створіть <strong>чернетку листа самому собі</strong>: заповніть тему, короткий текст, додайте невеликий навчальний файл і відкрийте поля Cc та Bcc. Надсилати лист необов’язково. У звіт не вставляйте приватну адресу повністю.</p></li>
+<li><p>Для словосполучення <code class="docutils literal notranslate"><span class="pre">wildcat</span> <span class="pre">company</span></code> та слова <code class="docutils literal notranslate"><span class="pre">зошит</span></code> знайдіть можливі переклади. Не покладайтеся лише на пошуковий фрагмент: перевірте кожен варіант у словнику або іншому профільному мовному ресурсі.</p></li>
+<li><p>Перевірте англійський відповідник <code class="docutils literal notranslate"><span class="pre">loparite</span></code> для слова <strong>лопарит</strong>. Знайдіть щонайменше два незалежні профільні джерела й порівняйте контекст уживання терміна.</p></li>
+<li><p>Створіть статичний QR-код для URL офіційного сайту ЧНУ за допомогою одного з перевірених генераторів. Проскануйте код камерою смартфона й до відкриття сторінки перевірте домен призначення.</p></li>
+<li><p>Відкрийте GNU Archives через HTTPS. Якщо на комп’ютері доступний FTP-клієнт і мережа дозволяє з’єднання, спробуйте анонімне підключення до <code class="docutils literal notranslate"><span class="pre">ftp.gnu.org</span></code> і порівняйте структуру каталогів із HTTPS-версією. Якщо порт FTP заблоковано або протокол недоступний, зафіксуйте це як результат і використайте HTTPS.</p></li>
+<li><p>У <strong>World Loanword Database (WOLD)</strong> дослідіть французьку як мову-джерело запозичень. Знайдіть кілька мов-реципієнтів і для однієї з них перевірте, чи вона сама виступає джерелом запозичень.</p></li>
+<li><p>У <strong>Glottolog</strong> знайдіть німецьку мову та запишіть її Glottocode, мовну сім’ю й макроареал. Потім знайдіть одну мову Південної Африки та порівняйте ці характеристики. За бажанням зіставте типологічні дані з WALS.</p></li>
+<li><p>Знайдіть в Інтернеті навчальну презентацію на лінгвістичну тематику. Проаналізуйте автора/установу, дату, джерела, структуру й оформлення та поясніть, чи придатна вона як навчальне джерело.</p></li>
+</ol>
+</section>
+<section id="id11">
+<h2><span class="section-number">9.4. </span>Контрольні питання<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Що таке комп’ютерна мережа? Чим LAN відрізняється від WAN?</p></li>
+<li><p>Чим Інтернет відрізняється від Всесвітньої павутини (Web)?</p></li>
+<li><p>Яке призначення TCP/IP і чому мережеві протоколи потрібні для обміну даними?</p></li>
+<li><p>Що таке IP-адреса, доменне ім’я і DNS?</p></li>
+<li><p>З яких основних частин складається URL?</p></li>
+<li><p>Що таке браузер і які функції він виконує?</p></li>
+<li><p>Що таке гіперпосилання та як перевірити адресу, на яку воно веде?</p></li>
+<li><p>Які способи збереження вебсторінки або окремого ресурсу ви використовували?</p></li>
+<li><p>Як працює пошукова система: що таке обхід вебу, індексування та ранжування?</p></li>
+<li><p>Чому результати одного запиту можуть відрізнятися в різних пошукових системах?</p></li>
+<li><p>Які актуальні оператори й засоби уточнення Google Search ви використали?</p></li>
+<li><p>Як змінювати пошуковий запит, якщо отримані результати надто широкі або нерелевантні?</p></li>
+<li><p>За якими ознаками можна оцінювати авторитетність і надійність вебджерела?</p></li>
+<li><p>Які офіційні інформаційно-пошукові ресурси доцільно використовувати для пошуку законодавства України?</p></li>
+<li><p>Який загальний формат адреси електронної пошти?</p></li>
+<li><p>Чим поля To, Cc і Bcc відрізняються одне від одного?</p></li>
+<li><p>Що таке фішинг і які ознаки підозрілого електронного листа потрібно перевіряти?</p></li>
+<li><p>Чим питально-відповідна або ШІ-система відрізняється від класичної пошукової системи?</p></li>
+<li><p>Чому відповідь ШІ-системи потрібно перевіряти за першоджерелами?</p></li>
+<li><p>Для яких задач використовують WALS, WOLD і Glottolog?</p></li>
+<li><p>Чим цифрова бібліотека або спеціалізована база відрізняється від звичайного вебпошуку?</p></li>
+<li><p>Чому звичайний FTP вважається небезпечним і які сучасні альтернативи використовують для передавання файлів?</p></li>
+<li><p>Чому FTP-посилання більше не слід очікувати відкрити безпосередньо в сучасному браузері?</p></li>
+<li><p>Що таке QR-код і які дані можна в ньому закодувати?</p></li>
+<li><p>Які перевірки безпеки потрібно виконати перед відкриттям URL, отриманого з QR-коду?</p></li>
+</ol>
+</section>
+<section id="id12">
+<h2><span class="section-number">9.5. </span>Вимоги до виконання і подання<a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Виконайте <strong>практичні завдання 1–34</strong>.</p></li>
+<li><p>Для кожного вебзавдання зафіксуйте щонайменше:</p>
+<ul class="simple">
+<li><p>сформульований запит або виконану дію;</p></li>
+<li><p>URL використаного джерела;</p></li>
+<li><p>дату доступу;</p></li>
+<li><p>короткий результат або висновок;</p></li>
+<li><p>скріншот лише там, де він справді підтверджує виконання.</p></li>
+</ul>
+</li>
+<li><p>Дайте відповіді на <strong>25 контрольних питань</strong>.</p></li>
+<li><p>Оформіть звіт одним документом у форматі PDF. За потреби збережіть також редаговану версію.</p></li>
+<li><p>Не включайте у звіт паролі, коди підтвердження, приватні адреси електронної пошти, персональні листи або інші конфіденційні дані.</p></li>
+<li><p>Подайте звіт у Google Classroom до встановленого дедлайну.</p></li>
+<li><p>Схема імені файлу:</p></li>
+</ol>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>&lt;група&gt;_&lt;ПрізвищеІм’я&gt;_ЛР8.pdf
+</pre></div>
+</div>
+<p>Наприклад:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>143_ПетренкоІван_ЛР8.pdf
+</pre></div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="lesson08.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">попередній</p>
+        <p class="prev-next-title"><span class="section-number">8. </span>ЛАБОРАТОРНА РОБОТА №7</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Зміст
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">9.1. План</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">9.2. Методичні вказівки</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">9.2.1. Основні поняття комп’ютерних мереж</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dns-url">9.2.2. Інтернет: адресація, DNS і URL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">9.2.3. Основні служби Інтернету</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">9.2.4. Пошукові системи</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#google-search">9.2.5. Робота з Google Search і мовою пошукових запитів</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">9.2.6. Інформаційно-пошукові системи та лінгвістичний пошук</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">9.2.7. Питально-відповідні та ШІ-системи</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ftp">9.2.8. Передавання файлів і FTP</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">9.2.9. Електронна пошта</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#qr">9.2.10. QR-коди</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">9.2.11. Перевірені вебресурси</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">9.3. Практичні завдання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">9.4. Контрольні питання</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">9.5. Вимоги до виконання і подання</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+Автор Василь МАЦЕНКО, Володимир КОВДРИШ
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2025, Василь МАЦЕНКО, Володимир КОВДРИШ.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
